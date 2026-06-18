@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
   Monitor,
@@ -12,6 +12,10 @@ import {
   Network,
   Cloud,
 } from 'lucide-react'
+
+// Static ID — one instance per page, so no collision risk, and always a valid
+// XML name (starts with a letter). Avoids useId() colon-stripping edge cases.
+const FILTER_ID = 'nt-glow-pkt'
 
 /**
  * Node centers in viewBox (0–780 × 0–260).
@@ -42,16 +46,17 @@ const IN_CY = [71, 131, 131, 131, 131, 131, 131, 131]
 const OUT_POINTS = OUT_CX.map((x, i) => `${x},${OUT_CY[i]}`).join(' ')
 const IN_POINTS = IN_CX.map((x, i) => `${x},${IN_CY[i]}`).join(' ')
 
-function PathPacket({ cxKeyframes, cyKeyframes, fill, duration, delay, filterId }) {
+function PathPacket({ cxKeyframes, cyKeyframes, fill, duration, delay }) {
   const n = cxKeyframes.length
   const times = Array.from({ length: n }, (_, i) => (n === 1 ? 0 : i / (n - 1)))
   return (
     <motion.circle
+      suppressHydrationWarning
       r={4}
       fill={fill}
       cx={cxKeyframes[0]}
       cy={cyKeyframes[0]}
-      filter={`url(#${filterId})`}
+      filter={`url(#${FILTER_ID})`}
       animate={{ cx: cxKeyframes, cy: cyKeyframes }}
       transition={{
         duration,
@@ -78,11 +83,10 @@ function fitStageToBounds(parentW, parentH) {
 
 export default function NetworkTopology() {
   const reduce = useReducedMotion()
-  const filterId = `glow-packet-${useId().replace(/:/g, '')}`
   const fitRef = useRef(null)
   const [stage, setStage] = useState({ w: 0, h: 0 })
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const el = fitRef.current
     if (!el) return
 
@@ -139,7 +143,7 @@ export default function NetworkTopology() {
             aria-hidden
           >
             <defs>
-              <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
+              <filter id={FILTER_ID} x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="2.2" result="b" />
                 <feMerge>
                   <feMergeNode in="b" />
@@ -159,6 +163,7 @@ export default function NetworkTopology() {
             />
             {!reduce && (
               <motion.polyline
+                suppressHydrationWarning
                 points={OUT_POINTS}
                 stroke="rgba(74, 222, 128, 0.5)"
                 strokeWidth={1.5}
@@ -182,6 +187,7 @@ export default function NetworkTopology() {
             />
             {!reduce && (
               <motion.polyline
+                suppressHydrationWarning
                 points={IN_POINTS}
                 stroke="rgba(56, 189, 248, 0.5)"
                 strokeWidth={1.5}
@@ -196,38 +202,10 @@ export default function NetworkTopology() {
 
             {!reduce && (
               <>
-                <PathPacket
-                  cxKeyframes={OUT_CX}
-                  cyKeyframes={OUT_CY}
-                  fill="#4ade80"
-                  duration={11}
-                  delay={0}
-                  filterId={filterId}
-                />
-                <PathPacket
-                  cxKeyframes={OUT_CX}
-                  cyKeyframes={OUT_CY}
-                  fill="#86efac"
-                  duration={11}
-                  delay={4}
-                  filterId={filterId}
-                />
-                <PathPacket
-                  cxKeyframes={IN_CX}
-                  cyKeyframes={IN_CY}
-                  fill="#38bdf8"
-                  duration={6.8}
-                  delay={5.5}
-                  filterId={filterId}
-                />
-                <PathPacket
-                  cxKeyframes={IN_CX}
-                  cyKeyframes={IN_CY}
-                  fill="#7dd3fc"
-                  duration={6.8}
-                  delay={9}
-                  filterId={filterId}
-                />
+                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#4ade80"  duration={11}  delay={0}   />
+                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#86efac"  duration={11}  delay={4}   />
+                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#38bdf8"  duration={6.8} delay={5.5} />
+                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#7dd3fc"  duration={6.8} delay={9}   />
               </>
             )}
           </svg>
@@ -238,6 +216,7 @@ export default function NetworkTopology() {
             const topPct = (node.y / VB.h) * 100
             return (
               <motion.div
+                suppressHydrationWarning
                 key={node.id}
                 title={node.label}
                 className="absolute flex h-[42px] w-[42px] items-center justify-center rounded-xl border border-white/80 bg-white/92 shadow-lg backdrop-blur-[2px] md:h-[46px] md:w-[46px]"
@@ -261,6 +240,7 @@ export default function NetworkTopology() {
 
                 {!reduce && (
                   <motion.span
+                    suppressHydrationWarning
                     className="pointer-events-none absolute inset-0 rounded-xl border border-transparent"
                     style={{
                       borderColor: node.color,

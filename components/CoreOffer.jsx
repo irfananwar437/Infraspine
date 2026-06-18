@@ -63,6 +63,7 @@ const SOLUTIONS = [
     title: 'IT Management Systems',
     accent: '#7C3AED',
     iconBg: '#F5F3FF',
+    cardBg: '/images/itmback.png',
     description: 'Integrated platforms for IT assets, operational visibility, reporting, and business-wide systems management.',
   },
 ]
@@ -97,14 +98,8 @@ export default function CoreOffer() {
         </div>
 
         <Reveal>
-          <div
-            className={
-              reduce
-                ? 'relative mb-8 rounded-[24px] border border-slate-200/90 shadow-[0_20px_50px_-24px_rgba(10,22,40,0.2)]'
-                : 'relative mb-8 rounded-[24px] p-[1px] bg-gradient-to-r from-slate-300/70 via-emerald-300/50 to-slate-300/70 shadow-[0_20px_50px_-24px_rgba(10,22,40,0.24)]'
-            }
-          >
-            <div className={`overflow-hidden bg-white ${reduce ? 'rounded-[24px]' : 'rounded-[23px]'}`}>
+          <div className="relative mb-8 rounded-[24px] p-[1px] bg-gradient-to-r from-slate-300/70 via-emerald-300/50 to-slate-300/70 shadow-[0_20px_50px_-24px_rgba(10,22,40,0.24)]">
+            <div className="overflow-hidden bg-white rounded-[23px]">
               <NetworkTopology />
             </div>
           </div>

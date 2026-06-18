@@ -51,7 +51,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="mt-3 text-[15px] max-w-lg mx-auto" style={{ color: '#64748B' }}>
-            Real results from real enterprise clients who trusted InfraSpine to transform their IT infrastructure.
+            Real results from real enterprise clients who trusted Infraspine to transform their IT infrastructure.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function Testimonials() {
               <Quote size={24} className="mb-3" style={{ color: '#E2E8F0' }} />
 
               {/* Quote text */}
-              <p className="text-[13.5px] leading-relaxed flex-1 mb-6" style={{ color: '#475569' }}>
+              <p className="text-[15px] leading-[1.7] flex-1 mb-6" style={{ color: '#374151' }}>
                 &ldquo;{t.quote}&rdquo;
               </p>
 
@@ -87,8 +87,8 @@ export default function Testimonials() {
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-[13px] font-bold" style={{ color: '#0A1628' }}>{t.name}</p>
-                  <p className="text-[11px]" style={{ color: '#94A3B8' }}>{t.role}, {t.company}</p>
+                  <p className="text-[14px] font-bold" style={{ color: '#0A1628' }}>{t.name}</p>
+                  <p className="text-[12px]" style={{ color: '#64748B' }}>{t.role}, {t.company}</p>
                 </div>
               </div>
             </div>

@@ -131,7 +131,7 @@ export default function ServicesTeaser() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a href="/contact" className="btn-green inline-flex">
+          <a href="/contact-us" className="btn-green inline-flex">
             Get a Free Consultation
             <ArrowRight size={16} aria-hidden="true" />
           </a>

@@ -1,13 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
-import Image from 'next/image'
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-} from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 export const revealViewport = { once: true, amount: 0.2, margin: '-60px' }
 
@@ -44,11 +37,12 @@ export function Reveal({ children, className = '', delay = 0 }) {
   const reduce = useReducedMotion()
 
   if (reduce) {
-    return <div className={className}>{children}</div>
+    return <div suppressHydrationWarning className={className}>{children}</div>
   }
 
   return (
     <motion.div
+      suppressHydrationWarning
       className={className}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -67,11 +61,12 @@ export function Stagger({ children, className = '' }) {
   const reduce = useReducedMotion()
 
   if (reduce) {
-    return <div className={className}>{children}</div>
+    return <div suppressHydrationWarning className={className}>{children}</div>
   }
 
   return (
     <motion.div
+      suppressHydrationWarning
       className={className}
       variants={staggerContainer}
       initial="hidden"
@@ -87,59 +82,13 @@ export function StaggerItem({ children, className = '' }) {
   const reduce = useReducedMotion()
 
   if (reduce) {
-    return <div className={className}>{children}</div>
+    return <div suppressHydrationWarning className={className}>{children}</div>
   }
 
   return (
-    <motion.div className={className} variants={staggerItem}>
+    <motion.div suppressHydrationWarning className={className} variants={staggerItem}>
       {children}
     </motion.div>
   )
 }
 
-/**
- * Subtle vertical parallax for section imagery (disabled when reduced motion).
- */
-export function ParallaxImage({
-  src,
-  alt,
-  sizes,
-  className = '',
-  priority = false,
-  imgClassName = 'object-cover',
-  unoptimized = false,
-}) {
-  const ref = useRef(null)
-  const reduce = useReducedMotion()
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  })
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    reduce ? [0, 0] : [28, -28]
-  )
-
-  return (
-    <div
-      ref={ref}
-      className={`relative overflow-hidden ${className}`}
-    >
-      <motion.div
-        className="absolute inset-x-0 top-[-8%] h-[116%] w-full"
-        style={{ y }}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className={imgClassName}
-          sizes={sizes}
-          priority={priority}
-          unoptimized={unoptimized}
-        />
-      </motion.div>
-    </div>
-  )
-}

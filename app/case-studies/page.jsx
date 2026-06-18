@@ -536,7 +536,7 @@ export default function CaseStudiesPage() {
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 View Case Studies <ArrowRight size={15} />
               </a>
-              <a href="/contact"
+              <a href="/contact-us"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Start Your Project
@@ -620,8 +620,8 @@ export default function CaseStudiesPage() {
                   </span>
 
                   {/* Title */}
-                  <h3 className="text-[14px] font-bold leading-snug mb-2" style={{ color: '#0A1628' }}>{cs.title}</h3>
-                  <p className="text-[12px] leading-relaxed flex-1 mb-4" style={{ color: '#64748B' }}>{cs.subtitle}</p>
+                  <h3 className="text-[15px] font-bold leading-snug mb-2" style={{ color: '#0A1628' }}>{cs.title}</h3>
+                  <p className="text-[13px] leading-relaxed flex-1 mb-4" style={{ color: '#64748B' }}>{cs.subtitle}</p>
 
                   {/* Key results preview */}
                   <div className="grid grid-cols-2 gap-2 mb-4">
@@ -708,7 +708,7 @@ export default function CaseStudiesPage() {
                     {study.challenge.map((c, i) => (
                       <li key={i} className="flex items-start gap-2.5">
                         <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: '#DC2626' }} />
-                        <span className="text-[12.5px] leading-relaxed" style={{ color: '#475569' }}>{c}</span>
+                        <span className="text-[13px] leading-relaxed" style={{ color: '#475569' }}>{c}</span>
                       </li>
                     ))}
                   </ul>
@@ -728,7 +728,7 @@ export default function CaseStudiesPage() {
                         <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#F0FDF4' }}>
                           <Check size={9} color="#16A34A" strokeWidth={3} />
                         </div>
-                        <span className="text-[12.5px] leading-relaxed" style={{ color: '#475569' }}>{s}</span>
+                        <span className="text-[13px] leading-relaxed" style={{ color: '#475569' }}>{s}</span>
                       </li>
                     ))}
                   </ul>
@@ -756,7 +756,7 @@ export default function CaseStudiesPage() {
 
                 {/* CTA */}
                 <div className="flex flex-wrap gap-3">
-                  <a href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90"
+                  <a href="/contact-us" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90"
                     style={{ background: '#00C853', color: '#0A1628' }}>
                     Start a Similar Project <ArrowRight size={13} />
                   </a>
@@ -798,7 +798,7 @@ export default function CaseStudiesPage() {
                         <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#FFFBEB' }}>
                           <Check size={9} color="#D97706" strokeWidth={3} />
                         </div>
-                        <span className="text-[12.5px] leading-relaxed" style={{ color: '#475569' }}>{o}</span>
+                        <span className="text-[13px] leading-relaxed" style={{ color: '#475569' }}>{o}</span>
                       </li>
                     ))}
                   </ul>
@@ -994,12 +994,12 @@ export default function CaseStudiesPage() {
             Book a free consultation and let us show you how we can transform your IT operations with the same results we've delivered for these enterprise clients.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Book a Free Consultation <ArrowRight size={15} />
             </a>
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
               View Our Services

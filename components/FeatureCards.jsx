@@ -156,7 +156,7 @@ export default function FeatureCards() {
             </span>
           </div>
           <a
-            href="/contact"
+            href="/contact-us"
             className="inline-flex items-center gap-2 text-[13px] font-semibold px-5 py-2.5 rounded-xl transition-all hover:opacity-90 hover:-translate-y-0.5"
             style={{
               background: '#0A1628',

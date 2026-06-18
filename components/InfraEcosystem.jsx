@@ -308,7 +308,7 @@ export default function InfraEcosystem() {
                   </button>
                 ) : (
                   <a
-                    href="/contact"
+                    href="/contact-us"
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-[12px] font-bold transition-all hover:opacity-90"
                     style={{ background: '#00C853', color: '#0A1628' }}
                   >

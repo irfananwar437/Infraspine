@@ -203,7 +203,7 @@ export default function SolutionsPage() {
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 Explore Solutions <ArrowRight size={15} />
               </a>
-              <a href="/contact"
+              <a href="/contact-us"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Book a Consultation
@@ -344,7 +344,7 @@ export default function SolutionsPage() {
                         style={{ background: '#DC2626' }}>
                         <span className="text-white text-[9px] font-black">✕</span>
                       </div>
-                      <p className="text-[12px] leading-relaxed" style={{ color: '#7F1D1D' }}>{p}</p>
+                      <p className="text-[13px] leading-relaxed" style={{ color: '#7F1D1D' }}>{p}</p>
                     </div>
                   ))}
                 </div>
@@ -399,7 +399,7 @@ export default function SolutionsPage() {
                           style={{ background: sol.bg }}>
                           <Check size={9} style={{ color: sol.color }} strokeWidth={3} />
                         </div>
-                        <span className="text-[12.5px] leading-snug" style={{ color: '#374151' }}>{d}</span>
+                        <span className="text-[13px] leading-snug" style={{ color: '#374151' }}>{d}</span>
                       </li>
                     ))}
                   </ul>
@@ -443,12 +443,12 @@ export default function SolutionsPage() {
                     ))}
                   </div>
                   <div className="flex flex-col gap-2 pt-4 border-t" style={{ borderColor: '#E2E8F0' }}>
-                    <a href="/contact"
+                    <a href="/contact-us"
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90"
                       style={{ background: sol.color, color: '#fff' }}>
                       Get a Quote <ArrowRight size={13} />
                     </a>
-                    <a href="/contact"
+                    <a href="/contact-us"
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-[13px] font-bold border transition-all hover:bg-slate-50"
                       style={{ borderColor: sol.border, color: sol.color }}>
                       Book Consultation <ChevronRight size={13} />
@@ -497,7 +497,7 @@ export default function SolutionsPage() {
                   <div className="w-3 h-3 rounded-full" style={{ background: s.color }} />
                 </div>
                 <h3 className="text-[14px] font-bold mb-2" style={{ color: '#0A1628' }}>{s.title}</h3>
-                <p className="text-[12.5px] leading-relaxed flex-1" style={{ color: '#64748B' }}>{s.desc}</p>
+                <p className="text-[13px] leading-relaxed flex-1" style={{ color: '#64748B' }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -572,12 +572,12 @@ export default function SolutionsPage() {
             Book a free consultation and get a custom proposal for your business — no commitments, no sales pressure.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Get a Free Consultation <ArrowRight size={15} />
             </a>
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
               View Case Studies

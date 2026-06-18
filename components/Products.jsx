@@ -394,10 +394,10 @@ export default function Products() {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-3">
-                <a href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90" style={{ background: product.color, color: '#fff' }}>
+                <a href="/contact-us" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90" style={{ background: product.color, color: '#fff' }}>
                   Get Pricing <ArrowRight size={13} />
                 </a>
-                <a href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold border transition-all hover:bg-slate-50" style={{ borderColor: product.border, color: product.color }}>
+                <a href="/contact-us" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold border transition-all hover:bg-slate-50" style={{ borderColor: product.border, color: product.color }}>
                   Request Demo <ChevronRight size={13} />
                 </a>
               </div>

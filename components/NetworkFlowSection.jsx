@@ -136,7 +136,7 @@ export default function NetworkFlowSection() {
         <Reveal>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-[13px] font-bold"
               style={{ background: '#00C853', color: '#0A1628' }}
             >

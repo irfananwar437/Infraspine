@@ -171,7 +171,7 @@ export default function InfraSpineSystem() {
               </div>
             ))}
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center gap-2 mt-2 text-[13px] font-semibold transition-colors group"
               style={{ color: '#00C853' }}
             >

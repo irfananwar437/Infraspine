@@ -1,0 +1,101 @@
+const BASE_URL = 'https://www.infraspine.com'
+
+const STATIC_ROUTES = [
+  { url: '/',                                    priority: 1.0,  changeFrequency: 'weekly'  },
+  { url: '/about-us',                            priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/our-organization',                    priority: 0.8,  changeFrequency: 'monthly' },
+  { url: '/services',                            priority: 0.95, changeFrequency: 'weekly'  },
+  { url: '/services/managed-it-services',        priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/cloud-solutions',            priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/cyber-security',             priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/network-infrastructure',     priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/software-development',       priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/ai-automation',              priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/bpo-services',               priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/it-trainings',               priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/it-consultancy',             priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/data-backup-recovery',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/data-center',               priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cloud-solutions/sharepoint', priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/network-infrastructure/voip', priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/network-infrastructure/structured-cabling', priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/network-infrastructure/network-design',    priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/all-services',                             priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/server-management',                        priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services',                           priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/services/field-services/hardware-break-fix',        priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services/desktop-support',           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services/rollouts-migrations',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services/network-support',           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services/audio-video-support',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/field-services/wifi-services',             priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/managed-it-services/service-desk',         priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/managed-it-services/remote-support',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/managed-it-services/device-monitoring',    priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/vulnerability-assessment',  priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/penetration-testing',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/incident-response',         priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/data-loss-prevention',      priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/data-encryption',           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/cloud-security',            priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/security-alerts',           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/security-auditing',         priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/iso-27001',                 priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/pci-dss',                   priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/dpo-as-a-service',          priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/cyber-essentials',          priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/nhs-dspt',                  priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cyber-security/business-continuity',       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/project-management',                       priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/it-recruitment',                           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/va-services',                              priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/cio-as-a-service',                         priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/services/disaster-recovery',                        priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/solutions',                           priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/infraspine-ai',                       priority: 0.9,  changeFrequency: 'weekly'  },
+  { url: '/bpo-services',                        priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/trainings',                           priority: 0.85, changeFrequency: 'monthly' },
+  { url: '/projects',                            priority: 0.85, changeFrequency: 'weekly'  },
+  { url: '/contact-us',                          priority: 0.9,  changeFrequency: 'monthly' },
+  { url: '/blog',                                 priority: 0.9,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/cybersecurity',          priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/cloud',                  priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/ai',                     priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/networking',             priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/training',               priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/managed-it',             priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/software',               priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/case-study',             priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/blog/category/physical-security',      priority: 0.8,  changeFrequency: 'weekly'  },
+  { url: '/privacy-policy',                       priority: 0.3,  changeFrequency: 'yearly'  },
+  { url: '/terms-of-service',                     priority: 0.3,  changeFrequency: 'yearly'  },
+]
+
+const PROJECT_SLUGS = [
+  'enterprise-erp-manufacturing',
+  'multi-branch-cctv-retail',
+  'biometric-attendance-healthcare',
+  'ai-automation-logistics',
+  'cybersecurity-financial-services',
+  'crm-implementation-real-estate',
+]
+
+export default function sitemap() {
+  const now = new Date().toISOString()
+
+  const staticPages = STATIC_ROUTES.map(route => ({
+    url: `${BASE_URL}${route.url}`,
+    lastModified: now,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }))
+
+  const projectPages = PROJECT_SLUGS.map(slug => ({
+    url: `${BASE_URL}/projects/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...projectPages]
+}

@@ -556,7 +556,7 @@ export default function ProductsPage() {
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 Explore Products <ArrowRight size={15} />
               </a>
-              <a href="/contact"
+              <a href="/contact-us"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Request a Demo
@@ -613,7 +613,7 @@ export default function ProductsPage() {
                   </div>
                   <h3 className="text-[15px] font-black mb-1" style={{ color: '#0A1628' }}>{p.name}</h3>
                   <p className="text-[11px] font-semibold uppercase tracking-wide mb-2" style={{ color: p.color }}>{p.tagline}</p>
-                  <p className="text-[12px] leading-relaxed flex-1" style={{ color: '#64748B' }}>{p.hero}</p>
+                  <p className="text-[13px] leading-relaxed flex-1" style={{ color: '#64748B' }}>{p.hero}</p>
                   <div className="flex items-center gap-1.5 mt-3 text-[11px] font-semibold" style={{ color: p.color }}>
                     Learn more <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
                   </div>
@@ -641,7 +641,7 @@ export default function ProductsPage() {
           <div className="flex overflow-x-auto gap-2 mb-8 pb-1 -mx-5 px-5 lg:mx-0 lg:px-0 lg:flex-wrap lg:justify-center scrollbar-hide">
             {PRODUCTS.map(p => (
               <button key={p.id} onClick={() => setActive(p.id)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-[12.5px] font-bold border flex-shrink-0 transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-[13px] font-bold border flex-shrink-0 transition-all duration-200"
                 style={active === p.id
                   ? { background: p.bg, color: p.color, borderColor: p.border, boxShadow: `0 4px 16px ${p.color}20` }
                   : { background: '#fff', color: '#64748B', borderColor: '#E2E8F0' }}>
@@ -712,10 +712,10 @@ export default function ProductsPage() {
 
                 {/* CTAs */}
                 <div className="flex flex-wrap gap-3">
-                  <a href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90" style={{ background: product.color, color: '#fff' }}>
+                  <a href="/contact-us" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-all hover:opacity-90" style={{ background: product.color, color: '#fff' }}>
                     Get Pricing <ArrowRight size={13} />
                   </a>
-                  <a href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold border transition-all hover:bg-slate-50" style={{ borderColor: product.border, color: product.color }}>
+                  <a href="/contact-us" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold border transition-all hover:bg-slate-50" style={{ borderColor: product.border, color: product.color }}>
                     Request Demo <ChevronRight size={13} />
                   </a>
                 </div>
@@ -782,7 +782,7 @@ export default function ProductsPage() {
                   <ArrowRight size={12} style={{ color: '#CBD5E1' }} />
                   <span className="px-2 py-0.5 rounded-md text-[10px] font-bold" style={{ background: `${int.color}15`, color: int.color }}>{int.to}</span>
                 </div>
-                <p className="text-[12.5px] leading-relaxed" style={{ color: '#64748B' }}>{int.desc}</p>
+                <p className="text-[13px] leading-relaxed" style={{ color: '#64748B' }}>{int.desc}</p>
               </div>
             ))}
           </div>
@@ -860,12 +860,12 @@ export default function ProductsPage() {
             Book a free product demo and see how InfraSpine products can transform your business operations.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Request a Free Demo <ArrowRight size={15} />
             </a>
-            <a href="/contact"
+            <a href="/contact-us"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
               Get Pricing

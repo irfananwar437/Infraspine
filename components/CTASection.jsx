@@ -18,12 +18,12 @@ export default function CTASection() {
         </h2>
 
         <p className="text-[14px] sm:text-[16px] max-w-lg mx-auto mt-4 mb-8 sm:mb-10 leading-relaxed" style={{ color: '#64748B' }}>
-          From first consultation to full deployment — InfraSpine manages every layer of your IT backbone.
+          From first consultation to full deployment — Infraspine manages every layer of your IT backbone.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a
-            href="/contact"
+            href="/contact-us"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-bold text-[14px] sm:text-[15px] transition-all hover:opacity-90 hover:-translate-y-0.5"
             style={{ background: '#00C853', color: '#0A1628' }}
           >

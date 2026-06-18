@@ -3,7 +3,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { Layers, TrendingUp, Shield, Clock, ArrowRight, CheckCircle2, Zap, Star } from 'lucide-react'
 import {
-  ParallaxImage,
   Reveal,
   Stagger,
   StaggerItem,
@@ -87,7 +86,7 @@ export default function ProblemSolution() {
             </StaggerItem>
             <StaggerItem>
               <motion.a
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-colors hover:opacity-95"
                 style={{ background: '#00C853', color: '#0A1628' }}
                 whileHover={reduce ? undefined : { scale: 1.02, y: -2 }}
@@ -102,12 +101,11 @@ export default function ProblemSolution() {
 
         <Reveal className="lg:hidden mb-8">
           <div className="relative h-[220px] sm:h-[260px] overflow-hidden rounded-2xl border border-slate-200/80 shadow-md">
-            <ParallaxImage
-              src="/images/sections/why-infraspine.jpg"
-              alt="Cybersecurity and enterprise IT operations"
-              sizes="(max-width: 1024px) 100vw, 480px"
-              className="h-full min-h-[220px]"
-            />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0A1628 0%, #0F2A4A 55%, #163352 100%)' }}>
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(148,163,184,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.08) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+              <div className="absolute rounded-full" style={{ top: '10%', left: '15%', width: 120, height: 120, background: 'radial-gradient(circle, rgba(0,200,83,0.14) 0%, transparent 70%)' }} />
+              <div className="absolute rounded-full" style={{ top: '40%', right: '10%', width: 90, height: 90, background: 'radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)' }} />
+            </div>
             <div className="pointer-events-none absolute bottom-2 right-2 z-10 hidden min-[400px]:block h-[130px] w-[140px] overflow-hidden rounded-lg border border-slate-200/90 bg-slate-950 shadow-xl ring-1 ring-black/5">
               <div className="origin-top-left scale-[0.42] translate-x-[-8%] translate-y-[-6%] w-[240%] h-[240%]">
                 <DashboardMockup />
@@ -119,12 +117,12 @@ export default function ProblemSolution() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
           <div className="hidden lg:block lg:col-span-5">
             <div className="sticky top-28 relative h-[min(560px,calc(100vh-8rem))] overflow-hidden rounded-2xl border border-slate-200/80 shadow-lg">
-              <ParallaxImage
-                src="/images/sections/why-infraspine.jpg"
-                alt="Cybersecurity and enterprise IT operations"
-                sizes="(max-width: 1280px) 40vw, 480px"
-                className="h-full min-h-[400px]"
-              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0A1628 0%, #0F2A4A 55%, #163352 100%)' }}>
+                <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(148,163,184,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.08) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
+                <div className="absolute rounded-full" style={{ top: '8%', left: '10%', width: 200, height: 200, background: 'radial-gradient(circle, rgba(0,200,83,0.12) 0%, transparent 70%)' }} />
+                <div className="absolute rounded-full" style={{ top: '45%', right: '8%', width: 160, height: 160, background: 'radial-gradient(circle, rgba(37,99,235,0.14) 0%, transparent 70%)' }} />
+                <div className="absolute rounded-full" style={{ bottom: '15%', left: '25%', width: 120, height: 120, background: 'radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%)' }} />
+              </div>
               <div className="pointer-events-none absolute bottom-4 right-4 z-10 h-[200px] w-[220px] overflow-hidden rounded-xl border border-slate-200/90 bg-slate-950 shadow-2xl ring-1 ring-black/10">
                 <div className="origin-top-left scale-[0.48] translate-x-[-6%] translate-y-[-4%] w-[210%] h-[210%]">
                   <DashboardMockup />
