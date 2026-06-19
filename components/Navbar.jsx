@@ -177,6 +177,11 @@ const dropV = {
    Outer div handles positioning (CSS transform not subject to
    Framer Motion override). Inner m.div handles animation.
    utility bar 32px + main nav 60px + 2px borders = ~94px top
+
+   The CTA footer is OUTSIDE the scrollable region (flex-shrink-0)
+   so it's always visible without scrolling — previously it was
+   the last item inside the scrollable list and was invisible
+   unless the user scrolled all the way down.
 ───────────────────────────────────────────────────────────── */
 function ServicesMega() {
   return (
@@ -186,111 +191,115 @@ function ServicesMega() {
     >
       <m.div
         variants={megaV} initial="hidden" animate="visible" exit="exit"
-        className="rounded-b-2xl origin-top bg-white border border-slate-200 overflow-y-auto"
+        className="rounded-b-2xl origin-top bg-white border border-slate-200 overflow-hidden flex flex-col"
         style={{
           boxShadow: '0 24px 64px rgba(7,26,55,0.20), 0 4px 16px rgba(7,26,55,0.10)',
-          maxHeight: 'calc(100vh - 160px)',
+          maxHeight: 'min(82vh, 600px)',
         }}
         role="menu"
         aria-label="Services menu"
       >
 
-        {/* ── Column headers — sticky ── */}
-        <div className="grid grid-cols-3 divide-x divide-slate-100 sticky top-0 z-10 bg-white">
-          {MEGA_COLS.map((col, ci) => (
-            <div
-              key={ci}
-              className="flex items-center gap-2.5 px-4 py-3"
-              style={{ background: `${col.color}0d`, borderBottom: `1px solid ${col.color}22` }}
-            >
-              <span
-                className="inline-flex items-center justify-center rounded-lg w-6 h-6 flex-shrink-0"
-                style={{ background: `${col.color}22` }}
+        {/* ── Scrollable region: column headers + items ── */}
+        <div className="overflow-y-auto flex-1 min-h-0">
+
+          {/* Column headers — sticky to the scrollable region */}
+          <div className="grid grid-cols-3 divide-x divide-slate-100 sticky top-0 z-10 bg-white">
+            {MEGA_COLS.map((col, ci) => (
+              <div
+                key={ci}
+                className="flex items-center gap-2.5 px-4 py-2.5"
+                style={{ background: `${col.color}0d`, borderBottom: `1px solid ${col.color}22` }}
               >
-                <col.icon size={13} style={{ color: col.color }} strokeWidth={2} />
-              </span>
-              <span className="text-[11px] font-black uppercase tracking-[0.15em]" style={{ color: col.color }}>
-                {col.heading}
-              </span>
-            </div>
-          ))}
-        </div>
+                <span
+                  className="inline-flex items-center justify-center rounded-lg w-6 h-6 flex-shrink-0"
+                  style={{ background: `${col.color}22` }}
+                >
+                  <col.icon size={13} style={{ color: col.color }} strokeWidth={2} />
+                </span>
+                <span className="text-[11px] font-black uppercase tracking-[0.15em]" style={{ color: col.color }}>
+                  {col.heading}
+                </span>
+              </div>
+            ))}
+          </div>
 
-        {/* ── Service items ── */}
-        <div className="grid grid-cols-3 divide-x divide-slate-100">
-          {MEGA_COLS.map((col, ci) => (
-            <div key={ci} className="px-4 py-5">
-              {col.groups.map((g, gi) => (
-                <div key={gi} className={gi > 0 ? 'mt-5 pt-4 border-t border-slate-100' : ''}>
+          {/* Service items */}
+          <div className="grid grid-cols-3 divide-x divide-slate-100">
+            {MEGA_COLS.map((col, ci) => (
+              <div key={ci} className="px-4 py-3">
+                {col.groups.map((g, gi) => (
+                  <div key={gi} className={gi > 0 ? 'mt-2.5 pt-2.5 border-t border-slate-100' : ''}>
 
-                  {/* Parent heading */}
-                  {g.parent ? (
-                    <Link
-                      href={g.parent.href}
-                      className="group flex items-center gap-2.5 px-2 py-2 rounded-xl mb-2 transition-colors hover:bg-slate-50"
-                    >
-                      <span
-                        className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
-                        style={{ background: `${col.color}15` }}
+                    {/* Parent heading */}
+                    {g.parent ? (
+                      <Link
+                        href={g.parent.href}
+                        className="group flex items-center gap-2.5 px-2 py-1.5 rounded-xl mb-1 transition-colors hover:bg-slate-50"
                       >
-                        {g.parent.icon && (
-                          <g.parent.icon size={13} style={{ color: col.color }} strokeWidth={1.8} />
-                        )}
-                      </span>
-                      <span className="text-[13px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
-                        {g.parent.label}
-                      </span>
-                      <ChevronRight
-                        size={10}
-                        className="flex-shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
-                        style={{ color: col.color }}
-                      />
-                    </Link>
-                  ) : (
-                    <div className="flex items-center gap-2.5 px-2 py-1 mb-2">
-                      {g.parentIcon && (
                         <span
-                          className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center"
+                          className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
                           style={{ background: `${col.color}15` }}
                         >
-                          <g.parentIcon size={13} style={{ color: col.color }} strokeWidth={1.8} />
+                          {g.parent.icon && (
+                            <g.parent.icon size={12} style={{ color: col.color }} strokeWidth={1.8} />
+                          )}
                         </span>
-                      )}
-                      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">
-                        {g.parentLabel || 'More'}
-                      </p>
-                    </div>
-                  )}
-
-                  {/* Sub-items */}
-                  <div className="space-y-px">
-                    {g.items.map(item => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="group/item flex items-center gap-2 px-2 py-1.5 rounded-md text-[12.5px] text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
-                      >
-                        <span
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full transition-transform duration-150 group-hover/item:scale-125"
-                          style={{ background: `${col.color}55` }}
+                        <span className="text-[13px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
+                          {g.parent.label}
+                        </span>
+                        <ChevronRight
+                          size={10}
+                          className="flex-shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
+                          style={{ color: col.color }}
                         />
-                        {item.label}
                       </Link>
-                    ))}
-                  </div>
+                    ) : (
+                      <div className="flex items-center gap-2.5 px-2 py-1 mb-1">
+                        {g.parentIcon && (
+                          <span
+                            className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center"
+                            style={{ background: `${col.color}15` }}
+                          >
+                            <g.parentIcon size={12} style={{ color: col.color }} strokeWidth={1.8} />
+                          </span>
+                        )}
+                        <p className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">
+                          {g.parentLabel || 'More'}
+                        </p>
+                      </div>
+                    )}
 
-                </div>
-              ))}
-            </div>
-          ))}
+                    {/* Sub-items */}
+                    <div>
+                      {g.items.map(item => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="group/item flex items-center gap-2 px-2 py-1 rounded-md text-[12.5px] leading-tight text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
+                        >
+                          <span
+                            className="flex-shrink-0 w-1.5 h-1.5 rounded-full transition-transform duration-150 group-hover/item:scale-125"
+                            style={{ background: `${col.color}55` }}
+                          />
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* ── Bottom CTA ── */}
-        <div className="border-t-2 border-blue-600">
+        {/* ── Bottom CTA — pinned, always visible, never scrolls away ── */}
+        <div className="border-t-2 border-blue-600 flex-shrink-0">
 
           {/* Secondary links */}
           <div
-            className="flex items-center gap-5 px-5 py-2.5 border-b"
+            className="flex items-center gap-5 px-5 py-2 border-b"
             style={{ background: '#040f20', borderColor: '#17355f' }}
           >
             <Link
@@ -310,7 +319,7 @@ function ServicesMega() {
 
           {/* Primary CTA */}
           <div
-            className="flex items-center justify-between gap-4 px-5 py-3"
+            className="flex items-center justify-between gap-4 px-5 py-2.5"
             style={{ background: 'linear-gradient(90deg, #071a37 0%, #0a2347 100%)', borderTop: '1px solid #17355f' }}
           >
             <div className="min-w-0">
@@ -323,7 +332,7 @@ function ServicesMega() {
             </div>
             <Link
               href="/request-quote"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-black whitespace-nowrap transition-all hover:scale-[1.03] active:scale-95"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-[14px] font-black whitespace-nowrap transition-all hover:scale-[1.03] active:scale-95"
               style={{
                 background: '#00C853',
                 color: '#022215',
@@ -404,22 +413,33 @@ function HoverMenu({ label, href, active, children }) {
   // Route change — always close (covers Link clicks inside the menu too)
   useEffect(() => { closeNow() }, [pathname, closeNow])
 
-  // Scroll / outside click / ESC — only listen while open
+  // Scroll / outside click / ESC — only listen while open.
+  // Uses 'wheel' + 'touchmove' on document (not window's 'scroll') because the
+  // mega-menu panel has its own overflow-y-auto: when the cursor is over the
+  // panel, the browser scroll-chains into that inner panel and the window
+  // never scrolls, so window's 'scroll' event never fires and the menu
+  // never closes. 'wheel'/'touchmove' fire on whatever element is under the
+  // cursor and bubble to document regardless of which element ends up
+  // scrolling, so this reliably closes the menu on ANY scroll input.
   useEffect(() => {
     if (!open) return
 
-    const onScroll = () => closeNow()
+    const onScrollIntent = () => closeNow()
     const onPointerDown = (e) => {
       if (rootRef.current && !rootRef.current.contains(e.target)) closeNow()
     }
     const onKeyDown = (e) => { if (e.key === 'Escape') closeNow() }
 
-    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('scroll', onScrollIntent, { passive: true })
+    document.addEventListener('wheel', onScrollIntent, { passive: true })
+    document.addEventListener('touchmove', onScrollIntent, { passive: true })
     document.addEventListener('mousedown', onPointerDown)
     document.addEventListener('touchstart', onPointerDown, { passive: true })
     document.addEventListener('keydown', onKeyDown)
     return () => {
-      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', onScrollIntent)
+      document.removeEventListener('wheel', onScrollIntent)
+      document.removeEventListener('touchmove', onScrollIntent)
       document.removeEventListener('mousedown', onPointerDown)
       document.removeEventListener('touchstart', onPointerDown)
       document.removeEventListener('keydown', onKeyDown)

@@ -166,18 +166,18 @@ export default function ProjectManagementPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#2563EB' }}>IT Project Management</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Technology Projects Delivered{' '}
               <span style={{ color: '#2563EB' }}>On Time. On Budget. First Time.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most technology projects fail not because of bad technology — they fail because of poor planning, unclear ownership, and insufficient risk management. Infraspine provides PRINCE2 and PMP-certified project managers who take end-to-end accountability for your IT projects from initiation through to handover, ensuring that what was promised is what gets delivered. We have managed over 150 technology projects across Pakistan, from infrastructure rollouts to enterprise software implementations, at project values between £500,000 and £5 million.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
                 <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>

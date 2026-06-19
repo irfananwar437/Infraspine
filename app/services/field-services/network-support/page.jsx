@@ -167,21 +167,21 @@ export default function NetworkSupportPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#0891B2' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#0891B2' }}>Network Support</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               On-Site Network Support —{' '}
               <span style={{ color: '#0891B2' }}>Connectivity Restored Fast.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Network outages affect every user simultaneously and cost your business by the minute. Infraspine\'s field network engineers provide on-site diagnosis, configuration, cabling fault finding, and device replacement with a four-hour response SLA and a target to restore connectivity within two hours of arrival — maintaining 99.2% network uptime across our supported estate.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[24px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}

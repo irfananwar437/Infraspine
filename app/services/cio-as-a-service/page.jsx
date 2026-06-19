@@ -166,18 +166,18 @@ export default function CIOAsAServicePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#EA580C' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#EA580C' }}>CIO as a Service</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Board-Level IT Leadership —{' '}
               <span style={{ color: '#EA580C' }}>Fractional Cost. Full Executive Impact.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               A full-time CIO costs £150,000 to £250,000 per year before benefits, pension, and bonus. For the majority of mid-market businesses in Pakistan, that investment is difficult to justify — yet the strategic IT leadership a CIO provides is genuinely needed. Infraspine CIO as a Service gives you an experienced technology executive who attends your board, develops your IT strategy, leads your digital transformation, manages your vendors, and represents technology at the highest level of your organisation — for a fraction of the full-time cost.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
                 <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>

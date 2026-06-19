@@ -177,21 +177,21 @@ export default function NOCMonitoringPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#2563EB' }}>NOC Monitoring</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               24/7 NOC Monitoring —{' '}
               <span style={{ color: '#2563EB' }}>We Watch So You Don&apos;t Have To.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most IT failures are not sudden — they are slow, predictable deteriorations that go unnoticed until the damage is done. Infraspine&apos;s 24/7 Network Operations Centre monitors your entire infrastructure around the clock, catches anomalies early, and resolves issues before your users ever notice a problem. No waiting until Monday morning. No discovering the server was down all weekend. Just continuous, expert-level vigilance over everything that keeps your business running.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[24px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}

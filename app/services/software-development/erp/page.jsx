@@ -177,18 +177,18 @@ export default function ERPPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#16A34A' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#16A34A' }}>Custom ERP Development</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Custom ERP Development —{' '}
               <span style={{ color: '#16A34A' }}>Business Software Built Around How You Work.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Off-the-shelf ERP systems are built for the global average business — and force yours to adapt to their processes. Custom ERP flips this: we build software that matches how your organisation actually works, with Pakistan-specific payroll, FBR tax compliance, local bank payment formats, and the exact workflows your teams use every day. Twenty-plus systems delivered. Six-month average delivery. Full source code ownership. No per-user licences, ever.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
                 <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>

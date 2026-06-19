@@ -208,7 +208,7 @@ export default function InfraspineAIPage() {
           style={{ background: 'radial-gradient(circle,#B7FF58,transparent 65%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-24 pb-12 sm:pt-28 sm:pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left */}
             <div className="flex-1 max-w-2xl">

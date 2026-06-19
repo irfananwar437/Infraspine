@@ -230,7 +230,7 @@ export default function Hero() {
   return (
     <section
       suppressHydrationWarning
-      className="relative isolate flex w-full min-h-[min(88svh,660px)] items-center overflow-hidden pt-[64px] lg:pt-[98px]"
+      className="relative isolate flex w-full min-h-[min(88svh,660px)] items-center overflow-hidden pt-[72px] lg:pt-[106px]"
       style={{ background: '#060E23' }}
       aria-labelledby="hero-heading"
     >

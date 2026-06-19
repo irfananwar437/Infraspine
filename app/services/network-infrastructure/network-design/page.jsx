@@ -172,21 +172,21 @@ export default function NetworkDesignPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#16A34A' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#16A34A' }}>Network Design & Maintenance</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Enterprise Network Design —{' '}
               <span style={{ color: '#16A34A' }}>Built for Performance. Designed to Last.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Your network is the foundation on which every other piece of your IT infrastructure depends. A network designed correctly from the start performs reliably, scales without major rework, and does not become a source of chronic performance complaints and security incidents. Infraspine\'s certified network engineers have designed and implemented over 150 enterprise networks across Pakistan — from single-site SMEs to multi-location enterprises with complex WAN requirements. We deliver complete network design, implementation, documentation, and ongoing maintenance under a single engagement.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[24px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}

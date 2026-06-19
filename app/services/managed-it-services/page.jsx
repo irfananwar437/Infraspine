@@ -165,21 +165,21 @@ export default function ManagedITServicesPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Managed IT Services</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Your IT, Monitored and Managed<br />
               <span style={{ color: '#00C853' }}>Around the Clock.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most businesses discover their IT is broken when their users tell them. Infraspine Managed IT Services flips that equation — proactive 24/7 monitoring detects issues before users notice them, structured helpdesk support resolves them fast, and monthly reporting keeps you in full control. All delivered under a fixed monthly cost with written SLAs.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               {BENEFITS.map(b => (
-                <div key={b.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[24px] font-black mb-1" style={{ color: b.color }}>{b.stat}</div>
+                <div key={b.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[20px] font-black mb-0.5" style={{ color: b.color }}>{b.stat}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{b.label}</div>
                 </div>
               ))}
