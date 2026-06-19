@@ -71,7 +71,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* ── Contact Grid ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <ContactForm />
         </div>

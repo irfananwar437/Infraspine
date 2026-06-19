@@ -395,6 +395,34 @@ function SimpleDropdown({ items }) {
 }
 
 /* ─────────────────────────────────────────────────────────────
+   BODY SCROLL LOCK — shared, ref-counted so multiple menu
+   instances (desktop hover menus + mobile accordion) can lock/
+   unlock independently without one clobbering another's lock.
+   This is the primary defense against "menu stays visible while
+   the page scrolls": instead of reacting to scroll events after
+   the fact (which has gaps — scrollbar-drag, momentum scroll,
+   keyboard paging), it makes the page unable to scroll at all
+   for as long as any menu is open.
+───────────────────────────────────────────────────────────── */
+let scrollLockCount = 0
+let savedHtmlOverflow = ''
+
+function lockBodyScroll() {
+  if (scrollLockCount === 0) {
+    savedHtmlOverflow = document.documentElement.style.overflow
+    document.documentElement.style.overflow = 'hidden'
+  }
+  scrollLockCount++
+}
+
+function unlockBodyScroll() {
+  scrollLockCount = Math.max(0, scrollLockCount - 1)
+  if (scrollLockCount === 0) {
+    document.documentElement.style.overflow = savedHtmlOverflow
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
    HOVER WRAPPER — click navigates to href, hover opens dropdown
    Closes on: mouse leave, scroll, outside click, route change, ESC.
 ───────────────────────────────────────────────────────────── */
@@ -412,6 +440,13 @@ function HoverMenu({ label, href, active, children }) {
 
   // Route change — always close (covers Link clicks inside the menu too)
   useEffect(() => { closeNow() }, [pathname, closeNow])
+
+  // Lock page scroll for as long as this menu is open
+  useEffect(() => {
+    if (!open) return
+    lockBodyScroll()
+    return () => unlockBodyScroll()
+  }, [open])
 
   // Scroll / outside click / ESC — only listen while open.
   // Uses 'wheel' + 'touchmove' on document (not window's 'scroll') because the
@@ -505,6 +540,15 @@ function NavbarInner() {
     const onKeyDown = (e) => { if (e.key === 'Escape') setMobileOpen(false) }
     document.addEventListener('keydown', onKeyDown)
     return () => document.removeEventListener('keydown', onKeyDown)
+  }, [mobileOpen])
+
+  // Mobile menu: lock page scroll while open. The menu's own services/industries/
+  // about accordions keep their own overflow-y-auto, so this only blocks the
+  // page behind it from scrolling — it doesn't block scrolling inside the menu.
+  useEffect(() => {
+    if (!mobileOpen) return
+    lockBodyScroll()
+    return () => unlockBodyScroll()
   }, [mobileOpen])
 
   const isActive = base => pathname === base || pathname.startsWith(base + '/')

@@ -123,7 +123,7 @@ export default async function ProjectDetailPage({ params }) {
       </div>
 
       {/* ── Main Content ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
 

@@ -152,7 +152,7 @@ export default function OurOrganizationPage() {
       </section>
 
       {/* ── Practice Divisions ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -230,7 +230,7 @@ export default function OurOrganizationPage() {
       </section>
 
       {/* ── Delivery Model ── */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -266,7 +266,7 @@ export default function OurOrganizationPage() {
       </section>
 
       {/* ── Internal Platforms ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4">

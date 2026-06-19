@@ -180,7 +180,7 @@ export default function TrainingsPage() {
       </section>
 
       {/* ── Training Tracks ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-black mb-4" style={{ color: '#0A1628' }}>
@@ -215,7 +215,7 @@ export default function TrainingsPage() {
       </section>
 
       {/* ── Why Train with Infraspine ── */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

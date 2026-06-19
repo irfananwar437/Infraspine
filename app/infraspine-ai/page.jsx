@@ -271,7 +271,7 @@ export default function InfraspineAIPage() {
       </section>
 
       {/* ── What We Build ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#0B1A3B' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#0B1A3B' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -303,7 +303,7 @@ export default function InfraspineAIPage() {
       </section>
 
       {/* ── How We Build AI Solutions ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#060E23' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#060E23' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -338,7 +338,7 @@ export default function InfraspineAIPage() {
       </section>
 
       {/* ── Use Cases by Industry ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#0B1A3B' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#0B1A3B' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4">

@@ -79,7 +79,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ── Projects Grid ── */}
-      <section className="py-16 sm:py-24" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {PROJECTS.map((project, i) => (
