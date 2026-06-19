@@ -347,7 +347,7 @@ function SimpleDropdown({ items }) {
   return (
     <m.div
       variants={dropV} initial="hidden" animate="visible" exit="exit"
-      className="absolute top-full left-0 mt-1 z-50"
+      className="absolute top-full left-0 z-50"
       style={{ width: 228 }}
       role="menu"
     >
@@ -387,14 +387,44 @@ function SimpleDropdown({ items }) {
 
 /* ─────────────────────────────────────────────────────────────
    HOVER WRAPPER — click navigates to href, hover opens dropdown
+   Closes on: mouse leave, scroll, outside click, route change, ESC.
 ───────────────────────────────────────────────────────────── */
 function HoverMenu({ label, href, active, children }) {
   const [open, setOpen] = useState(false)
   const timer = useRef(null)
+  const rootRef = useRef(null)
+  const pathname = usePathname()
 
   const show = useCallback(() => { clearTimeout(timer.current); setOpen(true) }, [])
   const hide = useCallback(() => { timer.current = setTimeout(() => setOpen(false), 220) }, [])
+  const closeNow = useCallback(() => { clearTimeout(timer.current); setOpen(false) }, [])
+
   useEffect(() => () => clearTimeout(timer.current), [])
+
+  // Route change — always close (covers Link clicks inside the menu too)
+  useEffect(() => { closeNow() }, [pathname, closeNow])
+
+  // Scroll / outside click / ESC — only listen while open
+  useEffect(() => {
+    if (!open) return
+
+    const onScroll = () => closeNow()
+    const onPointerDown = (e) => {
+      if (rootRef.current && !rootRef.current.contains(e.target)) closeNow()
+    }
+    const onKeyDown = (e) => { if (e.key === 'Escape') closeNow() }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    document.addEventListener('mousedown', onPointerDown)
+    document.addEventListener('touchstart', onPointerDown, { passive: true })
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      document.removeEventListener('mousedown', onPointerDown)
+      document.removeEventListener('touchstart', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [open, closeNow])
 
   const cls = `flex items-center gap-1.5 px-3.5 py-2 text-[13.5px] font-medium rounded-md transition-colors ${
     active || open
@@ -403,7 +433,7 @@ function HoverMenu({ label, href, active, children }) {
   }`
 
   return (
-    <div className="relative" onMouseEnter={show} onMouseLeave={hide}>
+    <div ref={rootRef} className="relative" onMouseEnter={show} onMouseLeave={hide}>
       <Link href={href} className={cls} aria-expanded={open} aria-haspopup="true">
         {label}
         <ChevronDown
@@ -445,6 +475,17 @@ function NavbarInner() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Mobile menu: close on route change so it never lingers after navigation
+  useEffect(() => { setMobileOpen(false); setMobileExp(null) }, [pathname])
+
+  // Mobile menu: close on ESC
+  useEffect(() => {
+    if (!mobileOpen) return
+    const onKeyDown = (e) => { if (e.key === 'Escape') setMobileOpen(false) }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [mobileOpen])
 
   const isActive = base => pathname === base || pathname.startsWith(base + '/')
 

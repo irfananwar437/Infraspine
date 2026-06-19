@@ -35,7 +35,7 @@ export default function NetworkFlowSection() {
   }, [])
 
   return (
-    <section id="network" className="py-14 sm:py-20" style={{ background: '#F8FAFC' }}>
+    <section id="network" className="py-12 sm:py-16 lg:py-20" style={{ background: '#F8FAFC' }}>
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         {/* Header */}
