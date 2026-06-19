@@ -230,7 +230,7 @@ export default function Hero() {
   return (
     <section
       suppressHydrationWarning
-      className="relative isolate flex w-full min-h-[min(88svh,660px)] items-center overflow-hidden pt-[72px] lg:pt-[106px]"
+      className="relative isolate flex w-full min-h-[min(80svh,560px)] items-center overflow-hidden pt-[72px] lg:pt-[106px]"
       style={{ background: '#060E23' }}
       aria-labelledby="hero-heading"
     >
@@ -257,13 +257,13 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-9 md:py-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-5 md:py-7">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
           {/* Left: Text */}
           <div className="flex-1 max-w-[620px]">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 mb-4">
+            <div className="inline-flex items-center gap-2 mb-3">
               <span
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em]"
                 style={{
@@ -280,7 +280,7 @@ export default function Hero() {
             {/* Heading */}
             <h1
               id="hero-heading"
-              className="text-[clamp(2rem,4.6vw,3.8rem)] font-black leading-[1.04] tracking-tight text-white mb-4"
+              className="text-[clamp(2rem,4.2vw,3.4rem)] font-black leading-[1.04] tracking-tight text-white mb-3"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {slide.heading}{' '}
@@ -288,18 +288,18 @@ export default function Hero() {
             </h1>
 
             {/* Divider */}
-            <div className="h-px w-20 mb-4" style={{ background: 'linear-gradient(90deg,#2563EB,#00C853)' }} aria-hidden="true" />
+            <div className="h-px w-20 mb-3" style={{ background: 'linear-gradient(90deg,#2563EB,#00C853)' }} aria-hidden="true" />
 
             {/* Description */}
             <p
-              className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-[540px]"
+              className="text-[15px] sm:text-[17px] leading-relaxed mb-4 max-w-[540px]"
               style={{ color: '#94A3B8' }}
             >
               {slide.desc}
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-7">
+            <div className="flex flex-wrap gap-3 mb-5">
               <Link
                 href={slide.cta.href}
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl text-[14px] sm:text-[15px] font-bold transition-all hover:opacity-90 hover:-translate-y-0.5"
