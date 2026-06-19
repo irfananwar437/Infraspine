@@ -1,12 +1,18 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import {
   ArrowRight,
   Shield,
   Users,
   Building2,
   Clock3,
+  Database,
+  Cloud,
+  Bot,
+  Headset,
+  Lock,
+  Settings2,
 } from 'lucide-react'
 import {
   Reveal,
@@ -19,51 +25,57 @@ import NetworkTopology from '@/components/visuals/NetworkTopology'
 
 const SOLUTIONS = [
   {
-    iconPath: '/images/Icons/erpicon.png',
+    icon: Database,
     title: 'ERP Development',
     accent: '#16A34A',
     iconBg: '#F0FDF4',
-    cardBg: '/images/erpback.png',
+    cardGradient: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 55%, #BBF7D0 100%)',
+    gridColor: 'rgba(22,163,74,0.10)',
     description: 'Custom ERP systems for finance, HR, operations, and enterprise workflows tailored to your business model.',
   },
   {
-    iconPath: '/images/Icons/cloudicon.png',
+    icon: Cloud,
     title: 'Cloud & Infrastructure',
     accent: '#2563EB',
     iconBg: '#EFF6FF',
-    cardBg: '/images/cloudback.png',
+    cardGradient: 'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 55%, #BFDBFE 100%)',
+    gridColor: 'rgba(37,99,235,0.10)',
     description: 'Secure servers, cloud platforms, networking, storage, and disaster recovery designed for resilient growth.',
   },
   {
-    iconPath: '/images/Icons/aiicon.png',
+    icon: Bot,
     title: 'Automation & AI Systems',
     accent: '#059669',
     iconBg: '#ECFDF5',
-    cardBg: '/images/aiback.png',
+    cardGradient: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 55%, #A7F3D0 100%)',
+    gridColor: 'rgba(5,150,105,0.10)',
     description: 'AI agents, WhatsApp automation, and workflow integrations that remove repetitive work and improve speed.',
   },
   {
-    iconPath: '/images/Icons/crmicon.png',
+    icon: Headset,
     title: 'CRM & Call Center',
     accent: '#0891B2',
     iconBg: '#ECFEFF',
-    cardBg: '/images/crmback.png',
+    cardGradient: 'linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 55%, #A5F3FC 100%)',
+    gridColor: 'rgba(8,145,178,0.10)',
     description: 'Sales, support, and communication systems with lead management, analytics, and omnichannel visibility.',
   },
   {
-    iconPath: '/images/Icons/cybericon.png',
+    icon: Lock,
     title: 'Cybersecurity Solutions',
     accent: '#DC2626',
     iconBg: '#FFF1F2',
-    cardBg: '/images/cyberback.png',
+    cardGradient: 'linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 55%, #FECDD3 100%)',
+    gridColor: 'rgba(220,38,38,0.10)',
     description: 'Firewall hardening, endpoint protection, threat monitoring, and access control to protect critical operations.',
   },
   {
-    iconPath: '/images/Icons/itsicon.png',
+    icon: Settings2,
     title: 'IT Management Systems',
     accent: '#7C3AED',
     iconBg: '#F5F3FF',
-    cardBg: '/images/itmback.png',
+    cardGradient: 'linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 55%, #DDD6FE 100%)',
+    gridColor: 'rgba(124,58,237,0.10)',
     description: 'Integrated platforms for IT assets, operational visibility, reporting, and business-wide systems management.',
   },
 ]
@@ -136,7 +148,7 @@ export default function CoreOffer() {
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {SOLUTIONS.map((solution, index) => (
-              <motion.a
+              <m.a
                 key={solution.title}
                 href="/services"
                 className="group flex flex-col rounded-2xl bg-white overflow-hidden"
@@ -158,34 +170,24 @@ export default function CoreOffer() {
                 <div
                   className="relative px-6 pt-6 pb-5 overflow-hidden"
                   style={{
-                    background: solution.cardBg
-                      ? undefined
-                      : solution.iconBg,
-                    backgroundImage: solution.cardBg
-                      ? `url(${solution.cardBg})`
-                      : undefined,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    background: solution.cardGradient,
                     borderBottom: `1px solid ${solution.accent}20`,
                   }}
                 >
-                  {/* Overlay so text stays readable over photo bg */}
-                  {solution.cardBg && (
-                    <div className="pointer-events-none absolute inset-0" style={{ background: 'rgba(236,254,255,0.15)' }} />
-                  )}
+                  {/* Subtle grid texture */}
+                  <div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                      backgroundImage: `linear-gradient(${solution.gridColor} 1px, transparent 1px), linear-gradient(90deg, ${solution.gridColor} 1px, transparent 1px)`,
+                      backgroundSize: '20px 20px',
+                    }}
+                  />
                   <div className="relative z-10 flex items-center justify-between">
                     <div
                       className="flex h-[76px] w-[76px] items-center justify-center rounded-2xl bg-white transition-transform duration-300 group-hover:scale-105"
                       style={{ boxShadow: `0 2px 12px ${solution.accent}30` }}
                     >
-                      <img
-                        src={solution.iconPath}
-                        alt=""
-                        aria-hidden="true"
-                        width={52}
-                        height={52}
-                        className="object-contain"
-                      />
+                      <solution.icon size={34} strokeWidth={1.6} style={{ color: solution.accent }} aria-hidden="true" />
                     </div>
                   </div>
                   <h3 className="relative z-10 mt-4 text-[15.5px] font-extrabold leading-snug text-[#0A1628]">
@@ -210,7 +212,7 @@ export default function CoreOffer() {
                     />
                   </div>
                 </div>
-              </motion.a>
+              </m.a>
             ))}
             </div>
 

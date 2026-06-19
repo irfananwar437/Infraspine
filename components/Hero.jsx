@@ -32,24 +32,24 @@ function NetworkVisual() {
 
         {/* Animated pulse lines */}
         <line x1="240" y1="190" x2="100" y2="80" stroke="#2563EB" strokeWidth="1.5" opacity="0.7">
-          <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3s" begin="2s" repeatCount="indefinite" />
         </line>
         <line x1="240" y1="190" x2="420" y2="250" stroke="#00C853" strokeWidth="1.5" opacity="0.6">
-          <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.5s" begin="2s" repeatCount="indefinite" />
         </line>
         <line x1="240" y1="190" x2="240" y2="340" stroke="#2563EB" strokeWidth="1.5" opacity="0.5">
-          <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" begin="2s" repeatCount="indefinite" />
         </line>
 
         {/* Central hub */}
         <circle cx="240" cy="190" r="22" fill="#0B1A3B" stroke="#2563EB" strokeWidth="2" />
         <circle cx="240" cy="190" r="14" fill="#1E3A8A" />
         <circle cx="240" cy="190" r="7" fill="#2563EB">
-          <animate attributeName="r" values="7;9;7" dur="2s" repeatCount="indefinite" />
+          <animate attributeName="r" values="7;9;7" dur="2s" begin="2s" repeatCount="indefinite" />
         </circle>
         <circle cx="240" cy="190" r="28" fill="none" stroke="#2563EB" strokeWidth="1" opacity="0.3">
-          <animate attributeName="r" values="22;36;22" dur="2s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+          <animate attributeName="r" values="22;36;22" dur="2s" begin="2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" begin="2s" repeatCount="indefinite" />
         </circle>
 
         {/* Outer nodes — primary */}
@@ -64,8 +64,8 @@ function NetworkVisual() {
             <circle cx={node.cx} cy={node.cy} r={node.r} fill={node.fill} stroke={node.stroke} strokeWidth="1.5" />
             <circle cx={node.cx} cy={node.cy} r={node.r * 0.45} fill={node.dot} />
             <circle cx={node.cx} cy={node.cy} r={node.r + 6} fill="none" stroke={node.stroke} strokeWidth="1" opacity="0.2">
-              <animate attributeName="opacity" values="0.2;0;0.2" dur={node.dur} repeatCount="indefinite" />
-              <animate attributeName="r" values={`${node.r + 4};${node.r + 12};${node.r + 4}`} dur={node.dur} repeatCount="indefinite" />
+              <animate attributeName="opacity" values="0.2;0;0.2" dur={node.dur} begin="2s" repeatCount="indefinite" />
+              <animate attributeName="r" values={`${node.r + 4};${node.r + 12};${node.r + 4}`} dur={node.dur} begin="2s" repeatCount="indefinite" />
             </circle>
           </g>
         ))}
@@ -85,16 +85,16 @@ function NetworkVisual() {
 
         {/* Data flow dots moving along lines */}
         <circle r="3" fill="#00C853" opacity="0.9">
-          <animateMotion dur="3s" repeatCount="indefinite" path="M240,190 L100,80" />
+          <animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M240,190 L100,80" />
         </circle>
         <circle r="3" fill="#2563EB" opacity="0.9">
-          <animateMotion dur="2.5s" repeatCount="indefinite" path="M240,190 L420,250" />
+          <animateMotion dur="2.5s" begin="2s" repeatCount="indefinite" path="M240,190 L420,250" />
         </circle>
         <circle r="3" fill="#7C3AED" opacity="0.8">
-          <animateMotion dur="4s" repeatCount="indefinite" path="M240,190 L60,250" />
+          <animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M240,190 L60,250" />
         </circle>
         <circle r="2.5" fill="#00C853" opacity="0.7">
-          <animateMotion dur="3.5s" repeatCount="indefinite" path="M240,190 L380,80" />
+          <animateMotion dur="3.5s" begin="2s" repeatCount="indefinite" path="M240,190 L380,80" />
         </circle>
       </svg>
     </div>
@@ -217,11 +217,9 @@ const INTERVAL = 7000
 
 export default function Hero() {
   const [current, setCurrent] = useState(0)
-  const [mounted, setMounted] = useState(false)
 
   const next = useCallback(() => setCurrent(p => (p + 1) % SLIDES.length), [])
 
-  useEffect(() => { setMounted(true) }, [])
   useEffect(() => {
     const id = setInterval(next, INTERVAL)
     return () => clearInterval(id)
@@ -265,21 +263,19 @@ export default function Hero() {
           {/* Left: Text */}
           <div className="flex-1 max-w-[620px]">
             {/* Tag */}
-            {mounted && (
-              <div className="inline-flex items-center gap-2 mb-6">
-                <span
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em]"
-                  style={{
-                    background: 'rgba(0,200,83,0.1)',
-                    border: '1px solid rgba(0,200,83,0.25)',
-                    color: '#00C853',
-                  }}
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-current" />
-                  {slide.tag}
-                </span>
-              </div>
-            )}
+            <div className="inline-flex items-center gap-2 mb-6">
+              <span
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.14em]"
+                style={{
+                  background: 'rgba(0,200,83,0.1)',
+                  border: '1px solid rgba(0,200,83,0.25)',
+                  color: '#00C853',
+                }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                {slide.tag}
+              </span>
+            </div>
 
             {/* Heading */}
             <h1
@@ -287,17 +283,8 @@ export default function Hero() {
               className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-[1.04] tracking-tight text-white mb-6"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              {mounted ? (
-                <>
-                  {slide.heading}{' '}
-                  <span style={{ color: '#00C853' }}>{slide.headingAccent}</span>
-                </>
-              ) : (
-                <>
-                  Enterprise Technology,{' '}
-                  <span style={{ color: '#00C853' }}>Built for Scale.</span>
-                </>
-              )}
+              {slide.heading}{' '}
+              <span style={{ color: '#00C853' }}>{slide.headingAccent}</span>
             </h1>
 
             {/* Divider */}
@@ -308,25 +295,25 @@ export default function Hero() {
               className="text-[16px] sm:text-[18px] leading-relaxed mb-8 max-w-[540px]"
               style={{ color: '#94A3B8' }}
             >
-              {mounted ? slide.desc : SLIDES[0].desc}
+              {slide.desc}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 mb-10">
               <Link
-                href={mounted ? slide.cta.href : '/contact-us'}
+                href={slide.cta.href}
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl text-[14px] sm:text-[15px] font-bold transition-all hover:opacity-90 hover:-translate-y-0.5"
                 style={{ background: '#00C853', color: '#0A1628' }}
               >
-                {mounted ? slide.cta.label : 'Book a Free Consultation'}
+                {slide.cta.label}
                 <ArrowRight size={16} />
               </Link>
               <Link
-                href={mounted ? slide.secondary.href : '/services'}
+                href={slide.secondary.href}
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 rounded-xl text-[14px] sm:text-[15px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.18)', color: '#fff' }}
               >
-                {mounted ? slide.secondary.label : 'Our Services'}
+                {slide.secondary.label}
                 <ChevronRight size={15} />
               </Link>
             </div>
@@ -348,16 +335,12 @@ export default function Hero() {
 
           {/* Right: Visual */}
           <div className="lg:w-[440px] xl:w-[500px] flex-shrink-0 w-full max-w-[500px] mx-auto lg:mx-0">
-            {mounted && slide.visual === 'network' ? (
+            {slide.visual === 'network' ? (
               <div className="relative h-[340px] sm:h-[400px]">
                 <NetworkVisual />
               </div>
-            ) : mounted ? (
-              <DashboardVisual />
             ) : (
-              <div className="relative h-[340px] sm:h-[400px]">
-                <NetworkVisual />
-              </div>
+              <DashboardVisual />
             )}
           </div>
         </div>

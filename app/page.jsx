@@ -1,21 +1,26 @@
+import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import HeroCards from '@/components/HeroCards'
-import CoreOffer from '@/components/CoreOffer'
-import Products from '@/components/Products'
-import InfraSpineSystem from '@/components/InfraSpineSystem'
-import StatsBar from '@/components/StatsBar'
-import ClientsStrip from '@/components/ClientsStrip'
-import ProblemSolution from '@/components/ProblemSolution'
-import OurApproach from '@/components/OurApproach'
-import NetworkFlowSection from '@/components/NetworkFlowSection'
-import InfraEcosystem from '@/components/InfraEcosystem'
-import Testimonials from '@/components/Testimonials'
-import CaseStudies from '@/components/CaseStudies'
-import CTASection from '@/components/CTASection'
-import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
-import ScrollToTop from '@/components/ScrollToTop'
+
+// Below-the-fold sections: code-split into separate chunks so the initial
+// JS bundle (parsed/executed before TTI) only contains above-the-fold code.
+// SSR stays on (default) so content/SEO and CLS are unaffected.
+const CoreOffer = dynamic(() => import('@/components/CoreOffer'))
+const Products = dynamic(() => import('@/components/Products'))
+const InfraSpineSystem = dynamic(() => import('@/components/InfraSpineSystem'))
+const StatsBar = dynamic(() => import('@/components/StatsBar'))
+const ClientsStrip = dynamic(() => import('@/components/ClientsStrip'))
+const ProblemSolution = dynamic(() => import('@/components/ProblemSolution'))
+const OurApproach = dynamic(() => import('@/components/OurApproach'))
+const NetworkFlowSection = dynamic(() => import('@/components/NetworkFlowSection'))
+const InfraEcosystem = dynamic(() => import('@/components/InfraEcosystem'))
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
+const CaseStudies = dynamic(() => import('@/components/CaseStudies'))
+const CTASection = dynamic(() => import('@/components/CTASection'))
+const Footer = dynamic(() => import('@/components/Footer'))
+const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'))
 
 export default function Home() {
   return (

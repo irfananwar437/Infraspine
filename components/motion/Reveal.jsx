@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 
 export const revealViewport = { once: true, amount: 0.2, margin: '-60px' }
 
@@ -41,7 +41,7 @@ export function Reveal({ children, className = '', delay = 0 }) {
   }
 
   return (
-    <motion.div
+    <m.div
       suppressHydrationWarning
       className={className}
       initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export function Reveal({ children, className = '', delay = 0 }) {
       transition={{ ...defaultRevealTransition, delay }}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -65,7 +65,7 @@ export function Stagger({ children, className = '' }) {
   }
 
   return (
-    <motion.div
+    <m.div
       suppressHydrationWarning
       className={className}
       variants={staggerContainer}
@@ -74,7 +74,7 @@ export function Stagger({ children, className = '' }) {
       viewport={revealViewport}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -86,9 +86,9 @@ export function StaggerItem({ children, className = '' }) {
   }
 
   return (
-    <motion.div suppressHydrationWarning className={className} variants={staggerItem}>
+    <m.div suppressHydrationWarning className={className} variants={staggerItem}>
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 

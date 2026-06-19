@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
+import { m, AnimatePresence } from 'framer-motion'
 import {
   Server, ShieldCheck, Cloud, Network, Code2, Zap, Users, BookOpen,
   Briefcase, Database, Camera, Fingerprint, Shield, Phone, Mail,
@@ -175,7 +175,7 @@ const dropV = {
 /* ─────────────────────────────────────────────────────────────
    MEGA-MENU
    Outer div handles positioning (CSS transform not subject to
-   Framer Motion override). Inner motion.div handles animation.
+   Framer Motion override). Inner m.div handles animation.
    utility bar 36px + main nav 66px + 2px borders = ~104px top
 ───────────────────────────────────────────────────────────── */
 function ServicesMega() {
@@ -184,7 +184,7 @@ function ServicesMega() {
       className="fixed z-50"
       style={{ top: 104, left: '50%', transform: 'translateX(-50%)', width: 920, maxWidth: 'calc(100vw - 24px)' }}
     >
-      <motion.div
+      <m.div
         variants={megaV} initial="hidden" animate="visible" exit="exit"
         className="rounded-b-2xl origin-top bg-white border border-slate-200 overflow-y-auto"
         style={{
@@ -335,7 +335,7 @@ function ServicesMega() {
           </div>
 
         </div>
-      </motion.div>
+      </m.div>
     </div>
   )
 }
@@ -345,7 +345,7 @@ function ServicesMega() {
 ───────────────────────────────────────────────────────────── */
 function SimpleDropdown({ items }) {
   return (
-    <motion.div
+    <m.div
       variants={dropV} initial="hidden" animate="visible" exit="exit"
       className="absolute top-full left-0 mt-1 z-50"
       style={{ width: 228 }}
@@ -381,7 +381,7 @@ function SimpleDropdown({ items }) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -605,7 +605,7 @@ function NavbarInner() {
       {/* ── Mobile menu ── */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
@@ -653,7 +653,7 @@ function NavbarInner() {
                 </div>
                 <AnimatePresence>
                   {mobileExp === 'services' && (
-                    <motion.div
+                    <m.div
                       initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}
                       className="overflow-hidden"
@@ -694,7 +694,7 @@ function NavbarInner() {
                           </div>
                         ))}
                       </div>
-                    </motion.div>
+                    </m.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -723,7 +723,7 @@ function NavbarInner() {
                   </div>
                   <AnimatePresence>
                     {mobileExp === g.key && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -745,7 +745,7 @@ function NavbarInner() {
                             </Link>
                           ))}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -781,7 +781,7 @@ function NavbarInner() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

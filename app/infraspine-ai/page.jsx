@@ -20,7 +20,7 @@ function AIOrbitVisual() {
       <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* Orbit rings */}
         <ellipse cx="250" cy="200" rx="180" ry="90" stroke="#1E3A8A" strokeWidth="1" strokeDasharray="4 8" opacity="0.5">
-          <animateTransform attributeName="transform" type="rotate" from="0 250 200" to="360 250 200" dur="20s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="rotate" from="0 250 200" to="360 250 200" dur="20s" begin="2s" repeatCount="indefinite" />
         </ellipse>
         <ellipse cx="250" cy="200" rx="130" ry="65" stroke="#0F2158" strokeWidth="1" strokeDasharray="3 10" opacity="0.4" />
         <ellipse cx="250" cy="200" rx="80" ry="40" stroke="#1E3A8A" strokeWidth="1" opacity="0.3" />
@@ -29,11 +29,11 @@ function AIOrbitVisual() {
         <circle cx="250" cy="200" r="48" fill="#0B1A3B" stroke="#2563EB" strokeWidth="1.5" />
         <circle cx="250" cy="200" r="34" fill="#0F2158" />
         <circle cx="250" cy="200" r="20" fill="#2563EB" opacity="0.9">
-          <animate attributeName="r" values="20;24;20" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="r" values="20;24;20" dur="3s" begin="2s" repeatCount="indefinite" />
         </circle>
         <circle cx="250" cy="200" r="55" fill="none" stroke="#2563EB" strokeWidth="1" opacity="0.2">
-          <animate attributeName="r" values="48;68;48" dur="3s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="r" values="48;68;48" dur="3s" begin="2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" begin="2s" repeatCount="indefinite" />
         </circle>
         {/* AI text in center */}
         <text x="250" y="206" textAnchor="middle" fill="#B7FF58" fontSize="13" fontWeight="900" fontFamily="monospace">AI</text>
@@ -50,7 +50,7 @@ function AIOrbitVisual() {
             <text x={node.cx} y={node.cy + 4} textAnchor="middle" fill={node.color} fontSize="9" fontWeight="900" fontFamily="monospace">{node.label}</text>
             {/* Moving data dot */}
             <circle r="3" fill={node.color} opacity="0.9">
-              <animateMotion dur={`${2 + i * 0.5}s`} repeatCount="indefinite"
+              <animateMotion dur={`${2 + i * 0.5}s`} begin="2s" repeatCount="indefinite"
                 path={`M250,200 L${node.cx},${node.cy}`} />
             </circle>
           </g>
@@ -65,7 +65,7 @@ function AIOrbitVisual() {
         ].map((n, i) => (
           <g key={i}>
             <circle cx={n.cx} cy={n.cy} r={n.r} fill="#060E23" stroke={n.color} strokeWidth="1.5" opacity="0.9">
-              <animate attributeName="opacity" values="0.9;0.5;0.9" dur={`${2.5 + i * 0.4}s`} repeatCount="indefinite" />
+              <animate attributeName="opacity" values="0.9;0.5;0.9" dur={`${2.5 + i * 0.4}s`} begin="2s" repeatCount="indefinite" />
             </circle>
             <text x={n.cx} y={n.cy + 4} textAnchor="middle" fill={n.color} fontSize="7" fontWeight="900" fontFamily="monospace">{n.label}</text>
           </g>

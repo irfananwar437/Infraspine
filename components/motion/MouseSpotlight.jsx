@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 
 export function MouseSpotlight({ children, className = '', spotlightColor = 'rgba(0, 200, 83, 0.15)', radius = 300 }) {
   const divRef = useRef(null)
@@ -37,7 +37,7 @@ export function MouseSpotlight({ children, className = '', spotlightColor = 'rgb
       className={`relative overflow-hidden group ${className}`}
     >
       {/* Background spotlight */}
-      <motion.div
+      <m.div
         className="pointer-events-none absolute -inset-px transition-opacity duration-300 rounded-2xl"
         animate={{
           opacity,
@@ -47,7 +47,7 @@ export function MouseSpotlight({ children, className = '', spotlightColor = 'rgb
       />
       
       {/* Border gradient effect */}
-      <motion.div
+      <m.div
         className="pointer-events-none absolute inset-0 z-10 transition-opacity duration-300 rounded-2xl"
         animate={{
           opacity,

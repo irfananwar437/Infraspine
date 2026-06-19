@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import { Activity, ShieldAlert, ShieldCheck, Server } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -29,7 +29,7 @@ export default function DashboardMockup() {
       <div className="w-full max-w-sm flex flex-col gap-4 relative z-10">
         
         {/* Top Stat Card */}
-        <motion.div 
+        <m.div 
           className="bg-slate-800/80 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 shadow-2xl flex justify-between items-center"
           initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,14 +39,14 @@ export default function DashboardMockup() {
           <div>
             <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">System Uptime</p>
             <div className="flex items-end gap-2">
-              <motion.span 
+              <m.span 
                 className="text-2xl font-bold text-white leading-none"
                 initial={reduce ? {} : { opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
               >
                 99.99%
-              </motion.span>
+              </m.span>
               <span className="text-emerald-400 text-xs font-medium mb-0.5 flex items-center gap-1">
                 <Activity size={12} /> Live
               </span>
@@ -56,7 +56,7 @@ export default function DashboardMockup() {
           {/* Mini Bar Chart */}
           <div className="flex items-end gap-1 h-10">
             {chartHeights.map((h, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 className="w-1.5 rounded-t-sm bg-emerald-500/80"
                 initial={reduce ? { height: `${h}%` } : { height: '0%' }}
@@ -66,10 +66,10 @@ export default function DashboardMockup() {
               />
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Threat Alert Card */}
-        <motion.div 
+        <m.div 
           className="bg-slate-800/80 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 shadow-2xl"
           initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,21 +77,21 @@ export default function DashboardMockup() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
           <div className="flex items-start gap-3">
-            <motion.div 
+            <m.div 
               className="mt-1 flex-shrink-0"
               animate={resolved ? { color: '#10b981' } : { color: '#ef4444' }}
               transition={{ duration: 0.5 }}
             >
               {resolved ? <ShieldCheck size={20} /> : <ShieldAlert size={20} />}
-            </motion.div>
+            </m.div>
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
-                <motion.p 
+                <m.p 
                   className="text-sm font-semibold text-white"
                   animate={{ color: resolved ? '#fff' : '#fca5a5' }}
                 >
                   {resolved ? 'Threat Neutralized' : 'Anomaly Detected'}
-                </motion.p>
+                </m.p>
                 <span className="text-slate-500 text-[10px]">Just now</span>
               </div>
               <p className="text-slate-400 text-xs leading-relaxed">
@@ -102,7 +102,7 @@ export default function DashboardMockup() {
               
               {/* Progress bar */}
               <div className="mt-3 h-1.5 w-full bg-slate-700 rounded-full overflow-hidden">
-                <motion.div 
+                <m.div 
                   className="h-full"
                   initial={{ width: '0%', backgroundColor: '#ef4444' }}
                   animate={resolved 
@@ -117,10 +117,10 @@ export default function DashboardMockup() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Nodes Status */}
-        <motion.div 
+        <m.div 
           className="flex gap-2"
           initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export default function DashboardMockup() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
       </div>
     </div>

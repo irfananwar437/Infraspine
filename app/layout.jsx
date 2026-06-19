@@ -1,18 +1,23 @@
 import './globals.css'
 import { Outfit, Source_Sans_3 } from 'next/font/google'
+import MotionProvider from '@/components/motion/MotionProvider'
 
 const fontDisplay = Outfit({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['700', '800', '900'],
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const fontBody = Source_Sans_3({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
-  weight: ['300', '400', '600', '700'],
+  weight: ['400', '600'],
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const BASE_URL = 'https://www.infraspine.com'
@@ -156,7 +161,9 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   )
 }

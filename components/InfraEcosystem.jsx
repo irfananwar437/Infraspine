@@ -179,8 +179,8 @@ export default function InfraEcosystem() {
 
                 {/* Center pulse ring */}
                 <circle cx={CX} cy={CY} r="48" fill="none" stroke="#DC2626" strokeWidth="1.5" strokeOpacity="0.25">
-                  <animate attributeName="r" values="42;56;42" dur="3s" repeatCount="indefinite" />
-                  <animate attributeName="stroke-opacity" values="0.15;0.45;0.15" dur="3s" repeatCount="indefinite" />
+                  <animate attributeName="r" values="42;56;42" dur="3s" begin="2s" repeatCount="indefinite" />
+                  <animate attributeName="stroke-opacity" values="0.15;0.45;0.15" dur="3s" begin="2s" repeatCount="indefinite" />
                 </circle>
               </svg>
 

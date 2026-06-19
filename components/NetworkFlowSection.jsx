@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Shield, Globe, Zap, Lock, Activity, ChevronRight } from 'lucide-react'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 
@@ -18,6 +18,21 @@ const FEATURES = [
 
 export default function NetworkFlowSection() {
   const [playing, setPlaying] = useState(true)
+  const [inView, setInView] = useState(false)
+  const playerSlotRef = useRef(null)
+
+  useEffect(() => {
+    const el = playerSlotRef.current
+    if (!el) return
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setInView(true)
+        io.disconnect()
+      }
+    }, { rootMargin: '200px 0px' })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   return (
     <section id="network" className="py-14 sm:py-20" style={{ background: '#F8FAFC' }}>
@@ -88,9 +103,10 @@ export default function NetworkFlowSection() {
               </div>
             </div>
 
-            {/* Remotion Player */}
-            <div className="w-full" style={{ aspectRatio: '1280 / 520', minHeight: 120 }}>
-              {NetworkTopologyComp && (
+            {/* Remotion Player — mounted only once scrolled near, so the player
+                engine isn't downloaded/executed on every page load */}
+            <div ref={playerSlotRef} className="relative w-full" style={{ aspectRatio: '1280 / 520', minHeight: 120 }}>
+              {inView ? (
                 <Player
                   component={NetworkTopologyComp}
                   durationInFrames={300}
@@ -103,6 +119,11 @@ export default function NetworkFlowSection() {
                   controls={false}
                   clickToPlay={false}
                   acknowledgeRemotionLicense
+                />
+              ) : (
+                <div
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(135deg, #0A1628 0%, #0F2A4A 55%, #163352 100%)' }}
                 />
               )}
             </div>

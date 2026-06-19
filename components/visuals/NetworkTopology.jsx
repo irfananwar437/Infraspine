@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import {
   Monitor,
   Wifi,
@@ -50,7 +50,7 @@ function PathPacket({ cxKeyframes, cyKeyframes, fill, duration, delay }) {
   const n = cxKeyframes.length
   const times = Array.from({ length: n }, (_, i) => (n === 1 ? 0 : i / (n - 1)))
   return (
-    <motion.circle
+    <m.circle
       suppressHydrationWarning
       r={4}
       fill={fill}
@@ -162,7 +162,7 @@ export default function NetworkTopology() {
               strokeLinejoin="round"
             />
             {!reduce && (
-              <motion.polyline
+              <m.polyline
                 suppressHydrationWarning
                 points={OUT_POINTS}
                 stroke="rgba(74, 222, 128, 0.5)"
@@ -172,7 +172,7 @@ export default function NetworkTopology() {
                 strokeLinejoin="round"
                 strokeDasharray="4 8"
                 animate={{ strokeDashoffset: [0, -12] }}
-                transition={{ repeat: Infinity, duration: 0.6, ease: 'linear' }}
+                transition={{ repeat: Infinity, duration: 0.6, ease: 'linear', delay: 2 }}
               />
             )}
 
@@ -186,7 +186,7 @@ export default function NetworkTopology() {
               strokeLinejoin="round"
             />
             {!reduce && (
-              <motion.polyline
+              <m.polyline
                 suppressHydrationWarning
                 points={IN_POINTS}
                 stroke="rgba(56, 189, 248, 0.5)"
@@ -196,16 +196,16 @@ export default function NetworkTopology() {
                 strokeLinejoin="round"
                 strokeDasharray="4 8"
                 animate={{ strokeDashoffset: [0, -12] }}
-                transition={{ repeat: Infinity, duration: 0.6, ease: 'linear' }}
+                transition={{ repeat: Infinity, duration: 0.6, ease: 'linear', delay: 2 }}
               />
             )}
 
             {!reduce && (
               <>
-                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#4ade80"  duration={11}  delay={0}   />
-                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#86efac"  duration={11}  delay={4}   />
-                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#38bdf8"  duration={6.8} delay={5.5} />
-                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#7dd3fc"  duration={6.8} delay={9}   />
+                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#4ade80"  duration={11}  delay={2}    />
+                <PathPacket cxKeyframes={OUT_CX} cyKeyframes={OUT_CY} fill="#86efac"  duration={11}  delay={6}    />
+                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#38bdf8"  duration={6.8} delay={7.5}  />
+                <PathPacket cxKeyframes={IN_CX}  cyKeyframes={IN_CY}  fill="#7dd3fc"  duration={6.8} delay={11}   />
               </>
             )}
           </svg>
@@ -215,7 +215,7 @@ export default function NetworkTopology() {
             const leftPct = (node.x / VB.w) * 100
             const topPct = (node.y / VB.h) * 100
             return (
-              <motion.div
+              <m.div
                 suppressHydrationWarning
                 key={node.id}
                 title={node.label}
@@ -239,7 +239,7 @@ export default function NetworkTopology() {
                 <Icon className="h-[18px] w-[18px] md:h-5 md:w-5" style={{ color: node.color }} strokeWidth={2} />
 
                 {!reduce && (
-                  <motion.span
+                  <m.span
                     suppressHydrationWarning
                     className="pointer-events-none absolute inset-0 rounded-xl border border-transparent"
                     style={{
@@ -252,11 +252,11 @@ export default function NetworkTopology() {
                       duration: 2.2,
                       repeat: Infinity,
                       ease: 'easeOut',
-                      delay: i * 0.28,
+                      delay: i * 0.28 + 2,
                     }}
                   />
                 )}
-              </motion.div>
+              </m.div>
             )
           })}
           </div>

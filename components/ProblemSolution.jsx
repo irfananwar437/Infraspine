@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import { Layers, TrendingUp, Shield, Clock, ArrowRight, CheckCircle2, Zap, Star } from 'lucide-react'
 import {
   Reveal,
@@ -85,7 +85,7 @@ export default function ProblemSolution() {
               </p>
             </StaggerItem>
             <StaggerItem>
-              <motion.a
+              <m.a
                 href="/contact-us"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-bold transition-colors hover:opacity-95"
                 style={{ background: '#00C853', color: '#0A1628' }}
@@ -94,7 +94,7 @@ export default function ProblemSolution() {
                 transition={{ type: 'spring', stiffness: 450, damping: 22 }}
               >
                 See How It Works <ArrowRight size={14} />
-              </motion.a>
+              </m.a>
             </StaggerItem>
           </Stagger>
         </div>
@@ -134,7 +134,7 @@ export default function ProblemSolution() {
           <div className="lg:col-span-7">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
               {STATS.map((s, idx) => (
-                <motion.div
+                <m.div
                   key={s.label}
                   className="flex flex-col items-center justify-center py-7 px-4 text-center rounded-2xl"
                   style={{ background: s.bg, border: `1px solid ${s.border}` }}
@@ -147,13 +147,13 @@ export default function ProblemSolution() {
                     {s.value}
                   </span>
                   <span className="text-[12px] font-semibold" style={{ color: s.color }}>{s.label}</span>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 mb-5">
               {FEATURES.map((f, idx) => (
-                <motion.div
+                <m.div
                   key={f.title}
                   className="group flex flex-col rounded-2xl p-6"
                   style={{
@@ -219,11 +219,11 @@ export default function ProblemSolution() {
                       <span className="text-[11px] font-semibold" style={{ color: f.badgeColor }}>{f.badge}</span>
                     </div>
                   )}
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
-            <motion.div
+            <m.div
               className="flex flex-col sm:flex-row items-center gap-5 rounded-2xl px-7 py-5"
               style={{ background: '#FFF1F2', border: '1px solid #FECDD3' }}
               initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
@@ -248,7 +248,7 @@ export default function ProblemSolution() {
                   <Star key={i} size={14} fill="#E11D48" style={{ color: '#E11D48' }} />
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 

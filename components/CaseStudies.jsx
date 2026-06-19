@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 import { CheckCircle2, ArrowRight, Star } from 'lucide-react'
 import {
   Reveal,
@@ -129,7 +129,7 @@ export default function CaseStudies() {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
           {CASES.map((c, i) => (
-            <motion.article
+            <m.article
               key={i}
               className="group relative flex flex-col rounded-2xl overflow-hidden border bg-white"
               style={{ borderColor: '#E2E8F0', boxShadow: '0 2px 16px rgba(10,22,40,0.06)' }}
@@ -183,7 +183,7 @@ export default function CaseStudies() {
                   Read Full Case Study <ArrowRight size={14} />
                 </a>
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
 

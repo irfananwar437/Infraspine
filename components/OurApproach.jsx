@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
-import { motion, useReducedMotion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { m, useReducedMotion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { Search, PenTool, Settings, Zap, Activity } from 'lucide-react'
 import { Stagger, StaggerItem, revealViewport, defaultRevealTransition } from '@/components/motion/Reveal'
 
@@ -103,7 +103,7 @@ export default function OurApproach() {
             aria-hidden="true"
             style={{ top: 28, left: '10%', right: '10%', height: 2, background: '#E2E8F0', zIndex: 0 }}
           >
-            <motion.div
+            <m.div
               className="h-full origin-left"
               style={{ background: '#00C853' }}
               initial={{ scaleX: 0 }}
@@ -116,7 +116,7 @@ export default function OurApproach() {
             {STEPS.map((step, i) => {
               const isLit = reduce ? true : i <= activeStep
               return (
-                <motion.div
+                <m.div
                   key={i}
                   className="group flex flex-col items-center"
                   initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ export default function OurApproach() {
                     <p className="mb-2 text-[14px] font-bold" style={{ color: '#0A1628' }}>{step.title}</p>
                     <p className="text-[12.5px] leading-relaxed" style={{ color: '#64748B' }}>{step.desc}</p>
                   </div>
-                </motion.div>
+                </m.div>
               )
             })}
           </div>

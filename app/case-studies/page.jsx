@@ -65,8 +65,6 @@ const CASE_STUDIES = [
       { label: 'Branch Visibility',    before: 'No real-time data',   after: 'Live P&L per branch' },
       { label: 'Data Source',          before: '6 separate systems',  after: 'Single source of truth' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80',
     tools: ['Next.js', 'Node.js', 'PostgreSQL', 'React', 'Docker', 'REST APIs'],
     timeline: '10 Weeks',
     testimonial: {
@@ -126,8 +124,6 @@ const CASE_STUDIES = [
       { label: 'Monitoring',           before: 'No visibility',       after: 'Zabbix dashboards + alerts' },
       { label: 'Disaster Recovery',    before: 'Non-existent',        after: 'Documented & tested quarterly' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop&q=80',
     tools: ['VMware', 'Zabbix', 'pfSense', 'Dell PowerEdge', 'Cisco', 'Veeam'],
     timeline: '14 Weeks',
     testimonial: {
@@ -187,8 +183,6 @@ const CASE_STUDIES = [
       { label: 'Store Visibility',     before: 'No centralized view',   after: 'Live dashboard for all 22' },
       { label: 'New Store Rollout',    before: '1–2 weeks ad-hoc',     after: 'Under 2 days, repeatable' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop&q=80',
     tools: ['UniFi', 'pfSense', 'PRTG', 'Ubiquiti', 'Cisco SG', 'WireGuard'],
     timeline: '8 Weeks',
     testimonial: {
@@ -248,8 +242,6 @@ const CASE_STUDIES = [
       { label: 'After-Hours Security', before: 'Manual guard rounds',  after: 'Motion-triggered AI alerts' },
       { label: 'Footage Retention',    before: 'None',                 after: '60-day automated archive' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop&q=80',
     tools: ['Hikvision', 'ZKTeco', 'Hik-Connect', 'UniFi', 'Synology NAS'],
     timeline: '6 Weeks',
     testimonial: {
@@ -309,8 +301,6 @@ const CASE_STUDIES = [
       { label: 'Shopify Integration',  before: 'None',                 after: 'Full API sync with WhatsApp' },
       { label: 'Peak Sale Staffing',   before: 'Hired temp staff',     after: 'No extra hires needed' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80',
     tools: ['n8n', 'WhatsApp Business API', 'Shopify API', 'Node.js', 'PostgreSQL'],
     timeline: '5 Weeks',
     testimonial: {
@@ -370,8 +360,6 @@ const CASE_STUDIES = [
       { label: 'Supervisor Visibility',before: 'None',                 after: 'Real-time wallboard dashboards' },
       { label: 'CRM Integration',      before: 'No CRM',              after: 'Screen pops + auto call logs' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1556761175-5973f81b0a7b?w=600&h=400&fit=crop&q=80',
     tools: ['FreePBX', 'Asterisk', 'Grandstream', 'Yealink', 'Vicidial', 'Zoiper'],
     timeline: '7 Weeks',
     testimonial: {
@@ -431,8 +419,6 @@ const CASE_STUDIES = [
       { label: 'Wi-Fi',                before: 'No wireless',          after: 'Enterprise UniFi, floor-by-floor' },
       { label: 'IT Management',        before: 'No tools',             after: 'Centralized dashboard for all assets' },
     ],
-    beforeImg: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&q=80',
     tools: ['Cisco', 'pfSense', 'UniFi', 'Dell PowerEdge', 'APC UPS', 'Veeam'],
     timeline: '11 Weeks',
     testimonial: {
@@ -840,11 +826,19 @@ export default function CaseStudiesPage() {
 
                 {/* Before & After images */}
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                  {/* Before image */}
+                  {/* Before panel */}
                   <div className="rounded-xl border overflow-hidden" style={{ borderColor: '#FECACA' }}>
-                    <div className="relative">
-                      <img src={study.beforeImg} alt={`Before — ${study.title}`} className="w-full h-48 sm:h-56 object-cover" />
-                      <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(220,38,38,0.15) 0%, transparent 60%)' }} />
+                    <div className="relative h-48 sm:h-56 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1F2937 0%, #374151 55%, #4B5563 100%)' }}>
+                      <div
+                        className="pointer-events-none absolute inset-0 opacity-50"
+                        style={{
+                          backgroundImage: 'linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)',
+                          backgroundSize: '18px 18px',
+                        }}
+                      />
+                      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                        <X size={56} strokeWidth={1.5} style={{ color: 'rgba(220,38,38,0.45)' }} />
+                      </div>
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full backdrop-blur-sm" style={{ background: 'rgba(220,38,38,0.85)' }}>
                         <X size={10} color="#fff" strokeWidth={3} />
                         <span className="text-[10px] font-bold uppercase tracking-wider text-white">Before</span>
@@ -855,11 +849,20 @@ export default function CaseStudiesPage() {
                       <p className="text-[10px] mt-0.5" style={{ color: '#DC2626' }}>{study.challenge[0]}</p>
                     </div>
                   </div>
-                  {/* After image */}
+                  {/* After panel */}
                   <div className="rounded-xl border overflow-hidden" style={{ borderColor: '#BBF7D0' }}>
-                    <div className="relative">
-                      <img src={study.afterImg} alt={`After — ${study.title}`} className="w-full h-48 sm:h-56 object-cover" />
-                      <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(22,163,74,0.15) 0%, transparent 60%)' }} />
+                    <div className="relative h-48 sm:h-56 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0A1628 0%, #0F2A4A 55%, #163352 100%)' }}>
+                      <div
+                        className="pointer-events-none absolute inset-0 opacity-50"
+                        style={{
+                          backgroundImage: 'linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)',
+                          backgroundSize: '18px 18px',
+                        }}
+                      />
+                      <div className="pointer-events-none absolute rounded-full" style={{ top: '18%', left: '18%', width: 110, height: 110, background: 'radial-gradient(circle, rgba(0,200,83,0.20) 0%, transparent 70%)' }} />
+                      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                        <Check size={56} strokeWidth={1.5} style={{ color: 'rgba(0,200,83,0.55)' }} />
+                      </div>
                       <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full backdrop-blur-sm" style={{ background: 'rgba(22,163,74,0.85)' }}>
                         <Check size={10} color="#fff" strokeWidth={3} />
                         <span className="text-[10px] font-bold uppercase tracking-wider text-white">After</span>
