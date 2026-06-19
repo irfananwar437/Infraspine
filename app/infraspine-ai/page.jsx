@@ -16,7 +16,7 @@ import {
 /* ── Animated AI orbit visual ──────────────────────────────────────────── */
 function AIOrbitVisual() {
   return (
-    <div className="relative w-full h-[340px] sm:h-[400px]" aria-hidden="true">
+    <div className="relative w-full h-[220px] sm:h-[300px] lg:h-[320px]" aria-hidden="true">
       <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* Orbit rings */}
         <ellipse cx="250" cy="200" rx="180" ry="90" stroke="#1E3A8A" strokeWidth="1" strokeDasharray="4 8" opacity="0.5">
@@ -208,11 +208,11 @@ export default function InfraspineAIPage() {
           style={{ background: 'radial-gradient(circle,#B7FF58,transparent 65%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20 sm:pt-32 sm:pb-24">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-24 pb-12 sm:pt-28 sm:pb-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left */}
             <div className="flex-1 max-w-2xl">
-              <div className="inline-flex items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 mb-4">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-black uppercase tracking-[0.14em]"
                   style={{ background: 'rgba(183,255,88,0.12)', border: '1px solid rgba(183,255,88,0.3)', color: '#B7FF58' }}>
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#B7FF58' }} />
@@ -220,22 +220,22 @@ export default function InfraspineAIPage() {
                 </span>
               </div>
 
-              <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-[1.04] tracking-tight text-white mb-6"
+              <h1 className="text-[clamp(2rem,4.6vw,3.8rem)] font-black leading-[1.04] tracking-tight text-white mb-4"
                 style={{ fontFamily: 'var(--font-display)' }}>
                 Intelligent Automation<br />
                 <span style={{ color: '#B7FF58' }}>Engineered for Enterprise.</span>
               </h1>
 
-              <div className="h-px w-20 mb-6" style={{ background: 'linear-gradient(90deg,#2563EB,#B7FF58)' }} aria-hidden="true" />
+              <div className="h-px w-20 mb-4" style={{ background: 'linear-gradient(90deg,#2563EB,#B7FF58)' }} aria-hidden="true" />
 
-              <p className="text-[16px] sm:text-[18px] leading-relaxed mb-5" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-3" style={{ color: '#94A3B8' }}>
                 Infraspine AI is our dedicated AI automation practice — the division that designs, builds, and operates custom artificial intelligence and workflow automation solutions for enterprise businesses.
               </p>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#64748B' }}>
+              <p className="text-[14px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 We do not sell AI software licences. We engineer AI-powered systems that become core operational infrastructure — from autonomous n8n workflows and WhatsApp business bots to LLM agents that process documents, qualify leads, and generate reports without human intervention.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-wrap gap-3 mb-7">
                 <Link href="/contact-us"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                   style={{ background: '#B7FF58', color: '#0A1628' }}>

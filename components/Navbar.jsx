@@ -176,13 +176,13 @@ const dropV = {
    MEGA-MENU
    Outer div handles positioning (CSS transform not subject to
    Framer Motion override). Inner m.div handles animation.
-   utility bar 36px + main nav 66px + 2px borders = ~104px top
+   utility bar 32px + main nav 60px + 2px borders = ~94px top
 ───────────────────────────────────────────────────────────── */
 function ServicesMega() {
   return (
     <div
       className="fixed z-50"
-      style={{ top: 104, left: '50%', transform: 'translateX(-50%)', width: 920, maxWidth: 'calc(100vw - 24px)' }}
+      style={{ top: 94, left: '50%', transform: 'translateX(-50%)', width: 920, maxWidth: 'calc(100vw - 24px)' }}
     >
       <m.div
         variants={megaV} initial="hidden" animate="visible" exit="exit"
@@ -458,7 +458,7 @@ function NavbarInner() {
 
       {/* ── Top utility bar ── */}
       <div className="hidden lg:block border-b" style={{ background: '#040f20', borderColor: '#0d2444' }}>
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-9">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-8">
           <div className="flex items-center gap-6">
             <a
               href="tel:+923001234567"
@@ -517,7 +517,7 @@ function NavbarInner() {
           }}
         />
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-[66px]">
+          <div className="flex items-center justify-between h-[60px]">
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="Infraspine">
