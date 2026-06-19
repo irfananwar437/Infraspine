@@ -790,7 +790,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ── Why InfraSpine Products ── */}
-      <section className="py-16" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4">

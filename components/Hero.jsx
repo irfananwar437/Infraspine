@@ -336,7 +336,7 @@ export default function Hero() {
           {/* Right: Visual */}
           <div className="lg:w-[400px] xl:w-[440px] flex-shrink-0 w-full max-w-[440px] mx-auto lg:mx-0">
             {slide.visual === 'network' ? (
-              <div className="relative h-[200px] sm:h-[280px] lg:h-[320px]">
+              <div className="relative h-[150px] sm:h-[280px] lg:h-[320px]">
                 <NetworkVisual />
               </div>
             ) : (

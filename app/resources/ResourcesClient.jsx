@@ -375,7 +375,7 @@ export default function ResourcesClient() {
       </section>
 
       {/* Webinars */}
-      <section className="py-14 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
@@ -412,7 +412,7 @@ export default function ResourcesClient() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-14" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-2xl mx-auto px-5 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-black mb-3" style={{ color: '#0A1628' }}>
             Get New Resources in Your Inbox

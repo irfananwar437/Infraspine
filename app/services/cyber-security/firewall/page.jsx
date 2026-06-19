@@ -175,22 +175,22 @@ export default function FirewallManagementPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#DC2626,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-4">
+            <div className="inline-flex items-center gap-2 mb-3">
               <div className="h-px w-6" style={{ background: '#DC2626' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#DC2626' }}>Firewall Management</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-3">
               NGFW &amp; Firewall Management —{' '}
               <span style={{ color: '#DC2626' }}>Your First Line of Cyber Defence.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-4 sm:mb-6" style={{ color: '#94A3B8' }}>
               A firewall is only as strong as its configuration and the team managing it. Poorly configured firewalls with bloated rulesets, outdated firmware, and misconfigured VPN gateways are regularly exploited by attackers — often years after the original misconfiguration. Infraspine&apos;s firewall management service keeps your perimeter security properly configured, continuously monitored, and compliant with industry standards, with a &lt;5-minute policy change SLA and zero-breach track record under management.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-6">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-2 sm:p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -325,7 +325,7 @@ export default function FirewallManagementPage() {
       </section>
 
       {/* ── Vendor Strip ── */}
-      <section className="py-12 bg-white border-y" style={{ borderColor: '#E2E8F0' }}>
+      <section className="py-16 sm:py-20 bg-white border-y" style={{ borderColor: '#E2E8F0' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <p className="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style={{ color: '#94A3B8' }}>
             Firewall Vendors We Manage

@@ -96,7 +96,7 @@ export default function BlogPage() {
       <NewsletterSection />
 
       {/* Bottom CTA */}
-      <section className="py-16" style={{ background: '#F8FAFC' }}>
+      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-5xl mx-auto px-5 lg:px-8 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2.2rem)] font-black mb-4" style={{ color: '#0A1628' }}>
             Ready to Put These Insights into Practice?

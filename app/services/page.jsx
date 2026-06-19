@@ -207,23 +207,23 @@ export default function ServicesPage() {
         <div className="pointer-events-none absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-[0.07]"
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-28">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Our Services</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               End-to-End IT Services for<br />
               <span style={{ color: '#00C853' }}>Enterprise Pakistan.</span>
             </h1>
-            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+            <p className="text-[16px] sm:text-[17px] leading-relaxed mb-5" style={{ color: '#94A3B8' }}>
               Infraspine delivers ten enterprise IT service lines from a single team — managed IT, cloud migrations, cybersecurity, network infrastructure, custom software, AI automation, BPO outsourcing, professional training, strategic consultancy, and backup and disaster recovery. Whether you need to outsource your entire IT operation or bring in specialist expertise for a specific project, Infraspine has the team, the certifications, and the track record to deliver it.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-5 sm:mb-8">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-3 sm:p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -369,7 +369,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Engagement models ── */}
-      <section className="py-16 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-[clamp(1.7rem,3vw,2.5rem)] font-black mb-3" style={{ color: '#0A1628' }}>How We Engage</h2>
@@ -428,7 +428,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Technology partners strip ── */}
-      <section className="py-12 border-y" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
+      <section className="py-16 sm:py-20 border-y" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] mb-7" style={{ color: '#94A3B8' }}>
             Certified Technology Partners

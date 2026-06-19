@@ -96,21 +96,21 @@ export default function AboutUsPage() {
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-28">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-14">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 mb-4">
                 <div className="h-px w-6" style={{ background: '#00C853' }} />
                 <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>About Infraspine</span>
               </div>
-              <h1 className="text-[clamp(2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+              <h1 className="text-[clamp(2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
                 The Technology Partner<br />
                 <span style={{ color: '#00C853' }}>Built for Enterprise Scale.</span>
               </h1>
-              <p className="text-[16px] sm:text-[18px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+              <p className="text-[16px] sm:text-[18px] leading-relaxed mb-5 sm:mb-8" style={{ color: '#94A3B8' }}>
                 Infraspine is a global IT services company that designs, deploys, and manages the complete technology environments of enterprise businesses — from network infrastructure and cloud to AI automation, cybersecurity, custom software, and BPO operations.
               </p>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-5 sm:mb-8" style={{ color: '#64748B' }}>
                 We are not a reseller. We are not a consulting firm that hands over a report. We are a full-delivery technology partner — one team that handles strategy, execution, and long-term support as a single, accountable unit.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -128,14 +128,14 @@ export default function AboutUsPage() {
             </div>
 
             {/* Right visual — stats grid */}
-            <div className="lg:flex-1 grid grid-cols-2 gap-4 max-w-sm lg:max-w-none">
+            <div className="lg:flex-1 grid grid-cols-2 gap-3 lg:gap-4 max-w-sm lg:max-w-none">
               {[
                 { value: '10+',   label: 'Years in Operation',    color: '#00C853', bg: 'rgba(0,200,83,0.06)',   border: 'rgba(0,200,83,0.15)' },
                 { value: '50+',   label: 'Enterprise Clients',    color: '#2563EB', bg: 'rgba(37,99,235,0.06)',  border: 'rgba(37,99,235,0.15)' },
                 { value: '99.9%', label: 'Uptime SLA Delivered',  color: '#D97706', bg: 'rgba(217,119,6,0.06)',  border: 'rgba(217,119,6,0.15)' },
                 { value: '24/7',  label: 'Monitoring Coverage',   color: '#7C3AED', bg: 'rgba(124,58,237,0.06)', border: 'rgba(124,58,237,0.15)' },
               ].map((stat, i) => (
-                <div key={i} className="rounded-2xl p-6 flex flex-col"
+                <div key={i} className="rounded-2xl p-4 lg:p-6 flex flex-col"
                   style={{ background: stat.bg, border: `1px solid ${stat.border}` }}>
                   <div className="text-[34px] font-black leading-none mb-2" style={{ color: stat.color }}>{stat.value}</div>
                   <div className="text-[12px] font-semibold" style={{ color: '#94A3B8' }}>{stat.label}</div>
@@ -304,7 +304,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ── Technology Partners ── */}
-      <section className="py-14 border-y" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
+      <section className="py-16 sm:py-20 border-y" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
         <div className="max-w-6xl mx-auto px-5 lg:px-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] mb-8" style={{ color: '#94A3B8' }}>
             Certified Technology Partners & Vendors
