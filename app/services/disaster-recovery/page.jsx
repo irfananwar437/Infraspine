@@ -242,6 +242,9 @@ export default function DisasterRecoveryPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>With DR vs Without DR</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Without DR Plan</div><div>With Infraspine DR</div>
+                </div>
                 {[
                   { label: 'Ransomware Recovery', withoutDR: 'Days to weeks', withDR: 'Hours (tested plan)', color: '#00C853' },
                   { label: 'Data Loss Risk', withoutDR: 'Last backup (days)', withDR: 'RPO <1 hour', color: '#00C853' },
@@ -256,9 +259,6 @@ export default function DisasterRecoveryPage() {
                     <div className="font-semibold" style={{ color: '#00C853' }}>{p.withDR}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Without DR Plan</div><div>With Infraspine DR</div>
-                </div>
               </div>
             </div>
           </div>

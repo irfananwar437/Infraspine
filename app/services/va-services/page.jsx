@@ -242,6 +242,9 @@ export default function VAServicesPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>VA Service Model Comparison</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Marketplace VA</div><div>Infraspine VA</div>
+                </div>
                 {[
                   { label: 'Quality Assurance', marketplace: 'None', managed: 'Dedicated account mgr', color: '#00C853' },
                   { label: 'Onboarding Time', marketplace: 'Variable (days–weeks)', managed: '5–7 working days', color: '#00C853' },
@@ -256,9 +259,6 @@ export default function VAServicesPage() {
                     <div className="font-semibold" style={{ color: '#00C853' }}>{p.managed}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Marketplace VA</div><div>Infraspine VA</div>
-                </div>
               </div>
             </div>
           </div>

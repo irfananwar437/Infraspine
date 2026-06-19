@@ -242,6 +242,9 @@ export default function ITRecruitmentPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>Recruitment Quality Comparison</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Generic Agency</div><div>Infraspine</div>
+                </div>
                 {[
                   { label: '12-Month Retention', generic: '67% average', specialist: '97% Infraspine', color: '#00C853' },
                   { label: 'Technical Screening', generic: 'CV keyword match', specialist: 'Practitioner-led', color: '#00C853' },
@@ -256,9 +259,6 @@ export default function ITRecruitmentPage() {
                     <div className="font-semibold" style={{ color: '#00C853' }}>{p.specialist}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Generic Agency</div><div>Infraspine</div>
-                </div>
               </div>
             </div>
           </div>

@@ -255,6 +255,9 @@ export default function FirewallManagementPage() {
                 NGFW vs Traditional Firewall
               </p>
               <div className="space-y-3">
+                <div className="grid grid-cols-3 text-[10px] font-bold uppercase tracking-wider pb-2 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div>Feature</div><div className="text-center">Traditional</div><div className="text-center">NGFW</div>
+                </div>
                 {[
                   { feature: 'Packet filtering by IP/Port', traditional: true, ngfw: true },
                   { feature: 'Application identification', traditional: false, ngfw: true },
@@ -275,9 +278,6 @@ export default function FirewallManagementPage() {
                     </div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 text-[10px] font-bold uppercase tracking-wider pt-2" style={{ color: '#94A3B8' }}>
-                  <div>Feature</div><div className="text-center">Traditional</div><div className="text-center">NGFW</div>
-                </div>
               </div>
             </div>
           </div>

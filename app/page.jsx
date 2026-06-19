@@ -34,12 +34,12 @@ export default function Home() {
       <Products />
       <InfraSpineSystem />
       <StatsBar />
-      <section id="clients"><ClientsStrip /></section>
+      <ClientsStrip />
       <ProblemSolution />
       <OurApproach />
       <NetworkFlowSection />
       <InfraEcosystem />
-      <section id="case-studies"><CaseStudies /></section>
+      <CaseStudies />
       <Testimonials />
       <CTASection />
       <Footer />

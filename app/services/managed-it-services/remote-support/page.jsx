@@ -248,6 +248,9 @@ export default function RemoteSupportPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>Remote vs On-Site Support Comparison</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Remote Support</div><div>On-Site Visit</div>
+                </div>
                 {[
                   { label: 'Time to First Response', remote: '<10 minutes', onsite: '1–4+ hours', good: true },
                   { label: 'Geographic Coverage', remote: 'Unlimited', onsite: 'Local area only', good: true },
@@ -262,9 +265,6 @@ export default function RemoteSupportPage() {
                     <div style={{ color: p.good ? '#94A3B8' : '#00C853' }}>{p.onsite}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Remote Support</div><div>On-Site Visit</div>
-                </div>
               </div>
             </div>
           </div>

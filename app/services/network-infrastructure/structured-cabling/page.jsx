@@ -247,6 +247,9 @@ export default function StructuredCablingPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>Uncertified vs Certified Cabling</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Uncertified</div><div>Infraspine</div>
+                </div>
                 {[
                   { label: 'Performance Assurance', internal: 'None', managed: 'Fluke certified every port' },
                   { label: 'Fault Diagnosis', internal: 'Hours or days', managed: 'Physical layer ruled out' },
@@ -261,9 +264,6 @@ export default function StructuredCablingPage() {
                     <div className="font-semibold" style={{ color: '#D97706' }}>{p.managed}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Uncertified</div><div>Infraspine</div>
-                </div>
               </div>
             </div>
           </div>

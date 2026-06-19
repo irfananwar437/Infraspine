@@ -242,6 +242,9 @@ export default function CIOAsAServicePage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>Full-Time CIO vs CIOaaS</p>
               <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div></div><div>Full-Time CIO</div><div>CIOaaS</div>
+                </div>
                 {[
                   { label: 'Annual Cost', fulltime: '£150K–£250K', cioas: '20–30% of that', color: '#00C853' },
                   { label: 'Availability', fulltime: '6–12 month recruit', cioas: 'Available immediately', color: '#00C853' },
@@ -256,9 +259,6 @@ export default function CIOAsAServicePage() {
                     <div className="font-semibold" style={{ color: '#00C853' }}>{p.cioas}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div></div><div>Full-Time CIO</div><div>CIOaaS</div>
-                </div>
               </div>
             </div>
           </div>

@@ -143,7 +143,7 @@ export default function InfraEcosystem() {
             className="rounded-2xl border p-4 flex items-center justify-center transition-all duration-500"
             style={{ borderColor: '#E2E8F0', background: '#FFFFFF', minHeight: '300px' }}
           >
-            <div className="relative w-full" style={{ maxWidth: '620px', paddingBottom: '54%' }}>
+            <div className="relative w-full pb-[88%] sm:pb-[54%]" style={{ maxWidth: '620px' }}>
 
               <svg viewBox="0 0 1000 590" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid meet">
                 <defs>
@@ -200,9 +200,8 @@ export default function InfraEcosystem() {
                     }}
                   >
                     <div
-                      className="rounded-xl flex items-center justify-center border-2"
+                      className="rounded-xl flex items-center justify-center border-2 w-8 h-8 sm:w-[46px] sm:h-[46px]"
                       style={{
-                        width: '46px', height: '46px',
                         background: active ? n.bg : '#F1F5F9',
                         borderColor: active ? n.border : '#E2E8F0',
                         boxShadow: active ? `0 4px 20px ${n.color}30` : 'none',
@@ -210,7 +209,7 @@ export default function InfraEcosystem() {
                         transition: 'all 0.6s ease',
                       }}
                     >
-                      <n.icon size={18} color={active ? n.color : '#94A3B8'} strokeWidth={1.5} />
+                      <n.icon size={16} color={active ? n.color : '#94A3B8'} strokeWidth={1.5} />
                     </div>
                     <p className="text-[9px] font-bold mt-1 text-center leading-tight max-w-[72px]"
                       style={{ color: active ? '#0A1628' : '#94A3B8', transition: 'color 0.6s ease' }}>

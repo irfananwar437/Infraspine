@@ -253,6 +253,9 @@ export default function ERPPage() {
             <div className="rounded-2xl border p-8" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
               <p className="text-[11px] font-bold uppercase tracking-widest mb-6" style={{ color: '#94A3B8' }}>Custom vs Off-the-Shelf ERP</p>
               <div className="space-y-3">
+                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pb-1 border-b" style={{ color: '#94A3B8', borderColor: '#E2E8F0' }}>
+                  <div>Factor</div><div>Custom ERP</div><div>Off-the-Shelf</div>
+                </div>
                 {[
                   { factor: 'Upfront cost', custom: 'Fixed project cost', shelf: 'Licence + implementation' },
                   { factor: 'Ongoing cost', custom: 'Maintenance only', shelf: 'Per-user monthly licence' },
@@ -268,9 +271,6 @@ export default function ERPPage() {
                     <div style={{ color: '#DC2626' }}>{r.shelf}</div>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 gap-2 text-[10px] font-bold uppercase tracking-wider pt-1" style={{ color: '#94A3B8' }}>
-                  <div>Factor</div><div>Custom ERP</div><div>Off-the-Shelf</div>
-                </div>
               </div>
             </div>
           </div>
