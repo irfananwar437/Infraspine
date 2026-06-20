@@ -2,12 +2,20 @@
 
 import { m, useReducedMotion } from 'framer-motion'
 
-export const revealViewport = { once: true, amount: 0.2, margin: '-60px' }
+// Trigger well before the element is actually scrolled into view (positive
+// bottom margin expands the intersection root downward) so the fade/slide-in
+// has already finished by the time a user — especially scrolling fast, or on
+// a slower device — would see it. The old '-60px' margin + 0.2 amount only
+// fired once content was nearly on-screen, which on anything slower than a
+// dev machine reads as a visible blank gap or "card popping in late" right
+// where cards meet headings — the exact overlap/gap pattern reported
+// repeatedly even after the underlying spacing was already correct.
+export const revealViewport = { once: true, amount: 0.1, margin: '0px 0px 240px 0px' }
 
 export const easeOutExpo = [0.16, 1, 0.3, 1]
 
 export const defaultRevealTransition = {
-  duration: 0.55,
+  duration: 0.4,
   ease: easeOutExpo,
 }
 
@@ -15,14 +23,14 @@ const staggerContainer = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.06,
+      staggerChildren: 0.05,
+      delayChildren: 0.04,
     },
   },
 }
 
 const staggerItem = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
