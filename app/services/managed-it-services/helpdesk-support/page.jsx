@@ -175,35 +175,35 @@ export default function HelpdeskSupportPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#0891B2,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#0891B2' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#0891B2' }}>IT Helpdesk Support</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Enterprise IT Helpdesk —{' '}
               <span style={{ color: '#0891B2' }}>Fast Resolution, Every Time.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Every hour your staff spend waiting for IT help is an hour of lost productivity. Infraspine&apos;s enterprise IT helpdesk delivers structured L1, L2, and L3 support with written SLA guarantees — accessible via phone, email, WhatsApp, and a web portal. Your team gets fast, knowledgeable help the moment they need it. You get full visibility into every ticket, every resolution time, and every SLA measurement, delivered in a monthly report that keeps you in control.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#0891B2', color: '#fff' }}>
                 Get a Dedicated Helpdesk <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 See Pricing
               </Link>
@@ -230,7 +230,7 @@ export default function HelpdeskSupportPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Ad-hoc IT support — whether that means your office manager doubling as IT support or a local technician you call when something breaks — has a fundamental flaw: there is no structure. No ticket tracking means issues get lost. No SLA means response times are unpredictable. No escalation path means complex problems stay unsolved. No reporting means you have no visibility into how much IT issues are actually costing you.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 A professional managed helpdesk changes this entirely. Every issue is tracked from first contact to resolution. SLAs are contractually guaranteed and measured monthly. Escalation paths are defined so complex issues reach the right engineer immediately. And monthly reports give your leadership team hard data on IT support performance — turning an invisible cost centre into a measurable, manageable business function.
               </p>
               <div className="space-y-3">

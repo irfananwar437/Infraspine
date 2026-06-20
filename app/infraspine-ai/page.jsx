@@ -237,12 +237,12 @@ export default function InfraspineAIPage() {
 
               <div className="flex flex-wrap gap-3 mb-4 sm:mb-7">
                 <Link href="/contact-us"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                   style={{ background: '#B7FF58', color: '#0A1628' }}>
                   Start Your AI Project <ArrowRight size={15} />
                 </Link>
                 <Link href="/services/ai-automation"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                   style={{ border: '2px solid rgba(255,255,255,0.18)', color: '#fff' }}>
                   AI Service Details <ChevronRight size={14} />
                 </Link>

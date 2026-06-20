@@ -171,13 +171,13 @@ export default function BiometricsPage() {
           style={{ background: 'radial-gradient(ellipse at top right, #7C3AED, transparent 60%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#7C3AED' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#7C3AED' }}>Biometric Systems</span>
             </div>
-            <h1 className="text-[clamp(2.1rem,4.5vw,3.7rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2.1rem,4.5vw,3.7rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Biometric Security & Attendance —{' '}
               <span style={{ color: '#7C3AED' }}>Identity You Cannot Fake.</span>
             </h1>
@@ -185,11 +185,11 @@ export default function BiometricsPage() {
               Proxy attendance, buddy punching, shared access cards, and password sharing are problems that passwords and cards can never solve — because credentials can always be transferred between people. Biometrics cannot. A fingerprint or a face is definitively tied to a specific individual — the only way to beat it is to be present in person. Infraspine deploys biometric attendance and access control systems across Pakistan that eliminate identity fraud and provide irrefutable attendance records for payroll and compliance purposes.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {STATS.map(s => (
                 <div key={s.label} className="rounded-xl p-4 border"
                   style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[22px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                  <div className="text-[18px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
@@ -197,12 +197,12 @@ export default function BiometricsPage() {
 
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#7C3AED', color: '#fff' }}>
                 Book a Free Consultation <ArrowRight size={14} />
               </Link>
               <Link href="/request-quote"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '1.5px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Get a Quote
               </Link>

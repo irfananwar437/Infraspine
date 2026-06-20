@@ -138,14 +138,14 @@ export default function TrainingsPage() {
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="grid lg:grid-cols-[1fr_360px] gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="h-px w-6" style={{ background: '#00C853' }} />
                 <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>IT Training Academy</span>
               </div>
-              <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+              <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
                 Build Real IT Skills.<br />
                 <span style={{ color: '#00C853' }}>Earn Vendor Certifications.</span>
               </h1>
@@ -154,12 +154,12 @@ export default function TrainingsPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact-us"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                   style={{ background: '#00C853', color: '#0A1628' }}>
                   Enrol in a Course <ArrowRight size={14} />
                 </Link>
                 <Link href="/services/it-trainings"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold border"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold border"
                   style={{ borderColor: '#ffffff22', color: '#CBD5E1' }}>
                   View All Courses
                 </Link>
@@ -222,7 +222,7 @@ export default function TrainingsPage() {
               <h2 className="text-[clamp(1.7rem,3vw,2.6rem)] font-black mb-6" style={{ color: '#0A1628' }}>
                 Why Students Choose Infraspine Training Academy
               </h2>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Infraspine Training Academy is run by the same engineers who build enterprise IT infrastructure for real clients. This means our curriculum is grounded in real-world scenarios — not textbook theory. Students leave with skills they can apply on day one. Our pass rates speak for themselves: 95% of our students pass their first certification attempt.
               </p>
               <div className="space-y-4">
@@ -265,7 +265,7 @@ export default function TrainingsPage() {
                 ))}
               </div>
               <Link href="/contact-us"
-                className="block w-full py-3.5 rounded-xl text-[14px] font-bold text-center transition-all hover:opacity-90"
+                className="block w-full py-3 rounded-xl text-[14px] font-bold text-center transition-all hover:opacity-90"
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 Reserve Your Seat
               </Link>

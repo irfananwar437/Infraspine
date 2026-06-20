@@ -320,7 +320,7 @@ export default async function IndustryPage({ params }) {
                 <div className="h-px w-6" style={{ background: ac }} />
                 <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: ac }}>Industry</span>
               </div>
-              <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white">
+              <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white">
                 IT Solutions for<br />
                 <span style={{ color: ac }}>{data.name}</span>
               </h1>
@@ -334,8 +334,8 @@ export default async function IndustryPage({ params }) {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
             {data.stats.map(s => (
-              <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                <div className="text-[20px] font-black mb-1" style={{ color: ac }}>{s.value}</div>
+              <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div className="text-[17px] font-black mb-1" style={{ color: ac }}>{s.value}</div>
                 <div className="text-[11px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
               </div>
             ))}
@@ -343,12 +343,12 @@ export default async function IndustryPage({ params }) {
 
           <div className="flex flex-wrap gap-3">
             <Link href="/request-quote"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: ac, color: '#fff' }}>
               Get a Free Assessment <ArrowRight size={14} />
             </Link>
             <Link href="/book-meeting"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: '#fff' }}>
               Book a Consultation
             </Link>
@@ -423,7 +423,7 @@ export default async function IndustryPage({ params }) {
               <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-black text-white mb-5 leading-tight">
                 {data.name} IT Expertise<br />You Can Rely On
               </h2>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#94A3B8' }}>
                 Infraspine engineers and consultants have worked extensively within the {data.name.toLowerCase()} sector across Pakistan. We understand the regulatory environment, the operational pressures, and the technology landscape — which means we design solutions that fit your context, not generic IT templates.
               </p>
               <div className="space-y-3">

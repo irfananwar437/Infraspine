@@ -47,13 +47,13 @@ export default function ProjectsPage() {
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Projects & Case Studies</span>
             </div>
-            <h1 className="text-[clamp(2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Enterprise Delivery.<br />
               <span style={{ color: '#00C853' }}>Measurable Results.</span>
             </h1>

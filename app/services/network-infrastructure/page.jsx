@@ -130,29 +130,29 @@ export default function NetworkInfrastructurePage() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#2563EB' }}>Network Infrastructure</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Enterprise Networks Built<br />
               <span style={{ color: '#2563EB' }}>to Last and to Perform.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
               Your network is the foundation of every technology investment your business makes. Slow, unreliable, or poorly designed networks reduce productivity, inflate IT support costs, and create security vulnerabilities attackers actively exploit. Infraspine designs, deploys, and manages enterprise networks — from structured cabling through to SD-WAN and 24/7 NOC monitoring — that are fast, resilient, and built to scale with your business.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <Link href="/contact-us"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#2563EB', color: '#fff' }}>
               Get a Free Network Assessment <ArrowRight size={14} />
             </Link>
@@ -175,7 +175,7 @@ export default function NetworkInfrastructurePage() {
               <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 The most common network problems we see — slow WiFi, VPN failures, internet dropouts, the server feels slow — are almost never hardware problems. They are design problems. A network built with consumer-grade switches, no VLAN segmentation, inadequate cabling, and no monitoring will fail repeatedly regardless of how many times you replace the router.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Every Infraspine network engagement starts with a thorough assessment of your current environment before a single piece of hardware is recommended. We document what you have, what problems it causes, and what a properly designed replacement looks like — with full justification for every architectural decision. You get a written design report first; implementation proceeds only when you are satisfied with the plan.
               </p>
               {['Assessment and design before any hardware is purchased',

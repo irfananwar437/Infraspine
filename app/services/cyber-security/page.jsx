@@ -135,13 +135,13 @@ export default function CyberSecurityPage() {
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#DC2626' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#DC2626' }}>Cyber Security</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Protect Your Business Before<br />
               <span style={{ color: '#DC2626' }}>an Attacker Does.</span>
             </h1>
@@ -149,17 +149,17 @@ export default function CyberSecurityPage() {
               Cybersecurity is not a product you buy — it is a practice you maintain. Infraspine Cybersecurity covers every layer of your attack surface: 24/7 SOC monitoring to detect threats as they happen, VAPT assessments to find weaknesses before attackers do, endpoint and email protection to block the most common attack vectors, and security awareness training to reduce the human risk that technology alone cannot solve.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {THREAT_STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
 
             <Link href="/contact-us"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#DC2626', color: '#fff' }}>
               Book a Free Security Assessment <ArrowRight size={14} />
             </Link>
@@ -182,7 +182,7 @@ export default function CyberSecurityPage() {
               <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 No single security tool stops all attacks. Ransomware bypasses antivirus because it exploits legitimate system tools. Phishing bypasses firewalls because the user clicks the link. Insider threats bypass perimeter security because they already have access. Effective cybersecurity requires layered controls at every level — network, endpoint, email, identity, and people.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Infraspine builds security programmes that address all layers simultaneously. We start with a threat assessment to understand your specific risk profile, then build a prioritised security roadmap that delivers the highest risk reduction for your budget. Every control we implement is mapped to your actual threat model — not a generic checklist.
               </p>
               <div className="space-y-3">

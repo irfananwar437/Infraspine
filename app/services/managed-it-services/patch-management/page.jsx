@@ -175,35 +175,35 @@ export default function PatchManagementPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#7C3AED,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#7C3AED' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#7C3AED' }}>Patch Management</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Automated Patch Management —{' '}
               <span style={{ color: '#7C3AED' }}>Vulnerabilities Closed Before They&apos;re Exploited.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Over 60% of successful cyberattacks exploit vulnerabilities that already had a patch available. The gap between patch release and patch deployment is where attackers live. Infraspine&apos;s automated patch management service eliminates that gap — systematically patching every OS, every application, and every endpoint in your environment on a structured schedule, with full compliance reporting and emergency zero-day response when critical CVEs are published.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#7C3AED', color: '#fff' }}>
                 Automate Patch Management <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Get a Compliance Audit
               </Link>
@@ -230,7 +230,7 @@ export default function PatchManagementPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 The problem is that manual patching at scale is genuinely difficult. Every operating system has a different update mechanism. Every application patches differently. Testing patches before production deployment requires dedicated processes and a staging environment. And doing it all during maintenance windows without disrupting business operations requires coordination and tooling that most IT teams — especially lean ones — simply do not have the bandwidth to manage properly.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Compliance requirements make this more pressing. ISO 27001, Cyber Essentials, PCI-DSS, and the SECP&apos;s IT security guidelines for financial institutions all mandate systematic patch management as a control. A compliance audit failure due to unpatched systems is not just an IT problem — it is a business risk and a potential regulatory sanction. Infraspine&apos;s patch management service provides the systematic process, tooling, and evidence you need to satisfy both security and compliance requirements.
               </p>
               <div className="space-y-3">

@@ -164,22 +164,22 @@ export default function ProjectManagementPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#2563EB' }}>IT Project Management</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Technology Projects Delivered{' '}
               <span style={{ color: '#2563EB' }}>On Time. On Budget. First Time.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most technology projects fail not because of bad technology — they fail because of poor planning, unclear ownership, and insufficient risk management. Infraspine provides PRINCE2 and PMP-certified project managers who take end-to-end accountability for your IT projects from initiation through to handover, ensuring that what was promised is what gets delivered. We have managed over 150 technology projects across Pakistan, from infrastructure rollouts to enterprise software implementations, at project values between £500,000 and £5 million.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -187,12 +187,12 @@ export default function ProjectManagementPage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#2563EB', color: '#fff' }}>
                 Discuss Your Project <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Request a PM Assessment
               </Link>
@@ -219,7 +219,7 @@ export default function ProjectManagementPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 When organisations try to deliver technology projects using internal IT staff who are simultaneously responsible for keeping systems running, the result is predictable. The project gets deprioritised every time an operational issue arises, deadlines slip, the budget drifts, and what eventually gets delivered is a fraction of what was originally scoped. An experienced, dedicated project manager changes this dynamic completely.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Infraspine\'s project managers bring PRINCE2 and PMP certifications, deep technology sector experience, and a track record of successful delivery across infrastructure, cloud migration, ERP implementation, and digital transformation projects. We take singular accountability for delivery so that your leadership team can focus on running the business.
               </p>
               <div className="space-y-3">

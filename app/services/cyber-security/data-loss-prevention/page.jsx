@@ -160,7 +160,7 @@ export default function DataLossPreventionPage() {
                 Data Loss Prevention<br />
                 <span style={{ color: accent }}>DLP Solutions in Pakistan</span>
               </h1>
-              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
                 Identify, monitor, and protect sensitive data from accidental or malicious exfiltration across your endpoints, network, and cloud environments. GDPR-compliant design with 99.7% detection accuracy and full visibility across your entire data estate.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -312,20 +312,20 @@ export default function DataLossPreventionPage() {
               Protect Your Sensitive Data<br />
               <span style={{ color: accent }}>Across Every Channel</span>
             </h2>
-            <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] leading-relaxed mb-4 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
               Infraspine designs and deploys enterprise DLP solutions that give you full visibility and control over sensitive data — from endpoints to email to cloud — with minimal false positives and zero business disruption.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: accent, color: '#fff' }}
               >
                 Start a DLP Project <ArrowRight size={15} />
               </Link>
               <Link
                 href="/services?tab=cyber"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}
               >
                 All Cybersecurity Services <ChevronRight size={15} />

@@ -40,13 +40,13 @@ export default function BlogPage() {
           aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.05]"
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }} aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>IT Blog &amp; Insights</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-5">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-5">
               Expert IT Insights for{' '}
               <span style={{ color: '#00C853' }}>Pakistani Businesses.</span>
             </h1>
@@ -106,12 +106,12 @@ export default function BlogPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#071a37', color: '#fff' }}>
               Talk to an Expert <ArrowRight size={14} />
             </Link>
             <Link href="/services"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all border"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all border"
               style={{ borderColor: '#E2E8F0', color: '#374151' }}>
               Explore Our Services
             </Link>

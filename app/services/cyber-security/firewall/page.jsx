@@ -181,7 +181,7 @@ export default function FirewallManagementPage() {
               <div className="h-px w-6" style={{ background: '#DC2626' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#DC2626' }}>Firewall Management</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-3">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-3">
               NGFW &amp; Firewall Management —{' '}
               <span style={{ color: '#DC2626' }}>Your First Line of Cyber Defence.</span>
             </h1>
@@ -190,20 +190,20 @@ export default function FirewallManagementPage() {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-6">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-2 sm:p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2 sm:p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#DC2626', color: '#fff' }}>
                 Get Expert Firewall Management <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Free Rule Review
               </Link>
@@ -230,7 +230,7 @@ export default function FirewallManagementPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 NGFW technology raises both the ceiling and the floor. Modern NGFWs from Fortinet, Palo Alto, and Check Point can perform application-aware inspection, SSL decryption, user-identity-based policy enforcement, and integrated threat prevention — capabilities that traditional firewalls simply do not have. But they require expert configuration to deliver this value. A misconfigured NGFW with default application control policies and disabled SSL inspection is providing almost no additional security over a basic ACL.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Policy management is where ongoing value is created. Every change request — a new application, a new branch, a new remote access requirement — needs to be evaluated for security impact before being implemented, documented in the change log, and reviewed quarterly for continued necessity. This discipline, applied consistently, is what separates organisations that use their firewall as a genuine security control from those that use it as a network traffic director with aspirational security labels.
               </p>
               <div className="space-y-3">

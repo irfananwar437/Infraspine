@@ -144,13 +144,13 @@ export default function PciDssPage() {
           style={{ background: `radial-gradient(circle,${ACCENT},transparent 70%)` }}
           aria-hidden="true"
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: ACCENT }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: ACCENT }}>Cybersecurity</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               PCI DSS Assessments<br />
               <span style={{ color: ACCENT }}>& Compliance Consulting.</span>
             </h1>
@@ -158,9 +158,9 @@ export default function PciDssPage() {
               Infraspine delivers PCI DSS v4.0 readiness assessments, gap analysis, and hands-on compliance consulting for organisations that store, process, or transmit cardholder data. From CDE scoping and network segmentation reviews through to SAQ completion and ROC preparation, our team provides QSA-qualified guidance at every stage of the compliance journey.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[18px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -170,14 +170,14 @@ export default function PciDssPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: ACCENT, color: '#fff' }}
               >
                 Request a PCI DSS Assessment <ArrowRight size={14} />
               </Link>
               <Link
                 href="/services/cyber-security"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold border transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold border transition-all hover:bg-white/10"
                 style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}
               >
                 All Cybersecurity Services

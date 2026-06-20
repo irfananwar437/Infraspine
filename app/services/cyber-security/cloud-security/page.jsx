@@ -160,7 +160,7 @@ export default function CloudSecurityPage() {
                 Cloud Security Services<br />
                 <span style={{ color: accent }}>AWS, Azure & GCP in Pakistan</span>
               </h1>
-              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
                 Securing your cloud environments with CSPM, CASB, identity management, container security, and zero-trust architecture. Certified engineers across AWS, Azure, and GCP with 24/7 cloud monitoring and compliance management.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -312,20 +312,20 @@ export default function CloudSecurityPage() {
               Protect Your Cloud Infrastructure<br />
               <span style={{ color: accent }}>Before Attackers Exploit Misconfigurations</span>
             </h2>
-            <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] leading-relaxed mb-4 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
               Infraspine\'s certified cloud security engineers assess and secure your AWS, Azure, and GCP environments — delivering CSPM, identity governance, container security, and 24/7 monitoring as a managed service.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: accent, color: '#fff' }}
               >
                 Start Cloud Security Assessment <ArrowRight size={15} />
               </Link>
               <Link
                 href="/services?tab=cyber"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}
               >
                 All Cybersecurity Services <ChevronRight size={15} />

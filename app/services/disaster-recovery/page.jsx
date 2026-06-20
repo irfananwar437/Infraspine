@@ -164,22 +164,22 @@ export default function DisasterRecoveryPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#DC2626,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#DC2626' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#DC2626' }}>Disaster Recovery</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Disaster Recovery —{' '}
               <span style={{ color: '#DC2626' }}>Back Online in Hours, Not Days.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Ransomware, hardware failure, human error, and natural disasters do not announce their arrival. When they strike, the difference between recovering in four hours and recovering in four days is whether you had a tested disaster recovery plan in place before the incident. Infraspine designs, implements, and tests DR strategies that restore your critical systems within agreed RTO and RPO targets — aligned to ISO 22301 and including annual DR testing as standard in every engagement.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -187,12 +187,12 @@ export default function DisasterRecoveryPage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#DC2626', color: '#fff' }}>
                 Get a DR Assessment <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Discuss Your RTO & RPO
               </Link>
@@ -219,7 +219,7 @@ export default function DisasterRecoveryPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Ransomware has made DR planning more urgent than ever. Ransomware attacks encrypt your data and demand payment for the decryption key — but paying the ransom does not guarantee recovery, and even when the key is provided, manual decryption of large data volumes can take days. The only reliable defence against ransomware is a tested DR capability with air-gapped or immutable backups that cannot themselves be encrypted, and a recovery process that has been proven to work within your required RTO.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Infraspine\'s DR service is not a document exercise — we design, configure, and test real recovery capability. Every engagement includes annual DR testing to prove that the plan works in practice and to identify gaps before they are discovered during a real incident.
               </p>
               <div className="space-y-3">

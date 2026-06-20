@@ -513,7 +513,7 @@ export default function CaseStudiesPage() {
               Real Results for<br />
               <span style={{ color: '#00C853' }}>Real Businesses</span>
             </h1>
-            <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
               See how we've transformed IT operations, built custom systems, and delivered measurable outcomes for enterprise clients across industries.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -993,17 +993,17 @@ export default function CaseStudiesPage() {
           <h2 className="text-[24px] sm:text-[40px] font-black text-white mb-4 leading-tight">
             Ready to Be Our<br /><span style={{ color: '#00C853' }}>Next Success Story?</span>
           </h2>
-          <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+          <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#94A3B8' }}>
             Book a free consultation and let us show you how we can transform your IT operations with the same results we've delivered for these enterprise clients.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Book a Free Consultation <ArrowRight size={15} />
             </a>
             <a href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
               View Our Services
             </a>

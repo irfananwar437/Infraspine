@@ -131,29 +131,29 @@ export default function BpoServicesPage() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>BPO Services</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Outsource the Operational.<br />
               <span style={{ color: '#00C853' }}>Focus on the Strategic.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
               The most expensive work your business does is often the most repetitive — customer support calls, data entry, invoice processing, HR paperwork, helpdesk tickets. This work must happen. But it does not need to consume your best people. Infraspine BPO handles these processes for you with trained teams, quality controls, and SLAs — so your organisation can invest in the work that actually creates competitive advantage.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <Link href="/contact-us"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Get a BPO Cost Estimate <ArrowRight size={14} />
             </Link>
@@ -176,7 +176,7 @@ export default function BpoServicesPage() {
               <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 Operational processes — customer support, data entry, administration, helpdesk — are essential but not the core of most businesses. Yet they consume a disproportionate share of headcount, management attention, and office space. Every hour a skilled employee spends processing invoices manually is an hour not spent on work that creates revenue, builds relationships, or solves strategic problems.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 BPO allows you to access a trained, managed team with established quality controls and technology infrastructure — without the cost of recruiting, training, managing, and retaining full-time headcount for roles that have high turnover and training costs. Infraspine BPO clients consistently report 30–50% cost reductions compared to equivalent in-house operations, alongside measurable improvements in quality and consistency.
               </p>
               {['No recruitment, training, or HR management overhead',

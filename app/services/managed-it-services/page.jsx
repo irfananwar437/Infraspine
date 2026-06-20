@@ -163,30 +163,30 @@ export default function ManagedITServicesPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.05]"
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Managed IT Services</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Your IT, Monitored and Managed<br />
               <span style={{ color: '#00C853' }}>Around the Clock.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most businesses discover their IT is broken when their users tell them. Infraspine Managed IT Services flips that equation — proactive 24/7 monitoring detects issues before users notice them, structured helpdesk support resolves them fast, and monthly reporting keeps you in full control. All delivered under a fixed monthly cost with written SLAs.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {BENEFITS.map(b => (
-                <div key={b.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: b.color }}>{b.stat}</div>
+                <div key={b.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: b.color }}>{b.stat}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{b.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 Get a Managed IT Quote <ArrowRight size={14} />
               </Link>
@@ -210,7 +210,7 @@ export default function ManagedITServicesPage() {
               <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 Break-fix IT — calling a technician only when something breaks — costs more than it saves. Every emergency call carries a premium rate, every unplanned outage costs your business in lost productivity, and every reactive patch cycle creates a window of vulnerability that structured management eliminates.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Managed IT replaces unpredictable IT costs with a fixed monthly fee that covers everything. Our clients consistently report 30–40% lower total IT spend within the first year, alongside dramatically fewer incidents because problems are caught and resolved before they escalate. The shift is not just financial — it is operational. Your team stops losing hours to IT problems and starts focusing on the work that moves your business forward.
               </p>
               <div className="space-y-3">

@@ -169,35 +169,35 @@ export default function StructuredCablingPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#D97706,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#D97706' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#D97706' }}>Structured Cabling</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Structured Cabling —{' '}
               <span style={{ color: '#D97706' }}>TIA-568 Certified CAT6A & Fiber.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Poor cabling is the hidden cause of most network performance problems — and the hardest to fix after the walls are closed. Infraspine installs and certifies TIA-568 compliant CAT6A copper and fiber optic structured cabling systems for offices, data centres, and campuses across Pakistan. Every port is Fluke DSX-8000 tested and certified, and every project is delivered with complete as-built documentation and a 25-year channel link warranty.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#D97706', color: '#fff' }}>
                 Get a Cabling Survey <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Request a Quote
               </Link>
@@ -224,7 +224,7 @@ export default function StructuredCablingPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Certified structured cabling eliminates this class of problem entirely. When every port in your building carries a Fluke DSX-8000 PASS result and a TIA-568 certification report, you know with certainty that the physical layer is not the problem. Troubleshooting network issues becomes vastly faster because the cabling can be ruled out immediately. And when your business grows and you add switching infrastructure to support 10 Gigabit to the desktop or wireless access points operating at Wi-Fi 6E speeds, CAT6A cabling is already in place to support it.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Structured cabling is also a property asset. A professionally installed and documented cabling system adds demonstrable value to an office fit-out — it is an asset that prospective tenants and building purchasers can verify through the certification documentation and that reduces their fit-out cost when they take occupation. The 25-year manufacturer warranty we register on qualifying installations means the infrastructure is supported for the life of the building fit-out cycle.
               </p>
               <div className="space-y-3">

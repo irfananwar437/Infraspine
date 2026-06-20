@@ -194,7 +194,7 @@ export default function SolutionsPage() {
               Complete Business Solutions<br />
               <span style={{ color: '#00C853' }}>Not Just Technology</span>
             </h1>
-            <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
               Four integrated solution tracks designed to solve real business problems — from unified ERP platforms and cloud migration to fully managed IT and end-to-end digital transformation.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -568,17 +568,17 @@ export default function SolutionsPage() {
           <h2 className="text-[24px] sm:text-[40px] font-black text-white mb-4 leading-tight">
             Let&apos;s Build Your<br /><span style={{ color: '#00C853' }}>Complete Solution</span>
           </h2>
-          <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
+          <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#94A3B8' }}>
             Book a free consultation and get a custom proposal for your business — no commitments, no sales pressure.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
               style={{ background: '#00C853', color: '#0A1628' }}>
               Get a Free Consultation <ArrowRight size={15} />
             </a>
             <a href="/contact-us"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
               View Case Studies
             </a>

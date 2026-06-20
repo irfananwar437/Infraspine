@@ -134,14 +134,14 @@ export default function BPOServicesPage() {
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="h-px w-6" style={{ background: '#00C853' }} />
                 <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Business Process Outsourcing</span>
               </div>
-              <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+              <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
                 Outsource Operations.<br />
                 <span style={{ color: '#00C853' }}>Scale Without Overhead.</span>
               </h1>
@@ -150,12 +150,12 @@ export default function BPOServicesPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact-us"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                   style={{ background: '#00C853', color: '#0A1628' }}>
                   Get a BPO Quote <ArrowRight size={14} />
                 </Link>
                 <Link href="/services/bpo-services"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold border"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold border"
                   style={{ borderColor: '#ffffff22', color: '#CBD5E1' }}>
                   Explore BPO Services
                 </Link>
@@ -222,7 +222,7 @@ export default function BPOServicesPage() {
               <h2 className="text-[clamp(1.7rem,3vw,2.6rem)] font-black mb-6" style={{ color: '#0A1628' }}>
                 Operational Teams That Run Like Your Own — Without the Overhead
               </h2>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Unlike commodity BPO providers, Infraspine teams are vertically trained in IT-adjacent industries. Our agents understand software, infrastructure, and technical workflows — making them effective in support, operations, and data roles that require more than scripted responses. Every team is managed by a dedicated account manager who attends your weekly standups and keeps performance on track.
               </p>
               <div className="space-y-4">

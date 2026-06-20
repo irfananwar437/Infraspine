@@ -160,7 +160,7 @@ export default function DataEncryptionPage() {
                 Enterprise Data Encryption<br />
                 <span style={{ color: accent }}>Services in Pakistan</span>
               </h1>
-              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
                 End-to-end encryption for data at rest, in transit, and in use. AES-256 standard, FIPS 140-2 compliant key management, and zero-knowledge architecture options — protecting your data even when attackers breach the perimeter.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -312,20 +312,20 @@ export default function DataEncryptionPage() {
               Make Your Data Unreadable<br />
               <span style={{ color: accent }}>Even After a Breach</span>
             </h2>
-            <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] leading-relaxed mb-4 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
               Infraspine designs and implements enterprise encryption strategies that protect your data at every layer — from device storage to cloud to email — with secure key management that keeps you in control.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: accent, color: '#fff' }}
               >
                 Plan Your Encryption Strategy <ArrowRight size={15} />
               </Link>
               <Link
                 href="/services?tab=cyber"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}
               >
                 All Cybersecurity Services <ChevronRight size={15} />

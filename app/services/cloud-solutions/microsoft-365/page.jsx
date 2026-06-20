@@ -175,35 +175,35 @@ export default function Microsoft365Page() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#0078D4,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#0078D4' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#0078D4' }}>Microsoft 365</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Microsoft 365 —{' '}
               <span style={{ color: '#0078D4' }}>The Complete Modern Workplace, Properly Configured.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Microsoft 365 is the world&apos;s most widely deployed productivity platform — but most organisations use less than 30% of what they are paying for, leave critical security settings at insecure defaults, and have no backup for the data they entrust to it. Infraspine&apos;s M365 service covers the complete journey: migration with zero downtime, proper security configuration, Teams and SharePoint deployment your staff will actually use, genuine backup, and ongoing administration so your platform stays optimised as Microsoft keeps adding capabilities.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#0078D4', color: '#fff' }}>
                 Migrate to Microsoft 365 <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Free M365 Health Check
               </Link>
@@ -230,7 +230,7 @@ export default function Microsoft365Page() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 The cost impact is real. A single compromised M365 account without MFA typically leads to email phishing of your contacts (reputation damage), access to all SharePoint and OneDrive files (data breach), and sometimes Business Email Compromise fraud (financial loss). Microsoft reports that organisations with MFA enabled block 99.9% of automated account compromise attacks. That single configuration change — which takes minutes to enforce — dramatically changes your security posture.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Teams adoption is the other major value lever. Organisations where Teams is properly structured around workflows see 15–20% productivity improvements from reduced email volume, faster decision-making, and better document collaboration. Getting there requires an architecture design, not just turning Teams on and hoping staff figure it out. Our deployment service includes governance design, team structure, and adoption training that gets your organisation to productive Teams usage within the first 30 days.
               </p>
               <div className="space-y-3">

@@ -213,7 +213,7 @@ export default function ServicesPage() {
               <div className="h-px w-6" style={{ background: '#00C853' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>Our Services</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               End-to-End IT Services for<br />
               <span style={{ color: '#00C853' }}>Enterprise Pakistan.</span>
             </h1>
@@ -223,8 +223,8 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-5 sm:mb-8">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 sm:p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[22px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 sm:p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[18px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
@@ -232,12 +232,12 @@ export default function ServicesPage() {
 
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#00C853', color: '#0A1628' }}>
                 Get a Free Consultation <ArrowRight size={14} />
               </Link>
               <Link href="/services/all-services"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold border transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold border transition-all hover:bg-white/10"
                 style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#fff' }}>
                 Browse All 40+ Services <ArrowRight size={14} />
               </Link>
@@ -261,7 +261,7 @@ export default function ServicesPage() {
               <p className="text-[15px] leading-relaxed mb-5" style={{ color: '#64748B' }}>
                 Most organisations end up with too many IT vendors. A networking company that does not understand the security implications of its own designs. A software developer who hands over code without documentation. A cybersecurity firm that found vulnerabilities but does not fix them. The result is fragmented accountability, integration failures, and technology that costs more to maintain than it saves.
               </p>
-              <p className="text-[15px] leading-relaxed mb-8" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Infraspine consolidates all ten enterprise IT disciplines under one team with a single SLA, a single account manager, and a single commercial relationship. Our engineers in each discipline work together on your environment — the network team knows what the security team has configured, the software team builds to the infrastructure team's standards, and the cloud team's FinOps governance integrates with the managed IT reporting. Technology that is designed, deployed, and managed as a whole performs better than technology assembled from disconnected parts.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
@@ -402,7 +402,7 @@ export default function ServicesPage() {
                 style={{ borderColor: `${m.color}40`, boxShadow: '0 4px 20px rgba(10,22,40,0.06)' }}>
                 <div className="px-6 py-5 border-b" style={{ borderColor: `${m.color}20` }}>
                   <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: m.badgeColor }}>{m.badge}</div>
-                  <h3 className="text-[20px] font-black mb-0.5" style={{ color: '#0A1628' }}>{m.title}</h3>
+                  <h3 className="text-[17px] font-black mb-0.5" style={{ color: '#0A1628' }}>{m.title}</h3>
                   <p className="text-[12px]" style={{ color: m.color }}>{m.subtitle}</p>
                 </div>
                 <div className="px-6 py-5">

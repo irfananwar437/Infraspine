@@ -175,35 +175,35 @@ export default function MobileAppsPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#7C3AED,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#7C3AED' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#7C3AED' }}>Mobile App Development</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Mobile App Development —{' '}
               <span style={{ color: '#7C3AED' }}>Native Performance, Cross-Platform Efficiency.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Mobile is not a channel — it is the primary computing platform for your customers and staff. Infraspine builds iOS and Android apps that deliver genuine native performance using React Native, Swift, and Kotlin. Fifty-plus apps delivered, an average 4.8-star App Store rating, and a development process that runs from interactive prototype through App Store submission and post-launch support. All source code and store accounts in your name, always.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[22px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[18px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#7C3AED', color: '#fff' }}>
                 Build Your Mobile App <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Get a Free Discovery Call
               </Link>
@@ -230,7 +230,7 @@ export default function MobileAppsPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 The React Native vs native development question comes up in every mobile project conversation. React Native has matured dramatically since Facebook open-sourced it in 2015 — major consumer apps including Facebook itself, Instagram, and Shopify use it in production. For most business applications, React Native delivers the same user experience as native at 40–60% of the development cost, because you are building once rather than twice. This cost advantage compounds on every future update: a single codebase means half the testing effort and half the release engineering work on every subsequent release.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 App Store Optimisation is the often-overlooked factor that determines whether a well-built app actually gets found. Over 65% of app downloads on the App Store come from search. Apps that rank on the first page for their target keywords get dramatically more organic downloads than apps buried on page three. Our ASO process — keyword research, metadata optimisation, screenshot design, and ongoing ranking monitoring — starts during development and continues post-launch to maximise the organic visibility of your investment.
               </p>
               <div className="space-y-3">

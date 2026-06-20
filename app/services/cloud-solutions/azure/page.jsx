@@ -175,35 +175,35 @@ export default function AzurePage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#0078D4,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#0078D4' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#0078D4' }}>Microsoft Azure</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Microsoft Azure —{' '}
               <span style={{ color: '#0078D4' }}>Enterprise Cloud Infrastructure, Expertly Managed.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Moving to Azure is the start of the journey, not the destination. Getting maximum value requires certified expertise in architecture, security, identity, Kubernetes, and cost governance. Infraspine&apos;s AZ-104 and AZ-305 certified engineers design, migrate, and manage Azure environments for organisations across Pakistan — delivering the infrastructure reliability, security posture, and cost control that cloud should provide but rarely delivers without expert management.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#0078D4', color: '#fff' }}>
                 Move to Azure with Infraspine <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Azure Cost Review
               </Link>
@@ -230,7 +230,7 @@ export default function AzurePage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 The financial model for on-premise infrastructure is increasingly unfavourable. Capital expenditure on servers depreciates over 3–5 years while cloud services scale elastically. Unplanned hardware failures create emergency procurement costs. Power, cooling, and rack space costs are often hidden from IT budgets but are very real. Our Azure migrations consistently demonstrate 30–40% total cost reduction versus the equivalent on-premise infrastructure when these hidden costs are properly accounted for in the business case.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Cost governance is where most organisations underinvest and then get unpleasant Azure bill surprises. The cloud&apos;s consumption-based model means costs can escalate quickly without visibility and controls. Our FinOps practice — continuous cost analysis, right-sizing, Reserved Instance modelling, and budget governance — is built into every managed Azure engagement so your cloud spend is always predictable, justified, and optimised.
               </p>
               <div className="space-y-3">

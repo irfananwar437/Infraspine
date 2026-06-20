@@ -146,23 +146,23 @@ export default function AiAutomationPage() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest" style={{ background: '#B7FF58', color: '#0A1628' }}>NEW</span>
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#B7FF58' }}>AI & Automation</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-6">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Automate the Repetitive.<br />
               <span style={{ color: '#B7FF58' }}>Amplify the Strategic.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-8" style={{ color: '#94A3B8' }}>
               Every hour your team spends copying data between systems, generating the same report, processing invoices manually, or answering the same support question is an hour not spent on work that actually requires human intelligence. Infraspine AI builds the automations, integrations, and intelligent tools that eliminate that waste — and deploy them securely within your existing technology environment.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-1" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[10.5px] leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}

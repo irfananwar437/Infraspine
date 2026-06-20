@@ -175,35 +175,35 @@ export default function NOCMonitoringPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#2563EB' }}>NOC Monitoring</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               24/7 NOC Monitoring —{' '}
               <span style={{ color: '#2563EB' }}>We Watch So You Don&apos;t Have To.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               Most IT failures are not sudden — they are slow, predictable deteriorations that go unnoticed until the damage is done. Infraspine&apos;s 24/7 Network Operations Centre monitors your entire infrastructure around the clock, catches anomalies early, and resolves issues before your users ever notice a problem. No waiting until Monday morning. No discovering the server was down all weekend. Just continuous, expert-level vigilance over everything that keeps your business running.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
-                  <div className="text-[20px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
+                <div key={s.label} className="rounded-xl p-2.5 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                  <div className="text-[17px] font-black mb-0.5" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#2563EB', color: '#fff' }}>
                 Start NOC Monitoring <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Get a Free Assessment
               </Link>
@@ -230,7 +230,7 @@ export default function NOCMonitoringPage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Proactive NOC monitoring transforms your IT posture from reactive to anticipatory. Our engineers do not wait for your phone to ring — they watch every metric, every minute, and act on warnings before they become failures. Organisations that move to managed NOC monitoring consistently see a 70–90% reduction in unplanned downtime within the first six months. Not because problems stop happening, but because they are caught and remediated before anyone is affected.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 There is also a staffing reality that makes in-house 24/7 monitoring impractical for most businesses. Genuine round-the-clock coverage requires a minimum of four full-time engineers to cover shift rotations, plus significant investment in monitoring software licensing, runbook documentation, and ongoing training. Infraspine delivers the same capability — with more experience across a wider technology stack — at a fraction of what building it in-house would cost.
               </p>
               <div className="space-y-3">

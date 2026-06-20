@@ -160,7 +160,7 @@ export default function SecurityAlertsPage() {
                 Security Alerts Management<br />
                 <span style={{ color: accent }}>SIEM Tuning & Triage in Pakistan</span>
               </h1>
-              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-8 max-w-2xl" style={{ color: '#94A3B8' }}>
+              <p className="text-[15px] sm:text-[17px] leading-relaxed mb-5 max-w-2xl" style={{ color: '#94A3B8' }}>
                 Managed SIEM alerting, tuning, and triage that eliminates alert fatigue while ensuring genuine threats are never missed. Processing 1M+ alerts per day with 98% false-positive reduction and sub-5-minute triage by 24/7 security analysts.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -312,20 +312,20 @@ export default function SecurityAlertsPage() {
               Cut Alert Fatigue by 98%<br />
               <span style={{ color: accent }}>Never Miss a Genuine Threat Again</span>
             </h2>
-            <p className="text-[15px] leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
+            <p className="text-[15px] leading-relaxed mb-4 max-w-xl mx-auto" style={{ color: '#94A3B8' }}>
               Infraspine\'s managed security alerts service tunes your SIEM, triages every alert within 5 minutes, and delivers weekly reports that give your leadership team clear visibility into your security posture.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: accent, color: '#fff' }}
               >
                 Fix Your Alert Problem <ArrowRight size={15} />
               </Link>
               <Link
                 href="/services?tab=cyber"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}
               >
                 All Cybersecurity Services <ChevronRight size={15} />

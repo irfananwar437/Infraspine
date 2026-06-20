@@ -164,22 +164,22 @@ export default function CIOAsAServicePage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#EA580C,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#EA580C' }} />
               <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#EA580C' }}>CIO as a Service</span>
             </div>
-            <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
+            <h1 className="text-[clamp(2rem,4vw,3.1rem)] font-black leading-[1.05] tracking-tight text-white mb-4">
               Board-Level IT Leadership —{' '}
               <span style={{ color: '#EA580C' }}>Fractional Cost. Full Executive Impact.</span>
             </h1>
             <p className="text-[16px] sm:text-[17px] leading-relaxed mb-6" style={{ color: '#94A3B8' }}>
               A full-time CIO costs £150,000 to £250,000 per year before benefits, pension, and bonus. For the majority of mid-market businesses in Pakistan, that investment is difficult to justify — yet the strategic IT leadership a CIO provides is genuinely needed. Infraspine CIO as a Service gives you an experienced technology executive who attends your board, develops your IT strategy, leads your digital transformation, manages your vendors, and represents technology at the highest level of your organisation — for a fraction of the full-time cost.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {STATS.map(s => (
-                <div key={s.label} className="rounded-xl p-4 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+                <div key={s.label} className="rounded-xl p-3 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
                   <div className="text-[22px] font-black mb-1 leading-tight" style={{ color: s.color }}>{s.value}</div>
                   <div className="text-[11px] font-semibold leading-snug" style={{ color: '#64748B' }}>{s.label}</div>
                 </div>
@@ -187,12 +187,12 @@ export default function CIOAsAServicePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:opacity-90"
                 style={{ background: '#EA580C', color: '#fff' }}>
                 Speak to a Fractional CIO <ArrowRight size={14} />
               </Link>
               <Link href="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] font-bold transition-all hover:bg-white/10"
                 style={{ border: '2px solid rgba(255,255,255,0.2)', color: '#fff' }}>
                 Request a Technology Audit
               </Link>
@@ -219,7 +219,7 @@ export default function CIOAsAServicePage() {
               <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 The CIOaaS model emerged as a response to a genuine market gap: the demand for experienced technology leadership at the mid-market level, where the need is real but the budget for a full-time executive appointment is not. A fractional CIO brings all of the experience, credibility, and commercial judgment of a seasoned technology leader, deployed across your organisation for the specific days and deliverables that matter most, without the overhead of a full-time executive hire.
               </p>
-              <p className="text-[15px] leading-relaxed mb-6" style={{ color: '#64748B' }}>
+              <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#64748B' }}>
                 Our fractional CIOs have held full-time CIO and CTO roles at organisations across financial services, manufacturing, retail, and professional services. They bring the board-level presence and strategic judgment that comes from having been genuinely accountable for enterprise technology at the highest level.
               </p>
               <div className="space-y-3">
