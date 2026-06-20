@@ -230,7 +230,7 @@ export default function Hero() {
   return (
     <section
       suppressHydrationWarning
-      className="relative isolate flex w-full min-h-[min(74svh,560px)] items-center overflow-hidden pt-[72px] lg:pt-[106px]"
+      className="relative isolate flex w-full min-h-[min(74vh,560px)] items-center overflow-hidden pt-[72px] lg:pt-[106px]"
       style={{ background: '#060E23' }}
       aria-labelledby="hero-heading"
     >
@@ -256,11 +256,11 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Content — md:pb-12 reserves clearance below the text/visual for the
-          HeroCards row, which is absolutely positioned straddling this
-          section's bottom edge (md:translate-y-1/2). Without this, the cards
-          float on top of and hide the trust-metrics row. */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-4 md:py-5 md:pb-24 lg:pb-24">
+      {/* Content — md:pb-16 leaves a fixed gap below the text/visual that
+          HeroCards (now in normal flow, pulled up by its own fixed negative
+          margin) sits inside, so it never reaches the trust-metrics row
+          regardless of either component's actual rendered height. */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-4 md:py-5 md:pb-16 lg:pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
           {/* Left: Text */}

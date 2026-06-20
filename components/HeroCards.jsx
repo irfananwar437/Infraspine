@@ -25,12 +25,21 @@ const CARDS = [
 ]
 
 export default function HeroCards() {
+  // Deliberately NOT absolutely positioned against the Hero section's bottom
+  // edge. That approach (position:absolute + translateY(50%) off a section
+  // sized by a min-height formula) requires the Hero's reserved padding to
+  // exactly match this component's rendered height — any mismatch between
+  // expected and actual height (font metrics, browser, viewport-unit support)
+  // overlaps these cards onto whatever is underneath with no graceful
+  // degradation. Normal flow + a small fixed negative margin still gives the
+  // "straddling the seam" look, but the worst case is bounded by that fixed
+  // margin instead of by this component's full height.
   return (
     <div
-      className="relative z-[35] -mt-3 px-3 min-[400px]:px-4 sm:px-6 sm:-mt-4 md:mt-0 md:pointer-events-none md:absolute md:inset-x-0 md:bottom-0 md:translate-y-1/2 lg:px-8"
+      className="relative z-[35] -mt-3 px-3 min-[400px]:px-4 sm:px-6 sm:-mt-4 md:-mt-12 lg:-mt-14 lg:px-8"
       aria-label="Highlights"
     >
-      <div className="pointer-events-auto mx-auto w-full max-w-[900px]">
+      <div className="mx-auto w-full max-w-[900px]">
         <div className="grid grid-cols-3 gap-1.5 min-[400px]:gap-2 sm:gap-3 md:gap-4">
           {CARDS.map((card) => (
             <div
