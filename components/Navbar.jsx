@@ -178,120 +178,135 @@ const dropV = {
    Framer Motion override). Inner m.div handles animation.
    utility bar 32px + main nav 60px + 2px borders = ~94px top
 
-   The CTA footer is OUTSIDE the scrollable region (flex-shrink-0)
-   so it's always visible without scrolling — previously it was
-   the last item inside the scrollable list and was invisible
-   unless the user scrolled all the way down.
+   All columns + the CTA footer render at once with no internal
+   scroll — row spacing is tuned to fit every service link within
+   one screen on common desktop heights (>=768px).
 ───────────────────────────────────────────────────────────── */
 function ServicesMega() {
+  // Measured from the live navbar element instead of a hardcoded pixel value —
+  // a fixed number only matches the real navbar height by coincidence and
+  // silently produces a gap (or overlap/clip) the moment the navbar's actual
+  // rendered height ever differs (font load shift, content change, zoom).
+  const [navHeight, setNavHeight] = useState(94)
+
+  useEffect(() => {
+    const navEl = document.querySelector('[role="navigation"]')
+    if (!navEl) return
+    const update = () => setNavHeight(navEl.getBoundingClientRect().height)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(navEl)
+    return () => ro.disconnect()
+  }, [])
+
   return (
     <div
       className="fixed z-50"
-      style={{ top: 94, left: '50%', transform: 'translateX(-50%)', width: 920, maxWidth: 'calc(100vw - 24px)' }}
+      style={{ top: navHeight, left: '50%', transform: 'translateX(-50%)', width: 920, maxWidth: 'calc(100vw - 24px)' }}
     >
       <m.div
         variants={megaV} initial="hidden" animate="visible" exit="exit"
         className="rounded-b-2xl origin-top bg-white border border-slate-200 overflow-hidden flex flex-col"
         style={{
           boxShadow: '0 24px 64px rgba(7,26,55,0.20), 0 4px 16px rgba(7,26,55,0.10)',
-          maxHeight: 'min(82vh, 600px)',
+          // Safety clamp only — content is sized to fit comfortably within this
+          // on every common desktop viewport, so this should never actually
+          // clip. No overflow-y-auto / scrollbar: all services are meant to be
+          // visible at once without scrolling.
+          maxHeight: 'calc(100vh - 24px)',
         }}
         role="menu"
         aria-label="Services menu"
       >
 
-        {/* ── Scrollable region: column headers + items ── */}
-        <div className="overflow-y-auto flex-1 min-h-0">
-
-          {/* Column headers — sticky to the scrollable region */}
-          <div className="grid grid-cols-3 divide-x divide-slate-100 sticky top-0 z-10 bg-white">
-            {MEGA_COLS.map((col, ci) => (
-              <div
-                key={ci}
-                className="flex items-center gap-2.5 px-4 py-2.5"
-                style={{ background: `${col.color}0d`, borderBottom: `1px solid ${col.color}22` }}
+        {/* Column headers */}
+        <div className="grid grid-cols-3 divide-x divide-slate-100">
+          {MEGA_COLS.map((col, ci) => (
+            <div
+              key={ci}
+              className="flex items-center gap-2.5 px-4 py-2"
+              style={{ background: `${col.color}0d`, borderBottom: `1px solid ${col.color}22` }}
+            >
+              <span
+                className="inline-flex items-center justify-center rounded-lg w-6 h-6 flex-shrink-0"
+                style={{ background: `${col.color}22` }}
               >
-                <span
-                  className="inline-flex items-center justify-center rounded-lg w-6 h-6 flex-shrink-0"
-                  style={{ background: `${col.color}22` }}
-                >
-                  <col.icon size={13} style={{ color: col.color }} strokeWidth={2} />
-                </span>
-                <span className="text-[11px] font-black uppercase tracking-[0.15em]" style={{ color: col.color }}>
-                  {col.heading}
-                </span>
-              </div>
-            ))}
-          </div>
+                <col.icon size={13} style={{ color: col.color }} strokeWidth={2} />
+              </span>
+              <span className="text-[11px] font-black uppercase tracking-[0.15em]" style={{ color: col.color }}>
+                {col.heading}
+              </span>
+            </div>
+          ))}
+        </div>
 
-          {/* Service items */}
-          <div className="grid grid-cols-3 divide-x divide-slate-100">
-            {MEGA_COLS.map((col, ci) => (
-              <div key={ci} className="px-4 py-3">
-                {col.groups.map((g, gi) => (
-                  <div key={gi} className={gi > 0 ? 'mt-2.5 pt-2.5 border-t border-slate-100' : ''}>
+        {/* Service items */}
+        <div className="grid grid-cols-3 divide-x divide-slate-100">
+          {MEGA_COLS.map((col, ci) => (
+            <div key={ci} className="px-4 py-2.5">
+              {col.groups.map((g, gi) => (
+                <div key={gi} className={gi > 0 ? 'mt-2 pt-2 border-t border-slate-100' : ''}>
 
-                    {/* Parent heading */}
-                    {g.parent ? (
-                      <Link
-                        href={g.parent.href}
-                        className="group flex items-center gap-2.5 px-2 py-1.5 rounded-xl mb-1 transition-colors hover:bg-slate-50"
+                  {/* Parent heading */}
+                  {g.parent ? (
+                    <Link
+                      href={g.parent.href}
+                      className="group flex items-center gap-2.5 px-2 py-1 rounded-xl mb-0.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
+                        style={{ background: `${col.color}15` }}
                       >
+                        {g.parent.icon && (
+                          <g.parent.icon size={12} style={{ color: col.color }} strokeWidth={1.8} />
+                        )}
+                      </span>
+                      <span className="text-[13px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
+                        {g.parent.label}
+                      </span>
+                      <ChevronRight
+                        size={10}
+                        className="flex-shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
+                        style={{ color: col.color }}
+                      />
+                    </Link>
+                  ) : (
+                    <div className="flex items-center gap-2.5 px-2 py-0.5 mb-0.5">
+                      {g.parentIcon && (
                         <span
-                          className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
+                          className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center"
                           style={{ background: `${col.color}15` }}
                         >
-                          {g.parent.icon && (
-                            <g.parent.icon size={12} style={{ color: col.color }} strokeWidth={1.8} />
-                          )}
+                          <g.parentIcon size={12} style={{ color: col.color }} strokeWidth={1.8} />
                         </span>
-                        <span className="text-[13px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
-                          {g.parent.label}
-                        </span>
-                        <ChevronRight
-                          size={10}
-                          className="flex-shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
-                          style={{ color: col.color }}
-                        />
-                      </Link>
-                    ) : (
-                      <div className="flex items-center gap-2.5 px-2 py-1 mb-1">
-                        {g.parentIcon && (
-                          <span
-                            className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center"
-                            style={{ background: `${col.color}15` }}
-                          >
-                            <g.parentIcon size={12} style={{ color: col.color }} strokeWidth={1.8} />
-                          </span>
-                        )}
-                        <p className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">
-                          {g.parentLabel || 'More'}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Sub-items */}
-                    <div>
-                      {g.items.map(item => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="group/item flex items-center gap-2 px-2 py-1 rounded-md text-[12.5px] leading-tight text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
-                        >
-                          <span
-                            className="flex-shrink-0 w-1.5 h-1.5 rounded-full transition-transform duration-150 group-hover/item:scale-125"
-                            style={{ background: `${col.color}55` }}
-                          />
-                          {item.label}
-                        </Link>
-                      ))}
+                      )}
+                      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">
+                        {g.parentLabel || 'More'}
+                      </p>
                     </div>
+                  )}
 
+                  {/* Sub-items */}
+                  <div>
+                    {g.items.map(item => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="group/item flex items-center gap-2 px-2 py-[3px] rounded-md text-[12.5px] leading-tight text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
+                      >
+                        <span
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full transition-transform duration-150 group-hover/item:scale-125"
+                          style={{ background: `${col.color}55` }}
+                        />
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
-                ))}
-              </div>
-            ))}
-          </div>
+
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
         {/* ── Bottom CTA — pinned, always visible, never scrolls away ── */}
@@ -406,11 +421,23 @@ function SimpleDropdown({ items }) {
 ───────────────────────────────────────────────────────────── */
 let scrollLockCount = 0
 let savedHtmlOverflow = ''
+let savedHtmlPaddingRight = ''
 
 function lockBodyScroll() {
   if (scrollLockCount === 0) {
+    // Hiding overflow removes the scrollbar, which on Windows/Linux Chrome
+    // (non-overlay scrollbars) shrinks the document's content width and
+    // shifts every fixed-width element — including the navbar link being
+    // hovered — sideways. That shift is what made the dropdown feel like it
+    // "broke" the moment a scroll happened. Reserving the scrollbar's width
+    // as padding keeps the page width constant while scroll is locked.
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
     savedHtmlOverflow = document.documentElement.style.overflow
+    savedHtmlPaddingRight = document.documentElement.style.paddingRight
     document.documentElement.style.overflow = 'hidden'
+    if (scrollbarWidth > 0) {
+      document.documentElement.style.paddingRight = `${scrollbarWidth}px`
+    }
   }
   scrollLockCount++
 }
@@ -419,6 +446,7 @@ function unlockBodyScroll() {
   scrollLockCount = Math.max(0, scrollLockCount - 1)
   if (scrollLockCount === 0) {
     document.documentElement.style.overflow = savedHtmlOverflow
+    document.documentElement.style.paddingRight = savedHtmlPaddingRight
   }
 }
 
