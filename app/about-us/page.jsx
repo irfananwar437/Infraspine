@@ -96,7 +96,7 @@ export default function AboutUsPage() {
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-8 sm:py-14">
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-14">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 mb-4">

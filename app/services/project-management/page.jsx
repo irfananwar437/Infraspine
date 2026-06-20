@@ -164,7 +164,7 @@ export default function ProjectManagementPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#2563EB' }} />

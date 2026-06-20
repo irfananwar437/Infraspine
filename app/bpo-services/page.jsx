@@ -134,7 +134,7 @@ export default function BPOServicesPage() {
           style={{ background: 'radial-gradient(circle,#2563EB,transparent 70%)' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
           <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-6">

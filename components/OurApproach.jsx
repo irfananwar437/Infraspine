@@ -68,11 +68,11 @@ export default function OurApproach() {
   }, [reduce])
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20" style={{ background: '#FFFFFF' }} id="approach" ref={containerRef}>
+    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#FFFFFF' }} id="approach" ref={containerRef}>
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <Stagger className="flex flex-col items-center">
             <StaggerItem className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8" style={{ background: '#00C853' }} />

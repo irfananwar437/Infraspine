@@ -144,7 +144,7 @@ export default function DpoAsAServicePage() {
           style={{ background: `radial-gradient(circle,${ACCENT},transparent 70%)` }}
           aria-hidden="true"
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-20 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-20">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: ACCENT }} />

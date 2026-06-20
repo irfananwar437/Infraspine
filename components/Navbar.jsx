@@ -219,71 +219,40 @@ function ServicesMega() {
         aria-label="Services menu"
       >
 
-        {/* Column headers */}
+        {/* Service columns — compact: flat text column label (no icon
+            band), no icon boxes on parent links, tight row height. */}
         <div className="grid grid-cols-3 divide-x divide-slate-100">
           {MEGA_COLS.map((col, ci) => (
-            <div
-              key={ci}
-              className="flex items-center gap-2.5 px-4 py-2"
-              style={{ background: `${col.color}0d`, borderBottom: `1px solid ${col.color}22` }}
-            >
-              <span
-                className="inline-flex items-center justify-center rounded-lg w-6 h-6 flex-shrink-0"
-                style={{ background: `${col.color}22` }}
-              >
-                <col.icon size={13} style={{ color: col.color }} strokeWidth={2} />
-              </span>
-              <span className="text-[11px] font-black uppercase tracking-[0.15em]" style={{ color: col.color }}>
-                {col.heading}
-              </span>
-            </div>
-          ))}
-        </div>
+            <div key={ci} className="px-4 py-3">
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <col.icon size={11} style={{ color: col.color }} strokeWidth={2.2} />
+                <span className="text-[10px] font-black uppercase tracking-[0.13em]" style={{ color: col.color }}>
+                  {col.heading}
+                </span>
+              </div>
 
-        {/* Service items */}
-        <div className="grid grid-cols-3 divide-x divide-slate-100">
-          {MEGA_COLS.map((col, ci) => (
-            <div key={ci} className="px-4 py-2.5">
               {col.groups.map((g, gi) => (
-                <div key={gi} className={gi > 0 ? 'mt-2 pt-2 border-t border-slate-100' : ''}>
+                <div key={gi} className={gi > 0 ? 'mt-1.5 pt-1.5 border-t border-slate-100' : ''}>
 
                   {/* Parent heading */}
                   {g.parent ? (
                     <Link
                       href={g.parent.href}
-                      className="group flex items-center gap-2.5 px-2 py-1 rounded-xl mb-0.5 transition-colors hover:bg-slate-50"
+                      className="group flex items-center gap-1.5 px-1 py-[3px] rounded-md transition-colors hover:bg-slate-50"
                     >
-                      <span
-                        className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
-                        style={{ background: `${col.color}15` }}
-                      >
-                        {g.parent.icon && (
-                          <g.parent.icon size={12} style={{ color: col.color }} strokeWidth={1.8} />
-                        )}
-                      </span>
-                      <span className="text-[13px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
+                      <span className="text-[12.5px] font-bold flex-1 leading-tight" style={{ color: col.color }}>
                         {g.parent.label}
                       </span>
                       <ChevronRight
-                        size={10}
+                        size={9}
                         className="flex-shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-150"
                         style={{ color: col.color }}
                       />
                     </Link>
                   ) : (
-                    <div className="flex items-center gap-2.5 px-2 py-0.5 mb-0.5">
-                      {g.parentIcon && (
-                        <span
-                          className="flex-shrink-0 w-6 h-6 rounded-lg flex items-center justify-center"
-                          style={{ background: `${col.color}15` }}
-                        >
-                          <g.parentIcon size={12} style={{ color: col.color }} strokeWidth={1.8} />
-                        </span>
-                      )}
-                      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-slate-400">
-                        {g.parentLabel || 'More'}
-                      </p>
-                    </div>
+                    <p className="px-1 py-[3px] text-[9.5px] font-black uppercase tracking-[0.1em] text-slate-400">
+                      {g.parentLabel || 'More'}
+                    </p>
                   )}
 
                   {/* Sub-items */}
@@ -292,10 +261,10 @@ function ServicesMega() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="group/item flex items-center gap-2 px-2 py-[3px] rounded-md text-[12.5px] leading-tight text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
+                        className="group/item flex items-center gap-1.5 px-1 py-[2px] rounded-md text-[12px] leading-tight text-slate-500 transition-colors hover:text-slate-900 hover:bg-slate-50"
                       >
                         <span
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full transition-transform duration-150 group-hover/item:scale-125"
+                          className="flex-shrink-0 w-1 h-1 rounded-full transition-transform duration-150 group-hover/item:scale-125"
                           style={{ background: `${col.color}55` }}
                         />
                         {item.label}
@@ -309,55 +278,33 @@ function ServicesMega() {
           ))}
         </div>
 
-        {/* ── Bottom CTA — pinned, always visible, never scrolls away ── */}
-        <div className="border-t-2 border-blue-600 flex-shrink-0">
-
-          {/* Secondary links */}
-          <div
-            className="flex items-center gap-5 px-5 py-2 border-b"
-            style={{ background: '#040f20', borderColor: '#17355f' }}
-          >
+        {/* ── Bottom CTA — single slim row, pinned, always visible ── */}
+        <div
+          className="flex items-center justify-between gap-4 px-5 py-2 border-t-2 border-blue-600 flex-shrink-0"
+          style={{ background: '#071a37' }}
+        >
+          <div className="flex items-center gap-4 min-w-0">
             <Link
               href="/services"
-              className="flex items-center gap-1.5 text-[12px] font-bold text-slate-400 transition-colors hover:text-white"
+              className="flex items-center gap-1 text-[12px] font-bold text-slate-400 transition-colors hover:text-white whitespace-nowrap"
             >
               View all services <ArrowRight size={11} />
             </Link>
             <span className="text-slate-700 select-none">|</span>
             <Link
               href="/book-meeting"
-              className="text-[12px] font-bold text-slate-400 transition-colors hover:text-white"
+              className="text-[12px] font-bold text-slate-400 transition-colors hover:text-white whitespace-nowrap"
             >
               Book a consultation
             </Link>
           </div>
-
-          {/* Primary CTA */}
-          <div
-            className="flex items-center justify-between gap-4 px-5 py-2.5"
-            style={{ background: 'linear-gradient(90deg, #071a37 0%, #0a2347 100%)', borderTop: '1px solid #17355f' }}
+          <Link
+            href="/request-quote"
+            className="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-[12.5px] font-black whitespace-nowrap transition-all hover:scale-[1.03] active:scale-95"
+            style={{ background: '#00C853', color: '#022215' }}
           >
-            <div className="min-w-0">
-              <p className="text-[14px] font-black leading-tight text-slate-100">
-                Not sure where to start?
-              </p>
-              <p className="text-[12px] mt-0.5 font-medium text-slate-400">
-                Free 60-min IT assessment — no commitment
-              </p>
-            </div>
-            <Link
-              href="/request-quote"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-[14px] font-black whitespace-nowrap transition-all hover:scale-[1.03] active:scale-95"
-              style={{
-                background: '#00C853',
-                color: '#022215',
-                boxShadow: '0 0 32px rgba(0,200,83,0.7), 0 0 12px rgba(0,200,83,0.5), 0 4px 16px rgba(0,200,83,0.4)',
-              }}
-            >
-              Get Free Assessment <ArrowRight size={14} />
-            </Link>
-          </div>
-
+            Get Free Assessment <ArrowRight size={12} />
+          </Link>
         </div>
       </m.div>
     </div>

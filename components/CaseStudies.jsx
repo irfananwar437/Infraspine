@@ -105,7 +105,7 @@ export default function CaseStudies() {
     <section className="pt-8 pb-8" style={{ background: '#F8FAFC' }} id="case-studies">
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <Stagger className="flex flex-col items-center">
             <StaggerItem className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8" style={{ background: '#00C853' }} />

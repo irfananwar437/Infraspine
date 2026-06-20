@@ -93,7 +93,7 @@ export default function CoreOffer() {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden px-4 py-16 sm:px-5 sm:py-20 lg:px-8 lg:py-24"
+      className="relative overflow-hidden px-4 py-10 sm:px-5 sm:py-14 lg:px-8 lg:py-16"
       style={{ background: '#FFFFFF' }}
     >
       <div className="relative mx-auto max-w-7xl">
@@ -110,15 +110,15 @@ export default function CoreOffer() {
         </div>
 
         <Reveal>
-          <div className="relative mb-8 rounded-[24px] p-[1px] bg-gradient-to-r from-slate-300/70 via-emerald-300/50 to-slate-300/70 shadow-[0_20px_50px_-24px_rgba(10,22,40,0.24)]">
+          <div className="relative mb-6 rounded-[24px] p-[1px] bg-gradient-to-r from-slate-300/70 via-emerald-300/50 to-slate-300/70 shadow-[0_20px_50px_-24px_rgba(10,22,40,0.24)]">
             <div className="overflow-hidden bg-white rounded-[23px]">
               <NetworkTopology />
             </div>
           </div>
         </Reveal>
 
-        <div className="relative px-6 pb-8 pt-12 sm:px-8 sm:pb-10 sm:pt-14 lg:px-12 lg:pb-12 lg:pt-16">
-            <div className="mb-12 text-center">
+        <div className="relative px-6 pb-6 pt-8 sm:px-8 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
+            <div className="mb-8 text-center">
               <Stagger className="flex flex-col items-center">
                 <StaggerItem className="mb-5">
                   <div className="inline-flex items-center gap-4">

@@ -35,11 +35,11 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20" style={{ background: '#FFFFFF' }}>
+    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#FFFFFF' }}>
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-8" style={{ background: '#00C853' }} />
             <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>

@@ -106,7 +106,7 @@ export default function InfraEcosystem() {
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <span
             className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full mb-4"
             style={{ background: 'rgba(0,200,83,0.1)', color: '#00C853', border: '1px solid rgba(0,200,83,0.2)' }}

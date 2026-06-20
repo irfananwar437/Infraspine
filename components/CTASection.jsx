@@ -2,7 +2,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 
 export default function CTASection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20" style={{ background: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
+    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#F8FAFC', borderTop: '1px solid #E2E8F0' }}>
       <div className="max-w-3xl mx-auto px-5 lg:px-8 text-center">
 
         <span

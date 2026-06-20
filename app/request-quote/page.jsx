@@ -32,7 +32,7 @@ export default function RequestQuotePage() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-16 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-14 sm:py-16">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 mb-5">
               <div className="h-px w-6" style={{ background: '#00C853' }} />

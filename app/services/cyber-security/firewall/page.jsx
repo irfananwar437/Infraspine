@@ -175,7 +175,7 @@ export default function FirewallManagementPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: 'radial-gradient(circle,#DC2626,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-8 sm:py-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-3">
               <div className="h-px w-6" style={{ background: '#DC2626' }} />
