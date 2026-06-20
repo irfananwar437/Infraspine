@@ -93,7 +93,7 @@ export default function CoreOffer() {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden px-4 py-10 sm:px-5 sm:py-14 lg:px-8 lg:py-16"
+      className="relative overflow-hidden px-4 py-8 sm:px-5 sm:py-12 lg:px-8 lg:py-14"
       style={{ background: '#FFFFFF' }}
     >
       <div className="relative mx-auto max-w-7xl">
@@ -117,7 +117,7 @@ export default function CoreOffer() {
           </div>
         </Reveal>
 
-        <div className="relative px-6 pb-6 pt-8 sm:px-8 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
+        <div className="relative px-6 pt-6 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
             <div className="mb-8 text-center">
               <Stagger className="flex flex-col items-center">
                 <StaggerItem className="mb-5">
@@ -216,11 +216,11 @@ export default function CoreOffer() {
             ))}
             </div>
 
-            <div className="mt-8 grid overflow-hidden rounded-[22px] border border-slate-200/80 bg-slate-50 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-6 grid overflow-hidden rounded-[22px] border border-slate-200/80 bg-slate-50 sm:grid-cols-2 xl:grid-cols-4">
               {METRICS.map((metric, index) => (
                 <div
                   key={metric.label}
-                  className={`flex items-center gap-4 px-6 py-5 ${
+                  className={`flex items-center gap-4 px-6 py-4 ${
                     index < METRICS.length - 1 ? 'border-b border-slate-200 xl:border-b-0 xl:border-r' : ''
                   }`}
                 >

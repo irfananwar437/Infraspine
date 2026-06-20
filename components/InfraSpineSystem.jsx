@@ -16,7 +16,7 @@ const MODULES = [
 
 export default function InfraSpineSystem() {
   return (
-    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#FFFFFF' }} id="platform">
+    <section className="py-8 sm:py-12 lg:py-14" style={{ background: '#FFFFFF' }} id="platform">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
         <div className="text-center mb-5 sm:mb-8">

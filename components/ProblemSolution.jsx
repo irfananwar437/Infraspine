@@ -58,7 +58,7 @@ export default function ProblemSolution() {
   const reduce = useReducedMotion()
 
   return (
-    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#F8FAFC' }} id="why">
+    <section className="py-8 sm:py-12 lg:py-14" style={{ background: '#F8FAFC' }} id="why">
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-10">

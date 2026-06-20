@@ -35,7 +35,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#FFFFFF' }}>
+    <section className="py-8 sm:py-12 lg:py-14" style={{ background: '#FFFFFF' }}>
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         {/* Heading */}

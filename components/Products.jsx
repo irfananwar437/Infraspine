@@ -312,7 +312,7 @@ export default function Products() {
   const Mockup = MOCKUPS[active]
 
   return (
-    <section className="py-10 sm:py-14 lg:py-16" style={{ background: '#FFFFFF' }} id="products">
+    <section className="py-8 sm:py-12 lg:py-14" style={{ background: '#FFFFFF' }} id="products">
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
 
         {/* Heading */}

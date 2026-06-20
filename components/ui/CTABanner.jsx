@@ -31,8 +31,8 @@ export default function CTABanner({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-5 lg:px-8 py-20 sm:py-28 text-center">
-        <div className="inline-flex items-center gap-2 mb-6">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 lg:px-8 py-12 sm:py-16 text-center">
+        <div className="inline-flex items-center gap-2 mb-4">
           <div className="h-px w-6" style={{ background: '#00C853' }} />
           <span className="text-[11px] font-bold uppercase tracking-[0.22em]" style={{ color: '#00C853' }}>
             Let&apos;s Work Together
@@ -41,13 +41,13 @@ export default function CTABanner({
         </div>
 
         <h2
-          className="text-[clamp(1.7rem,3.5vw,3rem)] font-black leading-tight text-white mb-5"
+          className="text-[clamp(1.7rem,3.5vw,3rem)] font-black leading-tight text-white mb-4"
           style={{ fontFamily: 'var(--font-display)' }}
         >
           {heading}
         </h2>
 
-        <p className="text-[15px] sm:text-[17px] leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
+        <p className="text-[15px] sm:text-[17px] leading-relaxed mb-7 max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
           {subheading}
         </p>
 
@@ -73,7 +73,7 @@ export default function CTABanner({
         </div>
 
         {/* Trust signals */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-7">
           {[
             'No obligation consultation',
             'Response within 2 hours',
