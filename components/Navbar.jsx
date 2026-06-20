@@ -357,22 +357,16 @@ function SimpleDropdown({ items }) {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   BODY SCROLL LOCK — shared, ref-counted so multiple menu
-   instances (desktop hover menus + mobile accordion) can lock/
-   unlock independently without one clobbering another's lock.
-   This is the primary defense against "menu stays visible while
-   the page scrolls": instead of reacting to scroll events after
-   the fact (which has gaps — scrollbar-drag, momentum scroll,
-   keyboard paging), it makes the page unable to scroll at all
-   for as long as any menu is open.
+   BODY SCROLL LOCK — used only by the mobile menu (opened by a
+   click, a deliberate user action). Desktop hover dropdowns close
+   themselves on any scroll input instead (see the wheel/touchmove
+   listeners in HoverMenu) rather than locking the page, since
+   toggling overflow purely from a mouse hover risks layout side
+   effects in some browsers for no real benefit here.
 ───────────────────────────────────────────────────────────── */
 let scrollLockCount = 0
 let savedHtmlOverflow = ''
 
-// `html { scrollbar-gutter: stable }` in globals.css reserves the scrollbar's
-// track permanently, so toggling overflow here never changes the layout
-// width — no padding compensation needed (and padding on <html> wouldn't
-// reach position:fixed content like the navbar anyway).
 function lockBodyScroll() {
   if (scrollLockCount === 0) {
     savedHtmlOverflow = document.documentElement.style.overflow
@@ -406,13 +400,6 @@ function HoverMenu({ label, href, active, children }) {
 
   // Route change — always close (covers Link clicks inside the menu too)
   useEffect(() => { closeNow() }, [pathname, closeNow])
-
-  // Lock page scroll for as long as this menu is open
-  useEffect(() => {
-    if (!open) return
-    lockBodyScroll()
-    return () => unlockBodyScroll()
-  }, [open])
 
   // Scroll / outside click / ESC — only listen while open.
   // Uses 'wheel' + 'touchmove' on document (not window's 'scroll') because the
