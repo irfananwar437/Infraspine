@@ -144,7 +144,7 @@ export default function SecurityAuditingPage() {
           style={{ background: `radial-gradient(circle,${ACCENT},transparent 70%)` }}
           aria-hidden="true"
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-5 sm:pt-7 pb-10 sm:pb-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: ACCENT }} />

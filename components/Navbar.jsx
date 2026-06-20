@@ -368,23 +368,15 @@ function SimpleDropdown({ items }) {
 ───────────────────────────────────────────────────────────── */
 let scrollLockCount = 0
 let savedHtmlOverflow = ''
-let savedHtmlPaddingRight = ''
 
+// `html { scrollbar-gutter: stable }` in globals.css reserves the scrollbar's
+// track permanently, so toggling overflow here never changes the layout
+// width — no padding compensation needed (and padding on <html> wouldn't
+// reach position:fixed content like the navbar anyway).
 function lockBodyScroll() {
   if (scrollLockCount === 0) {
-    // Hiding overflow removes the scrollbar, which on Windows/Linux Chrome
-    // (non-overlay scrollbars) shrinks the document's content width and
-    // shifts every fixed-width element — including the navbar link being
-    // hovered — sideways. That shift is what made the dropdown feel like it
-    // "broke" the moment a scroll happened. Reserving the scrollbar's width
-    // as padding keeps the page width constant while scroll is locked.
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
     savedHtmlOverflow = document.documentElement.style.overflow
-    savedHtmlPaddingRight = document.documentElement.style.paddingRight
     document.documentElement.style.overflow = 'hidden'
-    if (scrollbarWidth > 0) {
-      document.documentElement.style.paddingRight = `${scrollbarWidth}px`
-    }
   }
   scrollLockCount++
 }
@@ -393,7 +385,6 @@ function unlockBodyScroll() {
   scrollLockCount = Math.max(0, scrollLockCount - 1)
   if (scrollLockCount === 0) {
     document.documentElement.style.overflow = savedHtmlOverflow
-    document.documentElement.style.paddingRight = savedHtmlPaddingRight
   }
 }
 

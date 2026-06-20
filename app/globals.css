@@ -8,7 +8,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* Always reserve the scrollbar's gutter, shown or not, so toggling
+   `overflow: hidden` (e.g. while a nav dropdown is open) never changes the
+   available layout width. Without this, removing the scrollbar widens the
+   viewport by its track width, which shifts anything sized/positioned off
+   the right edge — including fixed-position nav content — since `padding`
+   compensation on <html> has no effect on position:fixed elements. */
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 
 body {
   background: #fff;

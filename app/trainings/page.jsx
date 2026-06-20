@@ -138,7 +138,7 @@ export default function TrainingsPage() {
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-10 sm:py-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-5 sm:pt-7 pb-10 sm:pb-14">
           <div className="grid lg:grid-cols-[1fr_360px] gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-6">

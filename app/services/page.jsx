@@ -207,7 +207,7 @@ export default function ServicesPage() {
         <div className="pointer-events-none absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-[0.07]"
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-8 sm:py-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
