@@ -246,7 +246,7 @@ export default function AboutUsPage() {
             {/* Vertical line */}
             <div className="absolute left-[28px] sm:left-1/2 top-0 bottom-0 w-px" style={{ background: '#E2E8F0' }} aria-hidden="true" />
 
-            <div className="space-y-3">
+            <div className="space-y-1">
               {MILESTONES.map((m, i) => (
                 <div key={i} className={`relative flex gap-6 sm:gap-0 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
                   {/* Content */}
