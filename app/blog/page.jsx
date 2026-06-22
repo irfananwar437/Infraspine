@@ -40,7 +40,7 @@ export default function BlogPage() {
           aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.05]"
           style={{ background: 'radial-gradient(circle,#00C853,transparent 70%)' }} aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-5 sm:pt-7 pb-10 sm:pb-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-[88px] lg:pt-[110px] pb-10 sm:pb-14">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="h-px w-6" style={{ background: '#00C853' }} />
@@ -83,7 +83,7 @@ export default function BlogPage() {
       </div>
 
       {/* Blog Grid */}
-      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
+      <section className="pt-8 sm:pt-10 pb-16 sm:pb-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {POSTS.map((post) => (

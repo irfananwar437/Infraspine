@@ -57,7 +57,7 @@ export default async function CategoryPage({ params }) {
           aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-[500px] h-[500px] rounded-full opacity-[0.06]"
           style={{ background: `radial-gradient(circle,${cat.color},transparent 70%)` }} aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-5 sm:pt-7 pb-10 sm:pb-14">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-[88px] lg:pt-[110px] pb-10 sm:pb-14">
           <div className="max-w-3xl">
             <Link href="/blog"
               className="inline-flex items-center gap-1.5 mb-6 text-[12px] font-semibold transition-colors hover:opacity-75"
@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }) {
       </div>
 
       {/* Posts Grid */}
-      <section className="py-16 sm:py-20" style={{ background: '#F8FAFC' }}>
+      <section className="pt-8 sm:pt-10 pb-16 sm:pb-20" style={{ background: '#F8FAFC' }}>
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
           {posts.length === 0 ? (
             <div className="text-center py-20">
