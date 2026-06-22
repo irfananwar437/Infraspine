@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import ScrollToTop from '@/components/ScrollToTop'
 import CTABanner from '@/components/ui/CTABanner'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import Link from 'next/link'
 import { Factory, Heart, Package, BarChart2, Building2, Truck, Home, ArrowRight } from 'lucide-react'
 
@@ -27,7 +28,12 @@ export default function IndustriesPage() {
     <div className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      <section className="relative overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20" style={{ background: '#071a37' }}>
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'Industries' },
+      ]} />
+
+      <section className="relative overflow-hidden pt-5 sm:pt-7 pb-16 sm:pb-20" style={{ background: '#071a37' }}>
         <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{ backgroundImage: 'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)', backgroundSize: '52px 52px' }}
           aria-hidden="true" />

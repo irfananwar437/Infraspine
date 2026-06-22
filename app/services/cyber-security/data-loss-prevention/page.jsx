@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import {
   Database, Shield, Network, Cloud, Mail, Settings,
   ChevronRight, ArrowRight, CheckCircle,
@@ -126,19 +127,12 @@ export default function DataLossPreventionPage() {
         <Navbar />
 
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="border-b" style={{ background: '#F8FAFC', borderColor: '#E2E8F0' }}>
-          <div className="max-w-6xl mx-auto px-5 lg:px-8 py-3">
-            <ol className="flex flex-wrap items-center gap-1.5 text-[12px]" style={{ color: '#64748B' }}>
-              <li><Link href="/" style={{ color: '#64748B' }} className="hover:underline">Home</Link></li>
-              <li><ChevronRight size={12} /></li>
-              <li><Link href="/services" style={{ color: '#64748B' }} className="hover:underline">Services</Link></li>
-              <li><ChevronRight size={12} /></li>
-              <li><Link href="/services?tab=cyber" style={{ color: '#64748B' }} className="hover:underline">Cybersecurity</Link></li>
-              <li><ChevronRight size={12} /></li>
-              <li style={{ color: accent }} className="font-semibold">Data Loss Prevention</li>
-            </ol>
-          </div>
-        </nav>
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services' },
+          { label: 'Cybersecurity', href: '/services/cyber-security' },
+          { label: 'Data Loss Prevention' },
+        ]} bg={heroBg} />
 
         {/* Hero */}
         <section style={{ background: heroBg }} className="relative overflow-hidden">
