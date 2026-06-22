@@ -155,7 +155,7 @@ export default function WiFiServicesPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'WiFi Services', href: '/services/field-services/wifi-services' },
-      ]} />
+      ]} bg="#001a08" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#001a08' }}>

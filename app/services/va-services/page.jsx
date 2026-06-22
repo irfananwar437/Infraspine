@@ -154,7 +154,7 @@ export default function VAServicesPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'VA Services', href: '/services/va-services' },
-      ]} />
+      ]} bg="#001a08" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#001a08' }}>

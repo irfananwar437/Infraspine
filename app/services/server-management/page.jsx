@@ -154,7 +154,7 @@ export default function ServerManagementPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'Server Management' },
-      ]} />
+      ]} bg="#00061a" />
 
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ background: '#00061a' }}>

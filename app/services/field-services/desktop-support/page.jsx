@@ -155,7 +155,7 @@ export default function DesktopSupportPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'Desktop & IT Support', href: '/services/field-services/desktop-support' },
-      ]} />
+      ]} bg="#00082a" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#00082a' }}>

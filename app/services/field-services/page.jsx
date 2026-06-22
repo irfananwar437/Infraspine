@@ -154,7 +154,7 @@ export default function FieldServicesPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'Global Field Services', href: '/services/field-services' },
-      ]} />
+      ]} bg="#1a0a00" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#1a0a00' }}>

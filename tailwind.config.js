@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         navy: {
           950: '#060E23',
+          // Canonical dark hero/section background used across the interior
+          // service & industry pages — the dominant dark shade site-wide.
+          925: '#071a37',
           900: '#0B1A3B',
           800: '#0F2158',
           700: '#1A2E6B',

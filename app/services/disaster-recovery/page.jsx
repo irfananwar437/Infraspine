@@ -154,7 +154,7 @@ export default function DisasterRecoveryPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'Disaster Recovery', href: '/services/disaster-recovery' },
-      ]} />
+      ]} bg="#1a0000" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#1a0000' }}>

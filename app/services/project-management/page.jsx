@@ -154,7 +154,7 @@ export default function ProjectManagementPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'Project Management', href: '/services/project-management' },
-      ]} />
+      ]} bg="#00082a" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#00082a' }}>

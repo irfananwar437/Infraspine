@@ -154,7 +154,7 @@ export default function ITRecruitmentPage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'IT Recruitment', href: '/services/it-recruitment' },
-      ]} />
+      ]} bg="#0f0020" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#0f0020' }}>

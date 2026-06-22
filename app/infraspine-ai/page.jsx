@@ -194,7 +194,7 @@ export default function InfraspineAIPage() {
       <Breadcrumb items={[
         { label: 'Home', href: '/' },
         { label: 'Infraspine AI' },
-      ]} />
+      ]} bg="#060E23" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#060E23' }}>

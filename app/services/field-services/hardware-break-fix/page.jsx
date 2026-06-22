@@ -155,7 +155,7 @@ export default function HardwareBreakFixPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'Hardware Break Fix', href: '/services/field-services/hardware-break-fix' },
-      ]} />
+      ]} bg="#1c0800" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#1c0800' }}>

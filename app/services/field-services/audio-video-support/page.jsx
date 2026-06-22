@@ -155,7 +155,7 @@ export default function AudioVideoSupportPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'Audio Video Support', href: '/services/field-services/audio-video-support' },
-      ]} />
+      ]} bg="#1a1000" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#1a1000' }}>

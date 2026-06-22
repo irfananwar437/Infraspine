@@ -154,7 +154,7 @@ export default function CIOAsAServicePage() {
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'CIO as a Service', href: '/services/cio-as-a-service' },
-      ]} />
+      ]} bg="#1c0800" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#1c0800' }}>

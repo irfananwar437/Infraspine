@@ -155,7 +155,7 @@ export default function NetworkSupportPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'Network Support', href: '/services/field-services/network-support' },
-      ]} />
+      ]} bg="#00101a" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#00101a' }}>

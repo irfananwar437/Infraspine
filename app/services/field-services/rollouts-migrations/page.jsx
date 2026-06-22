@@ -155,7 +155,7 @@ export default function RolloutsMigrationsPage() {
         { label: 'Services', href: '/services' },
         { label: 'Field Services', href: '/services/field-services' },
         { label: 'Rollouts & Migrations', href: '/services/field-services/rollouts-migrations' },
-      ]} />
+      ]} bg="#0f0020" />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden" style={{ background: '#0f0020' }}>
