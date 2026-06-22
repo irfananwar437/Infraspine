@@ -242,27 +242,31 @@ export default function AboutUsPage() {
             </h2>
           </div>
 
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-[28px] sm:left-1/2 top-0 bottom-0 w-px" style={{ background: '#E2E8F0' }} aria-hidden="true" />
+          {/* Single-column layout — dot + connecting line on the left, full-width
+              card to the right. The previous alternating left/right layout left
+              an empty half on every row since only one side ever had content,
+              which read as broken/oversized gaps no matter how tight the
+              vertical spacing was. This removes that structural emptiness
+              instead of just compressing it. */}
+          <div className="relative max-w-2xl mx-auto">
+            <div className="absolute left-[19px] top-2 bottom-2 w-px" style={{ background: '#E2E8F0' }} aria-hidden="true" />
 
-            <div className="space-y-1">
+            <div className="space-y-4">
               {MILESTONES.map((m, i) => (
-                <div key={i} className={`relative flex gap-6 sm:gap-0 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
-                  {/* Content */}
-                  <div className={`sm:w-[calc(50%-2.5rem)] ${i % 2 === 0 ? 'sm:pr-8' : 'sm:pl-8'} pl-14 sm:pl-0`}>
-                    <div className="p-5 rounded-2xl bg-white border transition-all hover:shadow-md" style={{ borderColor: '#E2E8F0' }}>
-                      <div className="text-[11px] font-black uppercase tracking-widest mb-1.5" style={{ color: '#00C853' }}>{m.year}</div>
-                      <h3 className="text-[15px] font-bold mb-2" style={{ color: '#0A1628' }}>{m.title}</h3>
-                      <p className="text-[13px] leading-relaxed" style={{ color: '#64748B' }}>{m.desc}</p>
-                    </div>
-                  </div>
+                <div key={i} className="relative flex gap-5">
                   {/* Dot */}
-                  <div className="absolute left-0 sm:left-1/2 top-5 -translate-y-0 sm:-translate-x-1/2 w-14 h-14 sm:w-5 sm:h-5 flex items-center justify-center sm:mt-4">
-                    <div className="w-4 h-4 rounded-full border-2 border-white" style={{ background: '#00C853', boxShadow: '0 0 0 3px rgba(0,200,83,0.2)' }} />
+                  <div
+                    className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ background: '#F0FDF4', border: '2px solid #00C853' }}
+                  >
+                    <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#00C853' }} />
                   </div>
-                  {/* Spacer for opposite side */}
-                  <div className="hidden sm:block sm:w-[calc(50%-2.5rem)]" />
+                  {/* Content */}
+                  <div className="flex-1 p-5 rounded-2xl bg-white border transition-all hover:shadow-md hover:-translate-y-0.5" style={{ borderColor: '#E2E8F0' }}>
+                    <div className="text-[11px] font-black uppercase tracking-widest mb-1.5" style={{ color: '#00C853' }}>{m.year}</div>
+                    <h3 className="text-[15px] font-bold mb-2" style={{ color: '#0A1628' }}>{m.title}</h3>
+                    <p className="text-[13px] leading-relaxed" style={{ color: '#64748B' }}>{m.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
