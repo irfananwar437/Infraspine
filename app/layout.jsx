@@ -1,6 +1,7 @@
 import './globals.css'
 import { Outfit, Source_Sans_3 } from 'next/font/google'
 import MotionProvider from '@/components/motion/MotionProvider'
+import { SITE_URL } from '@/lib/site'
 
 const fontDisplay = Outfit({
   subsets: ['latin'],
@@ -20,7 +21,7 @@ const fontBody = Source_Sans_3({
   adjustFontFallback: true,
 })
 
-const BASE_URL = 'https://www.infraspine.com'
+const BASE_URL = SITE_URL
 
 export const metadata = {
   metadataBase: new URL(BASE_URL),

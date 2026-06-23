@@ -10,6 +10,7 @@ import {
   Truck, BarChart2, Factory, Package, Home, ChevronRight, Sparkles,
   MonitorSmartphone,
 } from 'lucide-react'
+import { CONTACT_PHONE_DISPLAY, PHONE_LINK, CONTACT_EMAIL, EMAIL_LINK, WHATSAPP_LINK } from '@/lib/site'
 
 /* ─────────────────────────────────────────────────────────────
    DATA
@@ -519,20 +520,20 @@ function NavbarInner() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-8">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+923001234567"
+              href={PHONE_LINK}
               className="flex items-center gap-1.5 text-[11.5px] font-medium transition-colors hover:text-white"
               style={{ color: '#94A3B8' }}
             >
               <Phone size={10} style={{ color: '#2563EB' }} />
-              +92 300 123 4567
+              {CONTACT_PHONE_DISPLAY}
             </a>
             <a
-              href="mailto:hello@infraspine.com"
+              href={EMAIL_LINK}
               className="flex items-center gap-1.5 text-[11.5px] font-medium transition-colors hover:text-white"
               style={{ color: '#94A3B8' }}
             >
               <Mail size={10} style={{ color: '#2563EB' }} />
-              hello@infraspine.com
+              {CONTACT_EMAIL}
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -540,7 +541,7 @@ function NavbarInner() {
               24/7 Enterprise Support
             </span>
             <a
-              href="https://wa.me/923001234567"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-full transition-all hover:opacity-90"
@@ -676,13 +677,13 @@ function NavbarInner() {
 
               {/* Utility row */}
               <div className="flex flex-wrap gap-4 pb-4 border-b" style={{ borderColor: '#17355f' }}>
-                <a href="tel:+923001234567" className="flex items-center gap-1.5 text-[12px]" style={{ color: '#94A3B8' }}>
-                  <Phone size={11} style={{ color: '#2563EB' }} /> +92 300 123 4567
+                <a href={PHONE_LINK} className="flex items-center gap-1.5 text-[12px]" style={{ color: '#94A3B8' }}>
+                  <Phone size={11} style={{ color: '#2563EB' }} /> {CONTACT_PHONE_DISPLAY}
                 </a>
-                <a href="mailto:hello@infraspine.com" className="flex items-center gap-1.5 text-[12px]" style={{ color: '#94A3B8' }}>
-                  <Mail size={11} style={{ color: '#2563EB' }} /> hello@infraspine.com
+                <a href={EMAIL_LINK} className="flex items-center gap-1.5 text-[12px]" style={{ color: '#94A3B8' }}>
+                  <Mail size={11} style={{ color: '#2563EB' }} /> {CONTACT_EMAIL}
                 </a>
-                <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-[12px] font-semibold" style={{ color: '#25D366' }}>
                   <MessageCircle size={11} /> WhatsApp
                 </a>

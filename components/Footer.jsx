@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Mail, Phone, Linkedin, Twitter, MessageCircle, MapPin } from 'lucide-react'
+import { CONTACT_PHONE_DISPLAY, PHONE_LINK, CONTACT_EMAIL, EMAIL_LINK, WHATSAPP_LINK } from '@/lib/site'
 
 const FOOTER_COLS = {
   'IT Services': [
@@ -32,7 +33,7 @@ const FOOTER_COLS = {
 const SOCIALS = [
   { icon: Twitter,   label: 'Follow on X (Twitter)', href: 'https://twitter.com/infraspine'                   },
   { icon: Linkedin,  label: 'Connect on LinkedIn',   href: 'https://www.linkedin.com/company/infraspine'      },
-  { icon: Mail,      label: 'Email us',              href: 'mailto:hello@infraspine.com'                      },
+  { icon: Mail,      label: 'Email us',              href: EMAIL_LINK                      },
 ]
 
 export default function Footer() {
@@ -67,13 +68,13 @@ export default function Footer() {
             </p>
 
             <div className="space-y-2.5">
-              <a href="tel:+923001234567" className="flex items-center gap-2.5 text-[13px] text-slate-300 transition-colors hover:text-[#00C853]">
+              <a href={PHONE_LINK} className="flex items-center gap-2.5 text-[13px] text-slate-300 transition-colors hover:text-[#00C853]">
                 <Phone size={13} className="flex-shrink-0 text-[#00C853]" aria-hidden="true" />
-                +92 300 123 4567
+                {CONTACT_PHONE_DISPLAY}
               </a>
-              <a href="mailto:hello@infraspine.com" className="flex items-center gap-2.5 text-[13px] text-slate-300 transition-colors hover:text-[#00C853]">
+              <a href={EMAIL_LINK} className="flex items-center gap-2.5 text-[13px] text-slate-300 transition-colors hover:text-[#00C853]">
                 <Mail size={13} className="flex-shrink-0 text-[#00C853]" aria-hidden="true" />
-                hello@infraspine.com
+                {CONTACT_EMAIL}
               </a>
               <div className="flex items-start gap-2.5 text-[13px] text-slate-300">
                 <MapPin size={13} className="flex-shrink-0 text-[#2563EB] mt-0.5" aria-hidden="true" />
@@ -82,7 +83,7 @@ export default function Footer() {
             </div>
 
             <a
-              href="https://wa.me/923001234567"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[12.5px] font-semibold text-white transition-all hover:opacity-90"
