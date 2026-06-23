@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'VA Services Pakistan | Virtual Assistant & Outsourced Support | Infraspine',
+  title: 'VA Services Pakistan | Virtual Assistant & Outsourced Support',
   description: 'Infraspine VA Services: skilled virtual assistants for administrative, technical, and operational support. UK/US time zone coverage, 8/5 and 24/7 options, dedicated account manager. Reduce overhead without sacrificing quality.',
   alternates: { canonical: 'https://www.infraspine.com/services/va-services' },
   openGraph: {

@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'VoIP & Business Phone Systems Pakistan — Unified Communications | Infraspine',
+  title: 'VoIP & Business Phone Systems Pakistan — Unified Communications',
   description: 'Infraspine VoIP & Unified Communications: cloud PBX, Microsoft Teams Phone, SIP trunking, call center solutions, and video conferencing for Pakistan businesses. Cut call costs by up to 60%.',
   alternates: { canonical: 'https://www.infraspine.com/services/network-infrastructure/voip' },
   openGraph: {

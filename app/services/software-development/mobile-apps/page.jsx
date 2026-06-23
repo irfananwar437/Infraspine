@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Mobile App Development Pakistan — iOS, Android & React Native Apps | Infraspine',
+  title: 'Mobile App Development Pakistan — iOS, Android & React Native Apps',
   description: 'Infraspine Mobile App Development: React Native, iOS Swift and Android Kotlin development in Pakistan. 50+ apps delivered, 4.8-star average App Store rating, cross-platform efficiency with native performance.',
   alternates: { canonical: 'https://www.infraspine.com/services/software-development/mobile-apps' },
   openGraph: {

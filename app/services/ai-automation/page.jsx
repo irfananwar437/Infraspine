@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Zap, Brain, Bot, BarChart2, Cpu, GitMerge, CheckCircle, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'AI & Automation Services Pakistan — RPA, LLM, ML & Process Automation | Infraspine',
+  title: 'AI & Automation Services Pakistan — RPA, LLM, ML & Process Automation',
   description: 'Enterprise AI and automation: RPA with UiPath and Power Automate, custom LLM integrations, machine learning pipelines, AI chatbots, document intelligence, and workflow automation. Infraspine AI.',
   alternates: { canonical: 'https://www.infraspine.com/services/ai-automation' },
   openGraph: {

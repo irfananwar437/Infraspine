@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Rollouts & Migrations Pakistan | Device Deployment | Infraspine',
+  title: 'IT Rollouts & Migrations Pakistan | Device Deployment',
   description: 'Large-scale deployment of new devices, OS migrations, office relocations, and technology refresh programmes across Pakistan. 5,000+ devices deployed, 99.5% on-time delivery.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/rollouts-migrations' },
   openGraph: {

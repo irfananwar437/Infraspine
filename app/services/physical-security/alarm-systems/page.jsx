@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Alarm & Intrusion Detection Systems Pakistan — Security Alarms | Infraspine',
+  title: 'Alarm & Intrusion Detection Systems Pakistan — Security Alarms',
   description: 'Professional alarm and intrusion detection installation across Pakistan. PIR sensors, perimeter detection, central monitoring station integration. Honeywell, Bosch, Ajax certified.',
   alternates: { canonical: 'https://www.infraspine.com/services/physical-security/alarm-systems' },
   openGraph: {

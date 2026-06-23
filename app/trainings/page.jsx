@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Training Courses Pakistan — Certified IT Programs | Infraspine',
+  title: 'IT Training Courses Pakistan — Certified IT Programs',
   description: 'Infraspine IT Training Academy: Microsoft, Cisco, cybersecurity, cloud, networking, and AI automation courses. Instructor-led, lab-based, and corporate batch programs in Karachi.',
   alternates: { canonical: 'https://www.infraspine.com/trainings' },
   openGraph: {

@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   CheckCircle, FileText, Shield, Search, Users, BarChart2, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'ISO 27001 Consulting Pakistan | ISO 27001 Certification Support | Infraspine',
+  title: 'ISO 27001 Consulting Pakistan | ISO 27001 Certification Support',
   description: 'ISO 27001:2022 consulting and certification support in Pakistan. Infraspine delivers gap assessments, ISMS implementation, internal audits, and full certification body liaison for ISO/IEC 27001.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/iso-27001' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function Iso27001Page() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/iso-27001" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

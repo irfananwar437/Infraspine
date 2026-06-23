@@ -1,7 +1,9 @@
 import './globals.css'
 import { Outfit, Source_Sans_3 } from 'next/font/google'
 import MotionProvider from '@/components/motion/MotionProvider'
-import { SITE_URL } from '@/lib/site'
+import { AnalyticsHeadScripts, GtmNoScript } from '@/components/Analytics'
+import { SITE_URL, CONTACT_PHONE_TEL, CONTACT_EMAIL } from '@/lib/site'
+import { GOOGLE_SITE_VERIFICATION, BING_SITE_VERIFICATION } from '@/lib/seo'
 
 const fontDisplay = Outfit({
   subsets: ['latin'],
@@ -50,6 +52,11 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  // No `images` array here — app/opengraph-image.jsx is generated on the fly
+  // (via next/og) and Next.js injects the correct og:image / twitter:image
+  // tags from that file automatically. The previous hardcoded
+  // `${BASE_URL}/og-image.png` pointed at a file that never existed in
+  // public/, so every shared link had a broken preview image.
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -57,14 +64,6 @@ export const metadata = {
     siteName: 'Infraspine',
     title: 'Infraspine — Global IT Services, AI Solutions & Digital Infrastructure',
     description: 'Enterprise IT services, AI automation, cloud, cybersecurity, software development, BPO, and training — all under one accountable technology partner.',
-    images: [
-      {
-        url: `${BASE_URL}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Infraspine — Global IT Services & AI Solutions',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -72,13 +71,15 @@ export const metadata = {
     creator: '@infraspine',
     title: 'Infraspine — Global IT Services, AI Solutions & Digital Infrastructure',
     description: 'Enterprise IT services, AI automation, cloud, cybersecurity, software development, BPO, and training.',
-    images: [`${BASE_URL}/og-image.png`],
   },
   alternates: {
     canonical: BASE_URL,
   },
+  // Omitted entirely (not rendered as an empty/placeholder tag) unless the
+  // real code is set — see lib/seo.js and .env.example.
   verification: {
-    google: 'your-google-verification-code',
+    ...(GOOGLE_SITE_VERIFICATION ? { google: GOOGLE_SITE_VERIFICATION } : {}),
+    ...(BING_SITE_VERIFICATION ? { other: { 'msvalidate.01': BING_SITE_VERIFICATION } } : {}),
   },
 }
 
@@ -89,25 +90,28 @@ const ORGANIZATION_SCHEMA = {
   name: 'Infraspine',
   legalName: 'Infraspine Technologies',
   url: BASE_URL,
+  // /apple-icon is generated on the fly by app/apple-icon.jsx (next/og) —
+  // a real, fetchable 180x180 image, unlike the previous /logo.png which
+  // pointed at a file that didn't exist anywhere in public/.
   logo: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/logo.png`,
-    width: 200,
-    height: 60,
+    url: `${BASE_URL}/apple-icon`,
+    width: 180,
+    height: 180,
   },
   description: 'Infraspine is a global IT services company delivering managed IT, cloud solutions, cybersecurity, AI automation, software development, BPO, and IT training.',
   foundingDate: '2014',
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+92-300-1234567',
+      telephone: CONTACT_PHONE_TEL,
       contactType: 'customer service',
       availableLanguage: ['English', 'Urdu'],
       contactOption: 'TollFree',
       areaServed: 'Worldwide',
     },
   ],
-  email: 'hello@infraspine.com',
+  email: CONTACT_EMAIL,
   sameAs: [
     'https://www.linkedin.com/company/infraspine',
     'https://twitter.com/infraspine',
@@ -135,11 +139,8 @@ const WEBSITE_SCHEMA = {
   name: 'Infraspine',
   description: 'Global IT Services, AI Solutions & Digital Infrastructure',
   publisher: { '@id': `${BASE_URL}/#organization` },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/search?q={search_term_string}` },
-    'query-input': 'required name=search_term_string',
-  },
+  // No SearchAction: the site has no /search route. Advertising a sitelinks
+  // search box for a page that 404s does more harm than leaving it out.
   inLanguage: 'en-US',
 }
 
@@ -151,7 +152,8 @@ export default function RootLayout({ children }) {
     >
       <head>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><circle cx='18' cy='8' r='4' fill='%2300C853'/><circle cx='8' cy='26' r='4' fill='%232563EB'/><circle cx='28' cy='26' r='4' fill='%232563EB'/><circle cx='18' cy='20' r='3' fill='white'/><line x1='18' y1='12' x2='18' y2='17' stroke='%2394a3b8' stroke-width='1.5'/><line x1='10' y1='24' x2='16' y2='21' stroke='%2394a3b8' stroke-width='1.5'/><line x1='26' y1='24' x2='20' y2='21' stroke='%2394a3b8' stroke-width='1.5'/></svg>" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* apple-touch-icon is auto-injected by Next.js from app/apple-icon.jsx
+            (a real generated image) — no manual <link> needed/wanted here. */}
         <meta name="theme-color" content="#071a37" />
         <script
           type="application/ld+json"
@@ -161,8 +163,10 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
         />
+        <AnalyticsHeadScripts />
       </head>
       <body>
+        <GtmNoScript />
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

@@ -6,13 +6,14 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Globe, Network, Code, Smartphone, Users, FileCode,
   ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'VAPT Services Pakistan — Vulnerability Assessment & Penetration Testing | Infraspine',
+  title: 'VAPT Services Pakistan — Vulnerability Assessment & Penetration Testing',
   description: 'Infraspine VAPT: CVSS-scored vulnerability assessment and penetration testing in Pakistan. OWASP methodology, free re-test included, 48hr report delivery. Network, web app, mobile and social engineering testing.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/vapt' },
   openGraph: {
@@ -341,6 +342,8 @@ export default function VAPTPage() {
         primaryCTA={{ label: 'Book an Assessment', href: '/contact-us' }}
         secondaryCTA={{ label: 'Call Us Now', href: 'tel:+923001234567' }}
       />
+
+      <RelatedServices currentHref="/services/cyber-security/vapt" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

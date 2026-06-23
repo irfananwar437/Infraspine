@@ -6,13 +6,14 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, AlertTriangle, Zap, Globe, BarChart2,
   FileText, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'SOC as a Service Pakistan — 24/7 Security Operations Centre | Infraspine',
+  title: 'SOC as a Service Pakistan — 24/7 Security Operations Centre',
   description: 'Infraspine SOC as a Service: 24/7/365 threat detection and response, SIEM management, <30min threat response, 1M+ events analysed daily. Enterprise-grade SOC for Pakistan businesses without the enterprise price.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/soc' },
   openGraph: {
@@ -343,6 +344,8 @@ export default function SOCPage() {
         primaryCTA={{ label: 'Get Started', href: '/contact-us' }}
         secondaryCTA={{ label: 'Call Us Now', href: 'tel:+923001234567' }}
       />
+
+      <RelatedServices currentHref="/services/cyber-security/soc" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

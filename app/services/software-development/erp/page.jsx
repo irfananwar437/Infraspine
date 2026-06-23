@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Custom ERP Development Pakistan — Enterprise Resource Planning Software | Infraspine',
+  title: 'Custom ERP Development Pakistan — Enterprise Resource Planning Software',
   description: 'Infraspine Custom ERP Development: 20+ ERP systems delivered in Pakistan with full source code ownership. HR, payroll, finance, inventory, CRM, operations and BI dashboard — all integrated, 6-month average delivery.',
   alternates: { canonical: 'https://www.infraspine.com/services/software-development/erp' },
   openGraph: {

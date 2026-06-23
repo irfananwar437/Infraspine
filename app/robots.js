@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.infraspine.com'
+import { SITE_URL } from '@/lib/site'
 
 export default function robots() {
   return {
@@ -9,7 +9,7 @@ export default function robots() {
         disallow: ['/api/', '/_next/', '/admin/', '/private/'],
       },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   }
 }

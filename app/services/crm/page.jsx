@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Users, BarChart2, GitMerge, Settings, BookOpen, CheckCircle, ArrowRight, Layers, Target } from 'lucide-react'
 
 export const metadata = {
-  title: 'CRM Implementation & Integration Services Pakistan | Infraspine',
+  title: 'CRM Implementation & Integration Services Pakistan',
   description: 'Expert CRM implementation, customisation, and integration for Pakistan businesses. Microsoft Dynamics 365, Salesforce, HubSpot, Zoho CRM.',
   alternates: { canonical: 'https://www.infraspine.com/services/crm' },
   openGraph: {

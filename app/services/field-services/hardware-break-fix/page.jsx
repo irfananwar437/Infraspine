@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Hardware Break Fix Services Pakistan | On-Site Repair | Infraspine',
+  title: 'Hardware Break Fix Services Pakistan | On-Site Repair',
   description: 'Rapid on-site diagnosis and repair of failed hardware across Pakistan. Servers, workstations, networking kit, printers, and peripherals with 4hr response SLA and 95% same-day fix rate.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/hardware-break-fix' },
   openGraph: {

@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { BookOpen, Award, Users, Monitor, ShieldCheck, Cloud, Code2, CheckCircle, ArrowRight, Calendar } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Training Courses Pakistan — Microsoft, Cisco, AWS, Cybersecurity & More | Infraspine',
+  title: 'IT Training Courses Pakistan — Microsoft, Cisco, AWS, Cybersecurity & More',
   description: 'Professional IT training: Microsoft Azure, Microsoft 365, Cisco networking, AWS, cybersecurity certifications, ethical hacking, Python, and Power Platform. Instructor-led and online. Infraspine Academy.',
   alternates: { canonical: 'https://www.infraspine.com/services/it-trainings' },
   openGraph: {

@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   ShieldAlert, Filter, Zap, Lock, Settings, Archive,
   ArrowRight, CheckCircle,
@@ -339,6 +340,8 @@ export default function EmailSecurityPage() {
         primaryCTA={{ label: 'Get a Free Email Audit', href: '/contact-us' }}
         secondaryCTA={{ label: 'Call Us Now', href: 'tel:+923001234567' }}
       />
+
+      <RelatedServices currentHref="/services/cyber-security/email-security" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

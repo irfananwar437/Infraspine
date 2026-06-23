@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'All IT Services Pakistan — Complete IT Services Directory | Infraspine',
+  title: 'All IT Services Pakistan — Complete IT Services Directory',
   description: 'Complete directory of every IT service Infraspine delivers in Pakistan: managed IT, field services, cloud, cybersecurity, compliance, software development, networking, physical security, and professional services. Browse all 40+ service areas.',
   alternates: { canonical: 'https://www.infraspine.com/services/all-services' },
   openGraph: {

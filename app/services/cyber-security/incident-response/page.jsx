@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Zap, Search, Shield, RefreshCw, FileText, AlertTriangle,
   ChevronRight, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Incident Response Services Pakistan | Cyber Incident Management | Infraspine',
+  title: 'Incident Response Services Pakistan | Cyber Incident Management',
   description: 'Infraspine provides 24/7 emergency incident response, digital forensics, and cyber recovery services in Pakistan. Sub-1-hour emergency response. 200+ incidents handled.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/incident-response',
@@ -333,6 +334,8 @@ export default function IncidentResponsePage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/incident-response" accent="#DC2626" />
 
         <Footer />
       </div>

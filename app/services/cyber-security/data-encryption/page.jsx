@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, FileText, Mail, Database, Settings, Cloud,
   ChevronRight, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Data Encryption Services Pakistan | Enterprise Encryption | Infraspine',
+  title: 'Data Encryption Services Pakistan | Enterprise Encryption',
   description: 'Infraspine provides enterprise data encryption services in Pakistan — AES-256 full disk encryption, file encryption, email encryption, database encryption, and key management. FIPS 140-2 compliant.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/data-encryption',
@@ -333,6 +334,8 @@ export default function DataEncryptionPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/data-encryption" accent="#DC2626" />
 
         <Footer />
       </div>

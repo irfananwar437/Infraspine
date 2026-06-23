@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Microsoft 365 Services Pakistan — M365 Setup, Migration & Management | Infraspine',
+  title: 'Microsoft 365 Services Pakistan — M365 Setup, Migration & Management',
   description: 'Infraspine Microsoft 365 services in Pakistan: tenant setup, email migration, Teams and SharePoint deployment, M365 Backup and security configuration. 99.9% uptime SLA, zero-downtime migration.',
   alternates: { canonical: 'https://www.infraspine.com/services/cloud-solutions/microsoft-365' },
   openGraph: {

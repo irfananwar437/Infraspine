@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Service Desk Services Pakistan | IT Help Desk | Infraspine',
+  title: 'Service Desk Services Pakistan | IT Help Desk',
   description: 'Infraspine Service Desk: ITIL v4-aligned single point of contact for all IT issues. 85% first-contact resolution, <15min response time, 24/7/365 coverage via phone, email, chat and portal.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/service-desk' },
   openGraph: {

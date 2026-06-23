@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Search, Users, Network, FileText, Globe, CheckCircle, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Security Auditing Pakistan | Information Security Audit | Infraspine',
+  title: 'IT Security Auditing Pakistan | Information Security Audit',
   description: 'Comprehensive IT security auditing services in Pakistan. Infraspine assesses your information security controls against ISO 27001, NIST, and CIS benchmarks and delivers a prioritised remediation roadmap.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/security-auditing' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function SecurityAuditingPage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/security-auditing" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: '24/7 NOC Monitoring Services Pakistan — Network Operations Centre | Infraspine',
+  title: '24/7 NOC Monitoring Services Pakistan — Network Operations Centre',
   description: 'Infraspine NOC Monitoring: 24/7 network operations centre with SNMP, ICMP and agent-based monitoring. Proactive alert management, <15min P1 response and 99.9% uptime SLA for businesses in Pakistan.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/noc-monitoring' },
   openGraph: {

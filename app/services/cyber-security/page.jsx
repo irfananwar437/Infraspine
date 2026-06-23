@@ -6,13 +6,14 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   ShieldCheck, AlertTriangle, Lock, Eye, Server, Users,
   CheckCircle, ArrowRight, Activity, FileText, Zap, Shield,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Cybersecurity Services Pakistan — SOC, VAPT & Endpoint Security | Infraspine',
+  title: 'Cybersecurity Services Pakistan — SOC, VAPT & Endpoint Security',
   description: 'Infraspine Cybersecurity: 24/7 SOC monitoring, VAPT, endpoint detection and response, email security, NGFW management, and security awareness training. Defend your business against ransomware, phishing, and insider threats.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security' },
   openGraph: {
@@ -280,6 +281,8 @@ export default function CyberSecurityPage() {
         heading="Your Business Is a Target. Let's Make It a Hard One."
         subheading="Book a free 30-minute security consultation. We will identify your top 3 risk areas at no cost or obligation."
       />
+
+      <RelatedServices currentHref="/services/cyber-security" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

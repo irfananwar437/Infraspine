@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Data Center Services Pakistan — Server Room Design & Management | Infraspine',
+  title: 'Data Center Services Pakistan — Server Room Design & Management',
   description: 'Infraspine Data Center Services: server room design, rack management, UPS power systems, precision cooling, and remote hands support. TIA-942 compliant data centers for Pakistan businesses.',
   alternates: { canonical: 'https://www.infraspine.com/services/data-center' },
   openGraph: {

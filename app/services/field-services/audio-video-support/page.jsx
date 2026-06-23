@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Audio Video Support Services Pakistan | AV Installation | Infraspine',
+  title: 'Audio Video Support Services Pakistan | AV Installation',
   description: 'Professional AV installation, configuration, and maintenance in Pakistan. Boardroom displays, video conferencing, projection systems, and PA systems with same-day fault response.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/audio-video-support' },
   openGraph: {

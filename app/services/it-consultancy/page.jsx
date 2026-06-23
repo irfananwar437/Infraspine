@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Briefcase, FileText, BarChart2, Shield, Users, Layers, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Consultancy Services Pakistan — Strategy, Architecture & Digital Transformation | Infraspine',
+  title: 'IT Consultancy Services Pakistan — Strategy, Architecture & Digital Transformation',
   description: 'Enterprise IT consultancy: IT strategy and roadmap, digital transformation advisory, enterprise architecture design, vendor selection, project management, and technology governance. Infraspine.',
   alternates: { canonical: 'https://www.infraspine.com/services/it-consultancy' },
   openGraph: {

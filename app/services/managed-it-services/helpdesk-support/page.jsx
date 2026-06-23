@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Helpdesk Support Services Pakistan — L1, L2 & L3 Support | Infraspine',
+  title: 'IT Helpdesk Support Services Pakistan — L1, L2 & L3 Support',
   description: 'Infraspine IT Helpdesk: professional L1, L2 and L3 support for businesses in Pakistan. <2hr response SLA, 87% first-call resolution, 24/7 coverage via phone, email, WhatsApp and ticketing portal.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/helpdesk-support' },
   openGraph: {

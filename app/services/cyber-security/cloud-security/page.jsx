@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Cloud, Shield, Users, Server, CheckCircle, Globe,
   ChevronRight, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Cloud Security Services Pakistan | Cloud Infrastructure Protection | Infraspine',
+  title: 'Cloud Security Services Pakistan | Cloud Infrastructure Protection',
   description: 'Infraspine secures AWS, Azure, and GCP cloud environments in Pakistan. CSPM, CASB, identity management, container security, zero-trust architecture, and 24/7 cloud monitoring.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/cloud-security',
@@ -333,6 +334,8 @@ export default function CloudSecurityPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/cloud-security" accent="#DC2626" />
 
         <Footer />
       </div>

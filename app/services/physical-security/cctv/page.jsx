@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'CCTV & IP Surveillance Pakistan — Installation & Monitoring | Infraspine',
+  title: 'CCTV & IP Surveillance Pakistan — Installation & Monitoring',
   description: 'Professional CCTV and IP surveillance installation across Pakistan. 4K cameras, AI video analytics, remote monitoring, NVR setup. Hikvision, Dahua, Axis certified installers.',
   alternates: { canonical: 'https://www.infraspine.com/services/physical-security/cctv' },
   openGraph: {

@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT & Tech Recruitment Pakistan | Technology Staffing | Infraspine',
+  title: 'IT & Tech Recruitment Pakistan | Technology Staffing',
   description: 'Infraspine IT Recruitment: specialist technology staffing for permanent, contract, and interim roles. 500+ placements, 97% retention at 12 months, 48-hour shortlist delivery. Deep technical screening by practitioners.',
   alternates: { canonical: 'https://www.infraspine.com/services/it-recruitment' },
   openGraph: {

@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, Settings, Users, CheckCircle, Zap, FileText, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Cyber Essentials Certification Pakistan | CE & CE+ Support | Infraspine',
+  title: 'Cyber Essentials Certification Pakistan | CE & CE+ Support',
   description: 'Cyber Essentials and Cyber Essentials Plus certification support in Pakistan. Infraspine guides organisations through the five technical controls required for UK government-backed CE and CE+ certification.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/cyber-essentials' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function CyberEssentialsPage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/cyber-essentials" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

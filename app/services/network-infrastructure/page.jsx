@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Network, Wifi, Server, Shield, Activity, Layers, CheckCircle, ArrowRight, Globe } from 'lucide-react'
 
 export const metadata = {
-  title: 'Network Infrastructure Services Pakistan — LAN, WAN, SD-WAN & WiFi | Infraspine',
+  title: 'Network Infrastructure Services Pakistan — LAN, WAN, SD-WAN & WiFi',
   description: 'Enterprise network design, LAN/WAN implementation, SD-WAN deployment, WiFi 6, structured cabling, and 24/7 NOC monitoring. Infraspine builds networks that scale with your business.',
   alternates: { canonical: 'https://www.infraspine.com/services/network-infrastructure' },
   openGraph: {

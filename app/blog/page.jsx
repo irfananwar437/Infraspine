@@ -8,7 +8,7 @@ import { CATEGORIES, POSTS } from './data'
 import { PostCard, NewsletterSection } from './BlogComponents'
 
 export const metadata = {
-  title: 'IT Blog & Insights Pakistan — Cybersecurity, Cloud & Technology Tips | Infraspine',
+  title: 'IT Blog & Insights Pakistan — Cybersecurity, Cloud & Technology Tips',
   description: 'Expert IT insights from Infraspine Pakistan: cybersecurity guidance, cloud migration tips, AI automation, networking advice, and technology training resources for Pakistani businesses.',
   alternates: { canonical: 'https://www.infraspine.com/blog' },
   openGraph: {

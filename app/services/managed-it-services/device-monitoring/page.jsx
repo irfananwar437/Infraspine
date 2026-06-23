@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Device Monitoring Services Pakistan | Endpoint Monitoring | Infraspine',
+  title: 'Device Monitoring Services Pakistan | Endpoint Monitoring',
   description: 'Infraspine Device Monitoring: continuous monitoring of all endpoints, servers and network devices. 10,000+ devices monitored, <5min alert response, 99.9% monitoring uptime, proactive issue detection before failures occur.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/device-monitoring' },
   openGraph: {

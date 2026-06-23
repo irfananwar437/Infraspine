@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Patch Management Services Pakistan — Automated OS & App Patching | Infraspine',
+  title: 'Patch Management Services Pakistan — Automated OS & App Patching',
   description: 'Infraspine Patch Management: automated OS and application patching for Windows, Linux and macOS. 98% patch compliance rate, 72hr critical patch SLA, zero patch-related breaches. Serving Pakistan businesses.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/patch-management' },
   openGraph: {

@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   FileText, Database, Shield, BookOpen, CheckCircle, Users, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'NHS DSPT Assessment Pakistan | Data Security Protection Toolkit | Infraspine',
+  title: 'NHS DSPT Assessment Pakistan | Data Security Protection Toolkit',
   description: 'NHS Data Security and Protection Toolkit (DSPT) assessment support in Pakistan. Infraspine helps health and social care organisations complete their annual DSPT submission across all 10 NDG data security standards.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/nhs-dspt' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function NhsDsptPage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/nhs-dspt" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

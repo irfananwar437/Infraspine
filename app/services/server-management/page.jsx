@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Server Management Services Pakistan | Managed Servers | Infraspine',
+  title: 'Server Management Services Pakistan | Managed Servers',
   description: 'Fully managed server management in Pakistan: 24/7 monitoring, OS patching, performance tuning, backup, and hardware maintenance for physical and virtual servers. 99.9% uptime SLA.',
   alternates: { canonical: 'https://www.infraspine.com/services/server-management' },
   openGraph: {

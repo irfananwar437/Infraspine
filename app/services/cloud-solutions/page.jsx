@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Cloud Solutions Pakistan — Azure, AWS & Hybrid Cloud Services | Infraspine',
+  title: 'Cloud Solutions Pakistan — Azure, AWS & Hybrid Cloud Services',
   description: 'Infraspine Cloud Solutions: cloud migration to Azure and AWS, hybrid cloud architecture, cloud security, Infrastructure as Code, and managed cloud operations. Reduce infrastructure costs by 35% with enterprise cloud design.',
   alternates: { canonical: 'https://www.infraspine.com/services/cloud-solutions' },
   openGraph: {

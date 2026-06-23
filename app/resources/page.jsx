@@ -1,7 +1,7 @@
 import ResourcesClient from './ResourcesClient'
 
 export const metadata = {
-  title: 'IT Resources & Free Downloads — Guides, Checklists & Whitepapers | Infraspine',
+  title: 'IT Resources & Free Downloads — Guides, Checklists & Whitepapers',
   description: 'Free IT resources for Pakistan businesses: cybersecurity checklists, cloud migration guides, network templates, ERP selection guides, and technology whitepapers. Download instantly.',
   alternates: { canonical: 'https://www.infraspine.com/resources' },
   openGraph: {

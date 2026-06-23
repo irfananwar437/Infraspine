@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Desktop & IT Support Services Pakistan | End-User Support | Infraspine',
+  title: 'Desktop & IT Support Services Pakistan | End-User Support',
   description: 'On-site and remote end-user support for desktops, laptops, OS, software, and peripherals across Pakistan. Under 2hr on-site response, 92% first-call resolution.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/desktop-support' },
   openGraph: {

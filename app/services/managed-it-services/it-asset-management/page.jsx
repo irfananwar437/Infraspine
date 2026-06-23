@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Asset Management Services Pakistan — Hardware & Software ITAM | Infraspine',
+  title: 'IT Asset Management Services Pakistan — Hardware & Software ITAM',
   description: 'Infraspine IT Asset Management: complete hardware and software ITAM for businesses in Pakistan. 100% asset visibility, 30% average IT cost reduction, real-time inventory and full audit trail.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/it-asset-management' },
   openGraph: {

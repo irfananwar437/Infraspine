@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'On-Site Network Support Pakistan | Field Network Engineers | Infraspine',
+  title: 'On-Site Network Support Pakistan | Field Network Engineers',
   description: 'On-site network troubleshooting, switch and router configuration, cabling fault finding, and connectivity restoration across Pakistan. 4hr response, 99.2% uptime maintained.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/network-support' },
   openGraph: {

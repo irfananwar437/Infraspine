@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, FileText, Search, Users, AlertTriangle, BookOpen, CheckCircle, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Data Protection Officer as a Service Pakistan | Outsourced DPO | Infraspine',
+  title: 'Data Protection Officer as a Service Pakistan | Outsourced DPO',
   description: 'Outsourced DPO as a Service for GDPR and data protection compliance in Pakistan. Infraspine provides a named DPO, GDPR programme management, DPIA reviews, SAR handling, and breach notification support.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/dpo-as-a-service' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function DpoAsAServicePage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/dpo-as-a-service" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

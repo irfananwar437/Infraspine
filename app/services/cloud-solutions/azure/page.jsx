@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Microsoft Azure Services Pakistan — Azure Setup, Migration & Management | Infraspine',
+  title: 'Microsoft Azure Services Pakistan — Azure Setup, Migration & Management',
   description: 'Infraspine Microsoft Azure services in Pakistan: certified Azure engineers (AZ-104, AZ-305) for infrastructure setup, migration, AKS, Entra ID, backup and FinOps cost optimisation. 40% avg cost savings.',
   alternates: { canonical: 'https://www.infraspine.com/services/cloud-solutions/azure' },
   openGraph: {

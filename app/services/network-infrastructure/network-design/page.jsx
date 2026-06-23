@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Network Design & Maintenance Pakistan | Enterprise Network | Infraspine',
+  title: 'Network Design & Maintenance Pakistan | Enterprise Network',
   description: 'Infraspine Network Design & Maintenance: end-to-end enterprise network architecture, design, implementation and ongoing maintenance. 150+ networks designed, 99.99% uptime SLA, Cisco/Aruba/Fortinet certified engineers.',
   alternates: { canonical: 'https://www.infraspine.com/services/network-infrastructure/network-design' },
   openGraph: {

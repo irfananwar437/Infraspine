@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Disaster Recovery Services Pakistan | DR Planning & Testing | Infraspine',
+  title: 'Disaster Recovery Services Pakistan | DR Planning & Testing',
   description: 'Infraspine Disaster Recovery: DR strategy, design, and annual testing aligned to ISO 22301. RTO under 4 hours, RPO under 1 hour. Protect your business from cyberattack, hardware failure, and human error.',
   alternates: { canonical: 'https://www.infraspine.com/services/disaster-recovery' },
   openGraph: {

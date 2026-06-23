@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Project Management Pakistan | Technology Project Delivery | Infraspine',
+  title: 'IT Project Management Pakistan | Technology Project Delivery',
   description: 'Infraspine IT Project Management: PRINCE2 and PMP-certified project managers delivering technology projects on time and on budget. Agile and Waterfall methodologies. 150+ projects delivered across Pakistan.',
   alternates: { canonical: 'https://www.infraspine.com/services/project-management' },
   openGraph: {

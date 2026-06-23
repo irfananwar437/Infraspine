@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Global Field Services Pakistan | On-Site IT Support | Infraspine',
+  title: 'Global Field Services Pakistan | On-Site IT Support',
   description: 'Nationwide on-site IT deployment, break-fix, migrations, and support across Pakistan. 500+ sites served, 4hr response SLA, 50+ engineers nationwide.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services' },
   openGraph: {

@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Structured Cabling Pakistan — CAT6A & Fiber Optic Installation | Infraspine',
+  title: 'Structured Cabling Pakistan — CAT6A & Fiber Optic Installation',
   description: 'Infraspine Structured Cabling: TIA-568 certified CAT6A and fiber optic installation, cable testing, patch panel management, and complete documentation for offices and data centers in Pakistan.',
   alternates: { canonical: 'https://www.infraspine.com/services/network-infrastructure/structured-cabling' },
   openGraph: {

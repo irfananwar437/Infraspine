@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'WiFi Services Pakistan | Enterprise Wireless Network | Infraspine',
+  title: 'WiFi Services Pakistan | Enterprise Wireless Network',
   description: 'Enterprise wireless network design, access point installation, site surveys, and ongoing wireless support across Pakistan. Wi-Fi 6 certified, 99.9% uptime SLA, full coverage guaranteed.',
   alternates: { canonical: 'https://www.infraspine.com/services/field-services/wifi-services' },
   openGraph: {

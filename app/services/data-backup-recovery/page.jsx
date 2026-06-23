@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Database, Cloud, Shield, Activity, RefreshCw, Server, CheckCircle, ArrowRight, AlertTriangle, Clock } from 'lucide-react'
 
 export const metadata = {
-  title: 'Data Backup & Disaster Recovery Services Pakistan — Cloud Backup, BDR & DRaaS | Infraspine',
+  title: 'Data Backup & Disaster Recovery Services Pakistan — Cloud Backup, BDR & DRaaS',
   description: 'Enterprise data backup and disaster recovery: automated cloud backup, immutable backup storage, business continuity planning, disaster recovery as a service (DRaaS), and recovery testing. Infraspine.',
   alternates: { canonical: 'https://www.infraspine.com/services/data-backup-recovery' },
   openGraph: {

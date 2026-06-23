@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Physical Security Services Pakistan | Infraspine',
+  title: 'Physical Security Services Pakistan',
   description: 'Enterprise physical security in Pakistan: CCTV, access control, biometrics, alarm systems, and AI video analytics. 500+ installations, 99.8% uptime, 5-year warranty.',
   alternates: { canonical: 'https://www.infraspine.com/services/physical-security' },
   openGraph: {

@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'BPO Services — Business Process Outsourcing Pakistan | Infraspine',
+  title: 'BPO Services — Business Process Outsourcing Pakistan',
   description: 'Infraspine BPO Services: customer support, back-office operations, data entry, document processing, and virtual assistance. Reduce operational costs by 40% with our trained offshore teams.',
   alternates: { canonical: 'https://www.infraspine.com/bpo-services' },
   openGraph: {

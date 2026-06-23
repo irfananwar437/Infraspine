@@ -1,7 +1,13 @@
-'use client'
-
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { SITE_URL } from '@/lib/site'
+
+export const metadata = {
+  title: 'Privacy Policy',
+  description: "Infraspine's privacy policy: how we collect, use, disclose, and safeguard personal data for visitors and clients of our IT, ERP, automation, and cybersecurity services.",
+  alternates: { canonical: `${SITE_URL}/privacy-policy` },
+  robots: { index: true, follow: true },
+}
 
 export default function PrivacyPolicyPage() {
   return (

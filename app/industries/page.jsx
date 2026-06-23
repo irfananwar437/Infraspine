@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { Factory, Heart, Package, BarChart2, Building2, Truck, Home, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Industries We Serve — IT Solutions for Every Sector | Infraspine',
+  title: 'Industries We Serve — IT Solutions for Every Sector',
   description: 'Infraspine delivers managed IT, cybersecurity, and technology solutions for manufacturing, healthcare, retail, financial services, construction, logistics, and real estate businesses across Pakistan.',
   alternates: { canonical: 'https://www.infraspine.com/industries' },
 }

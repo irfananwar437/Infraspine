@@ -11,8 +11,9 @@ import {
   CheckCircle, ArrowRight, Shield, Cloud, Server, Network, Zap,
 } from 'lucide-react'
 
-/* ─── Industry data ─────────────────────────────────────── */
-const INDUSTRY_DATA = {
+/* ─── Industry data — exported so app/sitemap.js can derive routes from
+   the same single source instead of a separately hand-maintained list. */
+export const INDUSTRY_DATA = {
   manufacturing: {
     name: 'Manufacturing',
     icon: Factory,

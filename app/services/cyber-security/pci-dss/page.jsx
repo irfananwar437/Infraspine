@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, Network, Search, CheckCircle, FileText, BarChart2, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'PCI-DSS Assessments Pakistan | PCI Compliance Consulting | Infraspine',
+  title: 'PCI-DSS Assessments Pakistan | PCI Compliance Consulting',
   description: 'PCI DSS v4.0 readiness assessments, gap analysis, and compliance consulting in Pakistan. Infraspine supports SAQ completion, ROC preparation, and QSA-qualified guidance for cardholder data environments.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/pci-dss' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function PciDssPage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/pci-dss" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

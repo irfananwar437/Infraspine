@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Biometric Systems Pakistan — Fingerprint, Face Recognition & Attendance | Infraspine',
+  title: 'Biometric Systems Pakistan — Fingerprint, Face Recognition & Attendance',
   description: 'Biometric attendance and access systems across Pakistan. Fingerprint, face recognition, multi-modal terminals. HR and payroll integration. ZKTeco, Suprema, Hikvision certified.',
   alternates: { canonical: 'https://www.infraspine.com/services/physical-security/biometrics' },
   openGraph: {

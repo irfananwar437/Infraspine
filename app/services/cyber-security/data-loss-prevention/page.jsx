@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Database, Shield, Network, Cloud, Mail, Settings,
   ChevronRight, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Data Loss Prevention Pakistan | DLP Solutions | Infraspine',
+  title: 'Data Loss Prevention Pakistan | DLP Solutions',
   description: 'Infraspine delivers enterprise DLP solutions in Pakistan — data discovery, endpoint DLP, network controls, cloud data protection, and email encryption. GDPR-compliant design with 99.7% accuracy.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/data-loss-prevention',
@@ -333,6 +334,8 @@ export default function DataLossPreventionPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/data-loss-prevention" accent="#DC2626" />
 
         <Footer />
       </div>

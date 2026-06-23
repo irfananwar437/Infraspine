@@ -1,7 +1,13 @@
-'use client'
-
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { SITE_URL } from '@/lib/site'
+
+export const metadata = {
+  title: 'Terms of Service',
+  description: "Infraspine's terms of service governing use of our website and IT, ERP, automation, and cybersecurity services for businesses in Pakistan and globally.",
+  alternates: { canonical: `${SITE_URL}/terms-of-service` },
+  robots: { index: true, follow: true },
+}
 
 export default function TermsOfServicePage() {
   return (

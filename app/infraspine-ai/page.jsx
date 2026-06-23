@@ -1,4 +1,3 @@
-'use client'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
@@ -12,6 +11,18 @@ import {
   Network, Database, Globe, BarChart3, Shield, Plug,
   ChevronRight, Layers, MessageSquare,
 } from 'lucide-react'
+import { SITE_URL } from '@/lib/site'
+
+export const metadata = {
+  title: 'Infraspine AI — Intelligent Automation Engineered for Enterprise',
+  description: 'Infraspine AI delivers intelligent automation, AI agents, and n8n-powered workflows for enterprise businesses — built to remove manual work and scale with your operations.',
+  alternates: { canonical: `${SITE_URL}/infraspine-ai` },
+  openGraph: {
+    title: 'Infraspine AI — Intelligent Automation Engineered for Enterprise',
+    description: 'AI agents, intelligent workflows, and automation built for enterprise scale.',
+    url: `${SITE_URL}/infraspine-ai`,
+  },
+}
 
 /* ── Animated AI orbit visual ──────────────────────────────────────────── */
 function AIOrbitVisual() {

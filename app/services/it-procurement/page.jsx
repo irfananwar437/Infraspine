@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Procurement Services Pakistan — Hardware, Software & Vendor Management | Infraspine',
+  title: 'IT Procurement Services Pakistan — Hardware, Software & Vendor Management',
   description: 'Infraspine IT Procurement: 200+ vendor relationships, 15-25% cost savings vs retail, same-day quotes for hardware, software, and networking equipment in Pakistan. 3-year warranty coverage included.',
   alternates: { canonical: 'https://www.infraspine.com/services/it-procurement' },
   openGraph: {

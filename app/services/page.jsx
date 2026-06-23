@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'IT Services Pakistan — Managed IT, Cloud, Cybersecurity & More | Infraspine',
+  title: 'IT Services Pakistan — Managed IT, Cloud, Cybersecurity & More',
   description: 'Infraspine delivers end-to-end IT services: managed IT, cloud solutions, cybersecurity, network infrastructure, software development, AI automation, BPO, IT training, and data backup. One team. Every layer.',
   alternates: { canonical: 'https://www.infraspine.com/services' },
   openGraph: {

@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import ContactForm from './ContactForm'
 
 export const metadata = {
-  title: 'Contact Us — Get a Free IT Consultation | Infraspine',
+  title: 'Contact Us — Get a Free IT Consultation',
   description: 'Contact Infraspine for managed IT services, cloud solutions, cybersecurity, AI automation, BPO, and IT training. Response within 2 hours. Based in Karachi, serving clients globally.',
   alternates: { canonical: 'https://www.infraspine.com/contact-us' },
   openGraph: {

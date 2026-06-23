@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Users, Phone, FileText, BarChart2, Settings, Clock, CheckCircle, ArrowRight, Globe, Headphones } from 'lucide-react'
 
 export const metadata = {
-  title: 'BPO Services Pakistan — Customer Support, Data Processing & Back-Office Outsourcing | Infraspine',
+  title: 'BPO Services Pakistan — Customer Support, Data Processing & Back-Office Outsourcing',
   description: 'Infraspine BPO: 24/7 customer support, technical helpdesk, data entry and processing, finance and accounting back-office, HR administration, and document management outsourcing from Karachi.',
   alternates: { canonical: 'https://www.infraspine.com/services/bpo-services' },
   openGraph: {

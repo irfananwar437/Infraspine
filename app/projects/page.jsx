@@ -9,7 +9,7 @@ import { PROJECTS } from '@/data/projects'
 import { ArrowRight, BarChart2, Clock, Users, TrendingUp } from 'lucide-react'
 
 export const metadata = {
-  title: 'Projects & Case Studies — Enterprise IT Delivery Results | Infraspine',
+  title: 'Projects & Case Studies — Enterprise IT Delivery Results',
   description: 'Explore Infraspine\'s enterprise project portfolio — real case studies covering ERP deployment, CCTV surveillance, AI automation, cybersecurity, and CRM development with measurable business outcomes.',
   alternates: { canonical: 'https://www.infraspine.com/projects' },
   openGraph: {

@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, Cpu, Usb, ListChecks, Wrench, Smartphone,
   ArrowRight, CheckCircle,
@@ -340,6 +341,8 @@ export default function EndpointProtectionPage() {
         primaryCTA={{ label: 'Get Protected Today', href: '/contact-us' }}
         secondaryCTA={{ label: 'Call Us Now', href: 'tel:+923001234567' }}
       />
+
+      <RelatedServices currentHref="/services/cyber-security/endpoint-protection" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

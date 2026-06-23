@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'CIO as a Service Pakistan | Virtual Chief Information Officer | Infraspine',
+  title: 'CIO as a Service Pakistan | Virtual Chief Information Officer',
   description: 'Infraspine CIO as a Service: experienced CIO-level IT leadership on a fractional or part-time basis. Board-level technology strategy, vendor oversight, and digital transformation leadership without full-time cost.',
   alternates: { canonical: 'https://www.infraspine.com/services/cio-as-a-service' },
   openGraph: {

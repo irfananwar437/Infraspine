@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'AWS Cloud Services Pakistan — Amazon Web Services Setup & Management | Infraspine',
+  title: 'AWS Cloud Services Pakistan — Amazon Web Services Setup & Management',
   description: 'Infraspine AWS Cloud services in Pakistan: SAA-C03 certified engineers for EC2, S3, RDS, Lambda, EKS, IAM and CloudWatch. 30% average cost reduction, global infrastructure, Well-Architected reviews.',
   alternates: { canonical: 'https://www.infraspine.com/services/cloud-solutions/aws' },
   openGraph: {

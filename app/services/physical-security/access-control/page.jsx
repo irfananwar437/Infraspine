@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Access Control Systems Pakistan — Smart Card, RFID & Door Entry | Infraspine',
+  title: 'Access Control Systems Pakistan — Smart Card, RFID & Door Entry',
   description: 'Enterprise access control installation across Pakistan. Smart card, RFID, biometric, and visitor management systems. HID, Suprema, ZKTeco, Paxton certified installers.',
   alternates: { canonical: 'https://www.infraspine.com/services/physical-security/access-control' },
   openGraph: {

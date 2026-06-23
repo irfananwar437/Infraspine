@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Remote IT Support Pakistan | Remote Helpdesk & Monitoring | Infraspine',
+  title: 'Remote IT Support Pakistan | Remote Helpdesk & Monitoring',
   description: 'Infraspine Remote IT Support: secure remote desktop assistance, troubleshooting and resolution without on-site visits. <10min connection time, 90% remote resolution rate, 24/7 availability, 256-bit encrypted sessions.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services/remote-support' },
   openGraph: {

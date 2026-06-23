@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   AlertTriangle, BarChart2, Globe, Settings, Zap, FileText,
   ChevronRight, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Security Alerts Management Pakistan | SIEM & Alerting | Infraspine',
+  title: 'Security Alerts Management Pakistan | SIEM & Alerting',
   description: 'Infraspine manages SIEM alerting, tuning, and triage for businesses in Pakistan. 98% false-positive reduction, sub-5-minute alert triage, and 24/7 analyst coverage to eliminate alert fatigue.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/security-alerts',
@@ -333,6 +334,8 @@ export default function SecurityAlertsPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/security-alerts" accent="#DC2626" />
 
         <Footer />
       </div>

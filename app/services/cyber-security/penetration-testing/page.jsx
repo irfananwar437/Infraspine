@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, Globe, Users, Server, Wifi, Zap,
   ChevronRight, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Penetration Testing Services Pakistan | Ethical Hacking | Infraspine',
+  title: 'Penetration Testing Services Pakistan | Ethical Hacking',
   description: 'Infraspine provides authorised penetration testing and ethical hacking services in Pakistan. OWASP/PTES methodology, CREST-aligned approach, full exploitation reports and retesting included.',
   alternates: {
     canonical: 'https://www.infraspine.com/services/cyber-security/penetration-testing',
@@ -333,6 +334,8 @@ export default function PenetrationTestingPage() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentHref="/services/cyber-security/penetration-testing" accent="#DC2626" />
 
         <Footer />
       </div>

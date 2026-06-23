@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { Code2, Smartphone, Globe, Database, Cpu, GitBranch, CheckCircle, ArrowRight, Layers, Zap } from 'lucide-react'
 
 export const metadata = {
-  title: 'Software Development Services Pakistan — Web, Mobile & Enterprise Apps | Infraspine',
+  title: 'Software Development Services Pakistan — Web, Mobile & Enterprise Apps',
   description: 'Custom software development: enterprise web applications, mobile apps (iOS & Android), API development, SaaS platforms, ERP integrations, and legacy system modernisation. Built by Infraspine.',
   alternates: { canonical: 'https://www.infraspine.com/services/software-development' },
   openGraph: {

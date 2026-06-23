@@ -6,12 +6,13 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, FileText, Users, Zap, RefreshCw, BookOpen, CheckCircle, ArrowRight,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Business Continuity Planning Pakistan | BCP & BCM | Infraspine',
+  title: 'Business Continuity Planning Pakistan | BCP & BCM',
   description: 'Business Continuity Planning and BCM consulting in Pakistan. Infraspine develops and tests BCP to ISO 22301 standard, delivering Business Impact Analysis, crisis communication plans, and recovery strategy design.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/business-continuity' },
   openGraph: {
@@ -263,6 +264,8 @@ export default function BusinessContinuityPage() {
         secondaryLabel="Call Us Now"
         secondaryHref="tel:+923001234567"
       />
+
+      <RelatedServices currentHref="/services/cyber-security/business-continuity" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

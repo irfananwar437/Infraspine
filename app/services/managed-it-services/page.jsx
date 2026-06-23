@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Managed IT Services Pakistan — 24/7 IT Support & Monitoring | Infraspine',
+  title: 'Managed IT Services Pakistan — 24/7 IT Support & Monitoring',
   description: 'Infraspine Managed IT Services: 24/7 NOC monitoring, helpdesk support, patch management, IT asset management, and proactive infrastructure monitoring. Reduce downtime by 90% with a predictable monthly cost.',
   alternates: { canonical: 'https://www.infraspine.com/services/managed-it-services' },
   openGraph: {

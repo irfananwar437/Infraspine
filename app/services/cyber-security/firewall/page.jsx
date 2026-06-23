@@ -6,13 +6,14 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 import Link from 'next/link'
+import RelatedServices from '@/components/ui/RelatedServices'
 import {
   Shield, Settings, AlertTriangle, Lock, Globe, FileText,
   ArrowRight, CheckCircle,
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Firewall Management Services Pakistan — NGFW, UTM & Network Security | Infraspine',
+  title: 'Firewall Management Services Pakistan — NGFW, UTM & Network Security',
   description: 'Infraspine Firewall Management: expert NGFW deployment, rule optimisation, IPS/IDS management and VPN for Pakistan businesses. 99.99% uptime, <5min policy change SLA, 24/7 rule monitoring.',
   alternates: { canonical: 'https://www.infraspine.com/services/cyber-security/firewall' },
   openGraph: {
@@ -351,6 +352,8 @@ export default function FirewallManagementPage() {
         primaryCTA={{ label: 'Get Started', href: '/contact-us' }}
         secondaryCTA={{ label: 'Call Us Now', href: 'tel:+923001234567' }}
       />
+
+      <RelatedServices currentHref="/services/cyber-security/firewall" accent="#DC2626" />
 
       <Footer />
       <WhatsAppButton />

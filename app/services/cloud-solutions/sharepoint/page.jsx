@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Microsoft SharePoint & Power Platform Pakistan — Intranet & Automation | Infraspine',
+  title: 'Microsoft SharePoint & Power Platform Pakistan — Intranet & Automation',
   description: 'Infraspine SharePoint and Power Platform services: intranet portals, Teams integration, document management, Power Apps, Power Automate, and Power BI for Pakistan businesses.',
   alternates: { canonical: 'https://www.infraspine.com/services/cloud-solutions/sharepoint' },
   openGraph: {
