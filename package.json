@@ -10,6 +10,7 @@
     "remotion:render": "remotion render remotion/Root.jsx NetworkTopology out/network-topology.mp4"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.9",
     "@remotion/cli": "^4.0.451",
     "@remotion/player": "^4.0.451",
     "framer-motion": "^11.0.0",
